@@ -1,0 +1,13 @@
+{:uriI"§file://app/assets/plugins/slider.layerslider/skins/borderlessdark3d/info.json?type=application/json&id=7f4d0f2b4756c0c642e00c440d4f3421ae973933325e2716bda35b4a1cea7327:ET:load_pathI"app/assets/plugins;T:filenameI"Kapp/assets/plugins/slider.layerslider/skins/borderlessdark3d/info.json;T:	nameI"3slider.layerslider/skins/borderlessdark3d/info;T:logical_pathI"8slider.layerslider/skins/borderlessdark3d/info.json;T:content_typeI"application/json;T:sourceI"½{
+	"name" : "Borderless Dark for 3D sliders",
+	"version" : "4.6.0",
+	"requires" : "4.5.5",
+	"author" : "Kreatura Media",
+	"created" : "2013-01-15",
+	"updated" : "2013-07-29",
+	"note" : ""
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Yfile-digest://app/assets/plugins/slider.layerslider/skins/borderlessdark3d/info.json;TTF:charsetI"
+utf-8;F:digest"%§/l¶R3!˜J¢£A ıSîdöUBÌÀäQdæ:lengthi½:dependencies_digest"%"Œk2[7p'¨@²ßM¦Xê¸{ÏÑl31Ä§«3Ja:idI"E7f4d0f2b4756c0c642e00c440d4f3421ae973933325e2716bda35b4a1cea7327;F:
+mtimel+‹…[

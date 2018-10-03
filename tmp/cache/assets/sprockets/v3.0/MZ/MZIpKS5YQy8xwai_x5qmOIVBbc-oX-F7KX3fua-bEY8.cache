@@ -1,0 +1,14 @@
+{:uriI"œfile://app/assets/plugins/slider.layerslider/skins/glass/info.json?type=application/json&id=50f4c1fe14cbe2d82fbeb0aeb728305ef3c9543b4ec54ebdd36e22d01c9caccb:ET:load_pathI"app/assets/plugins;T:filenameI"@app/assets/plugins/slider.layerslider/skins/glass/info.json;T:	nameI"(slider.layerslider/skins/glass/info;T:logical_pathI"-slider.layerslider/skins/glass/info.json;T:content_typeI"application/json;T:sourceI"¤{
+	"name" : "Glass",
+	"version" : "4.6.0",
+	"requires" : "4.5.5",
+	"author" : "Kreatura Media",
+	"created" : "2013-01-15",
+	"updated" : "2013-07-29",
+	"note" : ""
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Nfile-digest://app/assets/plugins/slider.layerslider/skins/glass/info.json;TTF:charsetI"
+utf-8;F:digest"%‹¯‘Vä™Ğû#r#L´ô]a¬WîÒêŞ‚lQé©¹”:lengthi¤:dependencies_digest"%
+:Œ@n ë[‹…TùYc·p!ní9ß[lŸj–:idI"E50f4c1fe14cbe2d82fbeb0aeb728305ef3c9543b4ec54ebdd36e22d01c9caccb;F:
+mtimel+‹…[
