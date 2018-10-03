@@ -10,17 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//
-//= require slider.revolution/js/jquery.themepunch.tools.min.js
-//= require slider.revolution/js/jquery.themepunch.revolution.min.js
-//= require view/demo.revolution_slider.js
-//= require jquery/jquery-3.3.1.min.js
-//= require script_guillaume.js
+
+//= require jquery-3.2.1.min.js
 //= require scripts.js
-//= require contact.js
 //= require quote.js
-//= require bootstrap-sprockets
-//= require turbolinks
+
 
 
 
