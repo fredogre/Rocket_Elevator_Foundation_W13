@@ -56,11 +56,11 @@
 		_loadPopperBS4();
 
 		// Load Bootstrap JS
-		loadScript(plugin_path + 'bootstrap/js/bootstrap.min.js', function() {
+		loadScript('assets/plugins/bootstrap/js/bootstrap.min.js', function() {
 
 			// Load Material Design Js
 			if(jQuery("body").hasClass('enable-materialdesign')) {
-				loadScript(plugin_path + 'mdl/material.min.js');
+				loadScript('assets/plugins/mdl/material.min.js');
 			}
 
 			// Init
@@ -72,7 +72,7 @@
 		/* --- */
 		if(jQuery("body").hasClass("smoothscroll") && navigator.platform.indexOf('Mac') < 0) {
 
-			loadScript(plugin_path + 'smoothscroll.js', function() {
+			loadScript('assets/plugins/smoothscroll.js', function() {
 				jQuery.smoothScroll();
 			});
 
@@ -1179,7 +1179,7 @@
 
 		if(_container1.length > 0) {
 
-			loadScript(plugin_path + 'jquery.nav.min.js', function() {
+			loadScript('assets/plugins/jquery.nav.min.js', function() {
 
 				jQuery(_container1).onePageNav({
 					currentClass: 		'active',
@@ -1207,7 +1207,7 @@
 
 		if(_container2.length > 0) {
 
-			loadScript(plugin_path + 'jquery.nav.min.js', function() {
+			loadScript('assets/plugins/jquery.nav.min.js', function() {
 
 				jQuery(_container2).onePageNav({
 					currentClass: 		'active',
@@ -1237,7 +1237,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'owl-carousel/owl.carousel.min.js', function() {
+			loadScript('assets/plugins/owl-carousel/owl.carousel.min.js', function() {
 
 				_container.each(function() {
 
@@ -1394,7 +1394,7 @@
 
 		if(_container2.length > 0) {
 
-			loadScript(plugin_path + 'owl-carousel-2/owl.carousel.min.js', function() {
+			loadScript('assets/plugins/owl-carousel-2/owl.carousel.min.js', function() {
 
 
 				_container2.each(function() {
@@ -1492,7 +1492,7 @@
 		
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'slider.flexslider/jquery.flexslider-min.js', function() {
+			loadScript('assets/plugins/slider.flexslider/jquery.flexslider-min.js', function() {
 
 				if(jQuery().flexslider) {
 					var	_controlNav 	= _container.attr('data-controlNav'),
@@ -1555,7 +1555,7 @@
 
 		if(_el.length > 0) {
 
-			loadScript(plugin_path + 'magnific-popup/jquery.magnific-popup.min.js', function() {
+			loadScript('assets/plugins/magnific-popup/jquery.magnific-popup.min.js', function() {
 
 				if(typeof(jQuery.magnificPopup) == "undefined") {
 					return false;
@@ -1744,7 +1744,7 @@
 		var _container = jQuery('#YTPlayer');
 		
 		if(_container.length > 0) {
-			loadScript(plugin_path + 'jquery.mb.YTPlayer.min.js', function() {
+			loadScript('assets/plugins/jquery.mb.YTPlayer.min.js', function() {
 
 
 				if(jQuery().mb_YTPlayer) {
@@ -1795,7 +1795,7 @@
 		var _container = jQuery('.mix-grid');
 		
 		if(_container.length > 0) {
-			loadScript(plugin_path + 'mixitup/jquery.mixitup.min.js', function() {
+			loadScript('assets/plugins/mixitup/jquery.mixitup.min.js', function() {
 
 				if(jQuery().mixitup) {
 
@@ -1936,7 +1936,7 @@
 		
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'text-rotator/jquery.simple-text-rotator.min.js', function() {
+			loadScript('assets/plugins/text-rotator/jquery.simple-text-rotator.min.js', function() {
 
 				_container.each(function() {
 					var _t 			= jQuery(this),
@@ -1965,7 +1965,7 @@
 		var _container = jQuery('img.lazy');
 		
 		if(_container.length > 0) {
-			loadScript(plugin_path + 'lazyload/jquery.lazyload.min.js', function() {
+			loadScript('assets/plugins/lazyload/jquery.lazyload.min.js', function() {
 
 				if(jQuery().lazyload) {
 
@@ -2019,7 +2019,7 @@
 		var portfolio_isotope_container = jQuery("#portfolio.portfolio-isotope");
 
 		if(portfolio_isotope_container.length > 0) {
-			loadScript(plugin_path + 'isotope/isotope.pkgd.min.js', function() {
+			loadScript('assets/plugins/isotope/isotope.pkgd.min.js', function() {
 
 				// Isotope Portfolio
 				if(jQuery().isotope) {
@@ -2170,7 +2170,7 @@
 		var blog_isotope_container = jQuery("#blog.blog-isotope");
 
 		if(blog_isotope_container.length > 0) {
-			loadScript(plugin_path + 'isotope/isotope.pkgd.min.js', function() {
+			loadScript('assets/plugins/isotope/isotope.pkgd.min.js', function() {
 
 				// Isotope blog
 				if(jQuery().isotope) {
@@ -2412,7 +2412,7 @@
 		var file_container = jQuery("input[type=file]");
 
 		if(file_container.length > 0) {
-			loadScript(plugin_path + 'custom.fle_upload.js');
+			loadScript('assets/plugins/custom.fle_upload.js');
 		}
 
 
@@ -2497,7 +2497,7 @@
 		
 		if(_container.length > 0 || _container2.length > 0) {
 
-			loadScript(plugin_path + 'countdown/jquery.countdown.pack.min.js', function() {
+			loadScript('assets/plugins/countdown/jquery.countdown.pack.min.js', function() {
 
 				/** On Page Load **/
 				_container.each(function() {
@@ -2599,7 +2599,7 @@
 					_bigImageNo 	= Number(_bigImageNo) - 1; 
 					_container.find('a:eq('+_bigImageNo+')').css({ width: _firstElemWidth*2 + 'px'});
 
-					loadScript(plugin_path + 'isotope/isotope.pkgd.min.js', function() {
+					loadScript('assets/plugins/isotope/isotope.pkgd.min.js', function() {
 
 						setTimeout( function() {
 							_container.isotope({
@@ -2656,7 +2656,7 @@
 
 		if(_btn.length > 0 && _message != false) {
 
-			loadScript(plugin_path + 'toastr/toastr.js', function() {
+			loadScript('assets/plugins/toastr/toastr.js', function() {
 				// toastr.clear();
 
 				/** BUTTON CLICK
@@ -2755,7 +2755,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'chart.easypiechart/dist/jquery.easypiechart.min.js', function() {
+			loadScript('assets/plugins/chart.easypiechart/dist/jquery.easypiechart.min.js', function() {
 
 				jQuery(".piechart").each(function() {
 					var _t = jQuery(this),
@@ -2793,7 +2793,7 @@
 		
 		if(_container.length > 0) {
 			
-			loadScript(plugin_path + 'select2/js/select2.full.min.js', function() {
+			loadScript('assets/plugins/select2/js/select2.full.min.js', function() {
 		
 				_container.each(function() {
 					var _t = jQuery(this);
@@ -2822,8 +2822,8 @@
 		 ************************ **/
 		if(jQuery('form.validate-plugin').length > 0) {
 
-			loadScript(plugin_path + 'form.validate/jquery.form.min.js', function() {
-				loadScript(plugin_path + 'form.validate/jquery.validation.min.js');
+			loadScript('assets/plugins/form.validate/jquery.form.min.js', function() {
+				loadScript('assets/plugins/form.validate/jquery.validation.min.js');
 			});
 
 		}
@@ -2834,8 +2834,8 @@
 		 ************************ **/
 		if(jQuery('form.validate').length > 0) {
 
-			loadScript(plugin_path + 'form.validate/jquery.form.min.js', function() {
-				loadScript(plugin_path + 'form.validate/jquery.validation.min.js', function() {
+			loadScript('assets/plugins/form.validate/jquery.form.min.js', function() {
+				loadScript('assets/plugins/form.validate/jquery.validation.min.js', function() {
 
 					if(jQuery().validate) {
 
@@ -2914,7 +2914,7 @@
 		var _container = jQuery('input.masked');
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'form.masked/jquery.maskedinput.js', function() {
+			loadScript('assets/plugins/form.masked/jquery.maskedinput.js', function() {
 				
 				_container.each(function() {
 				
@@ -2947,7 +2947,7 @@
 		var _container_1 = jQuery('.datepicker');
 		
 		if(_container_1.length > 0) {
-			loadScript(plugin_path + 'bootstrap.datepicker/js/bootstrap-datepicker.min.js', function() {
+			loadScript('assets/plugins/bootstrap.datepicker/js/bootstrap-datepicker.min.js', function() {
 		
 				if(jQuery().datepicker) {
 
@@ -2956,7 +2956,7 @@
 							_lang 	=	_t.attr('data-lang') || 'en';
 
 						if(_lang != 'en' && _lang != '') { // load language file
-							loadScript(plugin_path + 'bootstrap.datepicker/locales/bootstrap-datepicker.'+_lang+'.min.js');
+							loadScript('assets/plugins/bootstrap.datepicker/locales/bootstrap-datepicker.'+_lang+'.min.js');
 						}
 
 						jQuery(this).datepicker({
@@ -2993,8 +2993,8 @@
 		var _container_2 = jQuery('.rangepicker');
 		
 		if(_container_2.length > 0) {
-			loadScript(plugin_path + 'bootstrap.daterangepicker/moment.min.js', function() {
-				loadScript(plugin_path + 'bootstrap.daterangepicker/daterangepicker.js', function() {
+			loadScript('assets/plugins/bootstrap.daterangepicker/moment.min.js', function() {
+				loadScript('assets/plugins/bootstrap.daterangepicker/daterangepicker.js', function() {
 			
 					if(jQuery().datepicker) {
 
@@ -3038,7 +3038,7 @@
 		var _container_3 = jQuery('.timepicker');
 		
 		if(_container_3.length > 0) {
-			loadScript(plugin_path + 'timepicki/timepicki.min.js', function() {
+			loadScript('assets/plugins/timepicki/timepicki.min.js', function() {
 			
 				if(jQuery().timepicki) {
 
@@ -3056,7 +3056,7 @@
 		var _container_4 = jQuery('.colorpicker');
 		
 		if(_container_4.length > 0) {
-			loadScript(plugin_path + 'spectrum/spectrum.min.js', function() {
+			loadScript('assets/plugins/spectrum/spectrum.min.js', function() {
 			
 				if(jQuery().spectrum) {
 
@@ -3139,7 +3139,7 @@
 		
 		if(_container_1.length > 0) {
 			
-			loadScript(plugin_path + 'editor.summernote/summernote.min.js', function() {
+			loadScript('assets/plugins/editor.summernote/summernote.min.js', function() {
 		
 				if(jQuery().summernote) {
 
@@ -3149,7 +3149,7 @@
 
 						if(_lang != 'en-US') { // Language!
 						alert(_lang);
-							loadScript(plugin_path + 'editor.summernote/lang/summernote-'+_lang+'.js');
+							loadScript('assets/plugins/editor.summernote/lang/summernote-'+_lang+'.js');
 						}
 
 						jQuery(this).summernote({
@@ -3184,7 +3184,7 @@
 		
 		if(_container_2.length > 0) {
 			
-			loadScript(plugin_path + 'editor.markdown/js/bootstrap-markdown.min.js', function() {
+			loadScript('assets/plugins/editor.markdown/js/bootstrap-markdown.min.js', function() {
 		
 				if(jQuery().markdown) {
 
@@ -3194,7 +3194,7 @@
 						var _lang = _t.attr('data-lang') || 'en';
 
 						if(_lang != 'en') { // Language!
-							loadScript(plugin_path + 'editor.markdown/locale/bootstrap-markdown.'+_lang+'.js');
+							loadScript('assets/plugins/editor.markdown/locale/bootstrap-markdown.'+_lang+'.js');
 						}
 
 						jQuery(this).markdown({
@@ -3244,7 +3244,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'pajinate/jquery.pajinate.bootstrap.min.js', function() {
+			loadScript('assets/plugins/pajinate/jquery.pajinate.bootstrap.min.js', function() {
 			
 				if(jQuery().pajinate) {
 
@@ -3286,7 +3286,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'infinite-scroll/jquery.infinitescroll.min.js', function() {
+			loadScript('assets/plugins/infinite-scroll/jquery.infinitescroll.min.js', function() {
 
 					_navSelector	= _container.attr('data-nextSelector') || "#inf-load-nex",
 					_itemSelector	= _container.attr('data-itemSelector') || ".item",
@@ -3342,7 +3342,7 @@
 		
 		if(_container.length > 0) {
 		
-			loadScript(plugin_path + 'image.zoom/jquery.zoom.min.js', function() {
+			loadScript('assets/plugins/image.zoom/jquery.zoom.min.js', function() {
 				
 				if(jQuery().zoom) {
 				
@@ -3413,7 +3413,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'typeahead.bundle.js', function() {
+			loadScript('assets/plugins/typeahead.bundle.js', function() {
 
 				if(jQuery().typeahead) {
 					
@@ -3476,7 +3476,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'form.stepper/jquery.stepper.min.js', function() {
+			loadScript('assets/plugins/form.stepper/jquery.stepper.min.js', function() {
 
 				if(jQuery().stepper) {
 
@@ -3526,7 +3526,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'slimscroll/jquery.slimscroll.min.js', function() {
+			loadScript('assets/plugins/slimscroll/jquery.slimscroll.min.js', function() {
 
 				if(jQuery().slimScroll) {
 
@@ -3670,7 +3670,7 @@
 
 		if(_t.length > 0) {
 
-			loadScript(plugin_path + 'jquery.backstretch.min.js', function() {
+			loadScript('assets/plugins/jquery.backstretch.min.js', function() {
 
 				jQuery(_t).each(function() {
 					var _this 				= jQuery(this),
@@ -3749,7 +3749,7 @@
 
 		if(data_background != '') {
 		
-			loadScript(plugin_path + 'jquery.backstretch.min.js', function() {
+			loadScript('assets/plugins/jquery.backstretch.min.js', function() {
 
 				if(data_background) {
 					jQuery.backstretch(data_background);
@@ -3811,7 +3811,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'widget.jflickr/jflickrfeed.min.js', function() {
+			loadScript('assets/plugins/widget.jflickr/jflickrfeed.min.js', function() {
 
 				if(jQuery().jflickrfeed) {
 					if(jQuery('.widget-flickr')) {
@@ -3858,7 +3858,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'widget.twittie/twittie.min.js', function() {
+			loadScript('assets/plugins/widget.twittie/twittie.min.js', function() {
 
 				if(jQuery().twittie) {
 					// jQuery('.example1 .tweet').twittie({
@@ -3975,7 +3975,7 @@
 		
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'widget.dribbble/jribbble.min.js', function() {
+			loadScript('assets/plugins/widget.dribbble/jribbble.min.js', function() {
 
 					var _token 	= _container.attr('data-token') 	|| 'f688ac519289f19ce5cebc1383c15ad5c02bd58205cd83c86cbb0ce09170c1b4', // demo default
 						_target	= _container.attr('data-target') 	|| '_blank',
@@ -4014,7 +4014,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'widget.mediaelementbuild/mediaelement-and-player.min.js', function() {
+			loadScript('assets/plugins/widget.mediaelementbuild/mediaelement-and-player.min.js', function() {
 
 
 			
