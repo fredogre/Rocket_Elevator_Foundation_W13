@@ -1,47 +1,0 @@
-{:uriI"êfile://app/assets/plugins/chart.easypiechart/demo/jquery.html?type=text/html&id=1cf18b4ab9b37eac150c2f2230b649581e98240e55744a90e256e18b5ecbf8a6:ET:load_pathI"app/assets/plugins;T:filenameI";app/assets/plugins/chart.easypiechart/demo/jquery.html;T:	nameI"#chart.easypiechart/demo/jquery;T:logical_pathI"(chart.easypiechart/demo/jquery.html;T:content_typeI"text/html;T:sourceI"ö<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8"/>
-	<title>jQuery</title>
-	<meta name="viewport" content="width=device-width"/>
-	<link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-
-	<ul>
-		<li><a href="index.html">Vanilla JS</a></li>
-		<li><a href="jquery.html" class="active">jQuery plugin</a></li>
-		<li><a href="angular.html">Angular module</a></li>
-		<li><a href="requirejs.html">RequireJS module</a></li>
-	</ul>
-
-	<span class="chart" data-percent="86">
-		<span class="percent"></span>
-	</span>
-
-	<span class="btn js_update">Update chart</span>
-
-	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-	<script src="../dist/jquery.easypiechart.min.js"></script>
-	<script>
-	$(function() {
-		$('.chart').easyPieChart({
-			easing: 'easeOutBounce',
-			onStep: function(from, to, percent) {
-				$(this.el).find('.percent').text(Math.round(percent));
-			}
-		});
-		var chart = window.chart = $('.chart').data('easyPieChart');
-		$('.js_update').on('click', function() {
-			chart.update(Math.random()*200-100);
-		});
-	});
-	</script>
-</body>
-</html>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Ifile-digest://app/assets/plugins/chart.easypiechart/demo/jquery.html;TTF:charsetI"
-utf-8;F:digest"%ì¡]6≠ìöœM<ıwf≤uRP&dëäJ—oÀ…:lengthiö:dependencies_digest"%EhúM˘}T<0Ën2Æ8∂«ÆÆ)»∏‚√ÎS5GOı:idI"E1cf18b4ab9b37eac150c2f2230b649581e98240e55744a90e256e18b5ecbf8a6;F:
-mtimel+ãÖ[

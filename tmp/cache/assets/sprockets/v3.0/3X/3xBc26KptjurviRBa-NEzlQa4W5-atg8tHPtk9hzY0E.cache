@@ -1,47 +1,0 @@
-{:uriI"õfile://app/assets/plugins/datatables/extensions/FixedColumns/Readme.txt?type=text/plain&id=06ef445b61366a7ca18ce47c612038f5e56c6e1357f5f4c691209c30914736a3:ET:load_pathI"app/assets/plugins;T:filenameI"Eapp/assets/plugins/datatables/extensions/FixedColumns/Readme.txt;T:	nameI".datatables/extensions/FixedColumns/Readme;T:logical_pathI"2datatables/extensions/FixedColumns/Readme.txt;T:content_typeI"text/plain;T:sourceI"Â# FixedColumns
-
-When making use of DataTables' x-axis scrolling feature (`scrollX`), you may wish to fix the left or right most columns in place. This plug-in for DataTables provides exactly this option (for non-scrolling tables, please use the FixedHeader plug-in, which can fix headers, footers and columns). Key features include:
-
-* Freezes the left most column to the side of the table
-* Option to freeze two or more columns
-* Full integration with DataTables' scrolling options
-
-
-# Installation
-
-To use FixedColumns, first download DataTables ( http://datatables.net/download ) and place the unzipped FixedColumns package into a `extensions` directory in the DataTables package. This will allow the pages in the examples to operate correctly. To see the examples running, open the `examples` directory in your web-browser.
-
-
-# Basic usage
-
-FixedColumns is initialised using the `$.fn.dataTable.FixedColumns()` constructor. For example:
-
-```js
-$(document).ready(function() {
-	var table = $('#example').DataTable( {
-		scrollY:        "300px",
-		scrollX:        true,
-		scrollCollapse: true,
-		paging:         false
-	} );
-
-	new $.fn.dataTable.FixedColumns( table );
-} );
-```
-
-
-# Documentation / support
-
-* Documentation: http://datatables.net/extensions/FixedColumns/
-* DataTables support forums: http://datatables.net/forums
-
-
-# GitHub
-
-If you fancy getting involved with the development of FixedColumns and help make it better, please refer to its GitHub repo: https://github.com/DataTables/FixedColumns
-
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"Sfile-digest://app/assets/plugins/datatables/extensions/FixedColumns/Readme.txt;TTF:charsetI"
-utf-8;F:digest"%≠®ú∆vÊä◊XÅ⁄‡Y +rÚ¶¸#Ÿ≈øÙÆ45:lengthiÂ:dependencies_digest"%”∏∫Ú?f≥pº*ÛäwGπ<\u•öùPµ£ö≥°ó:idI"E06ef445b61366a7ca18ce47c612038f5e56c6e1357f5f4c691209c30914736a3;F:
-mtimel+ãÖ[
