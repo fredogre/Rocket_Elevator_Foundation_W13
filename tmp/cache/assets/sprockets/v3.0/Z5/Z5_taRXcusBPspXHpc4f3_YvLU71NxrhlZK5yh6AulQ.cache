@@ -1,0 +1,34 @@
+{:uriI"–file://app/assets/plugins/slider.nivo/nivoslider.jquery.json?type=application/json&id=c17cc5d0c3f83a56eb06b871e30db56a5e7f74b33180514849aae739c013efb2:ET:load_pathI"app/assets/plugins;T:filenameI":app/assets/plugins/slider.nivo/nivoslider.jquery.json;T:	nameI""slider.nivo/nivoslider.jquery;T:logical_pathI"'slider.nivo/nivoslider.jquery.json;T:content_typeI"application/json;T:sourceI"Ô{
+  "name": "nivoslider",
+  "version": "3.2",
+  "title": "Nivo Slider",
+  "author": {
+    "name": "Gilbert Pellegrom",
+    "url": "http://gilbert.pellegrom.me"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/gilbitron/Nivo-Slider/blob/master/license.txt"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "description": "The Most Awesome jQuery Image Slider.",
+  "keywords": [
+    "slider",
+    "animation",
+    "effect"
+  ],
+  "homepage": "http://nivo.dev7studios.com",
+  "docs": "http://nivo.dev7studios.com/support",
+  "demo": "http://nivo.dev7studios.com/demos",
+  "download": "http://nivo.dev7studios.com/pricing",
+  "bugs": "https://github.com/gilbitron/Nivo-Slider/issues"
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Hfile-digest://app/assets/plugins/slider.nivo/nivoslider.jquery.json;TTF:charsetI"
+utf-8;F:digest"%ë÷44Zb°Ä¿lş­§uP€(Û%µ3
+7ó?J:lengthiÔ:dependencies_digest"%F<5¡W“Áø¿À¤¿J§„EËG 	¤Â­ä§¶i:idI"Ec17cc5d0c3f83a56eb06b871e30db56a5e7f74b33180514849aae739c013efb2;F:
+mtimel+‹…[
