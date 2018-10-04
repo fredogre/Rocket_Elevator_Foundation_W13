@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nb_of_units: 1
+  nb_of_floors: 1
+  nb_of_basements: 1
+  nb_of_parkings: 1
+  nb_of_elevators: 1
+  max_occupants: 1
+  business_hours: 1
+
+two:
+  nb_of_units: 1
+  nb_of_floors: 1
+  nb_of_basements: 1
+  nb_of_parkings: 1
+  nb_of_elevators: 1
+  max_occupants: 1
+  business_hours: 1
