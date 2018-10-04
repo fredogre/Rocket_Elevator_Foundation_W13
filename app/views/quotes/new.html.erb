@@ -1,14 +1,39 @@
 <h1>New Quote</h1>
 
-<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+<%= form_with scope: :quote, url: quotes_path, local: true do |form| %>
   <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :Number_of_units %><br>
+    <%= form.text_field :nb_of_units %>
   </p>
  
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.label :Number_of_floors %><br>
+    <%= form.text_field :nb_of_floors %>
+  </p>
+
+  <p>
+    <%= form.label :Number_of_basements %><br>
+    <%= form.text_field :nb_of_basements %>
+  </p>
+
+  <p>
+    <%= form.label :Number_of_parkings %><br>
+    <%= form.text_field :nb_of_parkings %>
+  </p>
+
+  <p>
+    <%= form.label :Number_of_elevators_required %><br>
+    <%= form.text_field :nb_of_elevators %>
+  </p>
+
+  <p>
+    <%= form.label :Maximum_occupants_capacity %><br>
+    <%= form.text_field :max_occupants %>
+  </p>
+
+  <p>
+    <%= form.label :Business_hours_per_day %><br>
+    <%= form.text_field :business_hours %>
   </p>
  
   <p>

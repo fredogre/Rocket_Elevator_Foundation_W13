@@ -3,7 +3,15 @@ class QuotesController < ApplicationController
     end
 
     def create
-        render plain: params[:article].inspect
+        @quote = Quote.new(quote_params)
+       
+        @quote.save
+        redirect_to root_path
+    end
+
+    private
+    def quote_params
+        params.require(:quote).permit!
     end
 
 end
