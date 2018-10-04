@@ -13,6 +13,11 @@
 
 //= require jquery-3.3.1.min.js
 //= require bootstrap.min.js
+//= require plugins/slider.revolution/js/jquery.themepunch.tools.min.js
+//= require plugins/slider.revolution/js/jquery.themepunch.revolution.min.js
+//= require view/demo.revolution_slider.js
+//= require script_guillaume.js
 //= require scripts.js
 //= require quote.js
+//= require quote_old.js
 

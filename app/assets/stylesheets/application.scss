@@ -13,20 +13,13 @@
  *= require_self
  */
 
-
- @import "bootstrap-sprockets";
- @import "bootstrap";
  @import "bootstrap.min.scss";
- @import "font-awesome-sprockets";
- @import "font-awesome";
- @import "bootstrap-social";
- @import "header-1.scss";
  @import "essentials.scss";
- @import "guillaume.scss";
  @import "layout.scss";
+ @import "header-1.scss";
+ @import "darkblue.scss";
+ @import "extralayers.scss";
+ @import "settings.scss";
+ @import "guillaume.scss";
  @import "custom.scss";
- @import "color_scheme/darkblue.scss";
- @import "plugins/bootstrap/css/bootstrap.min.css";
- @import "plugins/slider.revolution/css/extralayers.css";
- @import "plugins/slider.revolution/css/settings.css";
- @import "pages";
+
