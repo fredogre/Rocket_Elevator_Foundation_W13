@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'pages/index'
   get 'pages/index2'
   get 'pages/indextemp'
 
