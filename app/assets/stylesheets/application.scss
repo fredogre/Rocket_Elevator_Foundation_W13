@@ -19,7 +19,11 @@
  @import "header-1.scss";
  @import "darkblue.scss";
  @import "extralayers.scss";
- @import "settings.scss";
+
  @import "guillaume.scss";
  @import "custom.scss";
+ @import "settings.scss";
 
+ .tp-leftarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/large_left.png) no-Repeat top left;	width:40px;	height:40px;   }
+ .tp-rightarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/large_right.png) no-Repeat top left;	width:40px;	height:40px;   }
+ 
