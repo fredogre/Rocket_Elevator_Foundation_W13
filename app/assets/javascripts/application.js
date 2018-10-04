@@ -19,5 +19,5 @@
 //= require script_guillaume.js
 //= require scripts.js
 //= require quote.js
-//= require quote_old.js
+
 
