@@ -1,3 +1,4 @@
+
 		<div id="slidetop">
 			<div class="container">				
 				<div class="row">
@@ -43,7 +44,8 @@
 
 							<!-- Logo -->
 							<a class="logo float-left scrollTo" href="#top">
-								<img src="assets/images/_rocketelevators/R2.png" alt="" data-bgposition="CENTER " />
+								<%= image_tag("_rocketelevators/R2.png") %>
+								<!--<img src="assets/images/_rocketelevators/R2.png" alt="" data-bgposition="CENTER " />-->
 							</a>
 
 							<!-- 
@@ -113,7 +115,10 @@
 							<!-- SLIDE  -->
 							<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600" data-delay="7000"  data-saveperformance="off"  data-title="Higher ground">
 								<!-- MAIN IMAGE -->
-								<img src="assets/images/_rocketelevators/AdobeStock_122227340.jpeg"  alt="cover image"  data-bgposition="CENTER " data-bgfit="cover" data-bgrepeat="no-repeat" data-shadow="" >
+								
+								<!--<%= image_tag("_rocketelevators/AdobeStock_122227340.jpeg") %>-->
+								<%= image_tag("_rocketelevators/1x1.png", alt: "elevators", data: {lazyload: asset_url("_rocketelevators/AdobeStock_122227340.jpeg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
+								<!--<img src="assets/images/_rocketelevators/AdobeStock_122227340.jpeg"  alt="cover image"  data-bgposition="CENTER " data-bgfit="cover" data-bgrepeat="no-repeat" data-shadow="" >-->
 								
 								<div class="overlay dark-8"><!-- dark overlay [0 to 9 opacity] --></div>
 								<div class="d-none d-sm-none d-md-none d-lg-block"> <!--BIG SCREEN-->
@@ -311,7 +316,9 @@
 							<!-- SLIDE  -->
 							<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600" data-delay="7000" data-saveperformance="off" data-title="Residential">
 								<!-- MAIN IMAGE -->
-								<img src="assets/images/_rocketelevators/luxury-home-elevator-design2.png" alt="cover image"  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat" data-shadow="" >
+								<!--<%= image_tag("_rocketelevators/luxury-home-elevator-design2.png") %>-->
+								<%= image_tag("_rocketelevators/1x1.png", alt: "elevators", data: {lazyload: asset_url("_rocketelevators/luxury-home-elevator-design2.png"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
+								<!--<img src="assets/images/_rocketelevators/luxury-home-elevator-design2.png" alt="cover image"  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat" data-shadow="" >-->
 
 								<div class="overlay dark-8"><!-- dark overlay [0 to 9 opacity] --></div>
 								<div class="d-none d-sm-none d-md-none d-lg-block"> <!--BIG SCREEN-->
@@ -459,7 +466,9 @@
 							<!-- SLIDE  -->
 							<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300" data-delay="7000" data-saveperformance="off" data-title="Commercial">
 								<!-- MAIN IMAGE -->
-								<img src="assets/images/_rocketelevators/elevator-stock-600x300.jpg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+								<%= image_tag("_rocketelevators/1x1.png", alt: "elevators", data: {lazyload: asset_url("_rocketelevators/elevator-stock-600x300"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
+								<!--<%= image_tag("_rocketelevators/elevator-stock-600x300.jpg") %>
+								<img src="assets/images/_rocketelevators/elevator-stock-600x300.jpg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">-->
 
 								<div class="overlay dark-8"><!-- dark overlay [0 to 9 opacity] --></div>
 								<div class="d-none d-sm-none d-md-none d-lg-block"> <!--BIG SCREEN-->
@@ -626,7 +635,8 @@
 									<a class="image-hover" href="#portfolio" > 
 										<span class="image-hover-icon image-hover-dark"> <!-- image-hover-light | image-hover-dark -->
 										</span>
-										<img class="img-fluid" src="assets/images/_rocketelevators/Bollywood-Awards.jpg" alt="img" />
+										<%= image_tag("_rocketelevators/Bollywood-Awards.jpg", :class => "img-fluid") %>
+										<!--<img class="img-fluid" src="assets/images/_rocketelevators/Bollywood-Awards.jpg" alt="img" />-->
 									</a>
 								</div>
 	
@@ -641,7 +651,8 @@
 								<!--TO DO-->
 								<a class="image-hover" href="page_services_residential.html" >
 									<span class="image-hover-icon image-hover-dark"></span>
-									<img class="img-fluid" src="assets/images/_rocketelevators/contemporary-entry.jpg" alt="img" />
+									<%= image_tag("_rocketelevators/contemporary-entry.jpg", :class => "img-fluid") %>
+									<!--<img class="img-fluid" src="assets/images/_rocketelevators/contemporary-entry.jpg" alt="img" />-->
 								</a>
 								<h3 class="mt-10">Residential services</h3>
 								<p>Our residential elevators will get you up even if you can't</p>
@@ -651,9 +662,9 @@
 							<div class="col-sm-12 col-md-4">
 								<!--TO DO-->
 								<a class="image-hover" href="page_services_commercial.html" data-plugin-options='{"type":"iframe"}'>
-										<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-										</span>
-										<img class="img-fluid" src="assets/images/_rocketelevators/elevator-stock-600x300.jpg" alt="img" />
+										<span class="image-hover-icon image-hover-dark"></span>
+										<%= image_tag("_rocketelevators/elevator-stock-600x300.jpg", :class => "img-fluid") %>
+										<!--<img class="img-fluid" src="assets/images/_rocketelevators/elevator-stock-600x300.jpg" alt="img" />-->
 									</a>
 									<h3 class="mt-10">Corporate services</h3>
 									<p>Our corporate elevators will get you to the top in no time</p>
@@ -1007,6 +1018,7 @@
 													</a>
 												</span>
 											</span>
+											
 												<img class="img-fluid" src="assets/images/_rocketelevators/151007_Cambridge_R2_Modern-style_High-resolution600x300.jpg" width="600" height="399" alt="">	
 													
 											</figure>
