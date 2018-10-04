@@ -1,5 +1,6 @@
 $(document).ready(function(){
   //initialise quote radio button
+  //document.getElementById(residential-tab-button).attr('aria-selected', false);
   $('input:radio[name=project_type]:nth(0)').attr('checked', true);
   $('input:radio[name=product_type]:nth(0)').attr('checked', true);
   });
