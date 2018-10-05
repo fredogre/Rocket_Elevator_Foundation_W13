@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/residential'
   get 'pages/commercial'
- 
+  
   post '/new_quote' => 'quotes#new_quote'
   resource :quotes
   resource :employees
