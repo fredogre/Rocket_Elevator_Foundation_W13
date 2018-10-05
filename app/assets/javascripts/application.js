@@ -14,6 +14,7 @@
 
 // Bootstrap is being loaded from a plugin. If plugin removed, add require_ bootstrap
 //= require jquery-3.3.1.min.js
+
 //= require plugins/slider.revolution/js/jquery.themepunch.tools.min.js
 //= require plugins/slider.revolution/js/jquery.themepunch.revolution.min.js
 //= require view/demo.revolution_slider.js
