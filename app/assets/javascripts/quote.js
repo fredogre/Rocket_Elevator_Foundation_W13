@@ -4,6 +4,13 @@ var quoteparams = [];
 
 var form;
 
+var quote_first_name;
+var quote_last_name;
+var quote_email;
+var quote_company;
+var quote_project_name;
+var quote_project_location;
+
 //residential link
 var quote_res_nbunit;
 var quote_res_nbfloor;
@@ -72,6 +79,13 @@ function validatevalue(itemToCheck) {
 function getElement(){
     form = document.getElementById('quoteform');
 
+    quote_first_name = document.getElementById('contact_first_name');
+    quote_last_name = document.getElementById('contact_last_name');
+    quote_email = document.getElementById('contact_email');
+    quote_company = document.getElementById('contact_company');
+    quote_project_name = document.getElementById('project_name');
+    quote_project_location = document.getElementById('project_location');
+
     //residential link
     quote_res_nbunit = document.getElementById('res_nbapartment');
     quote_res_nbfloor = document.getElementById('res_floors');
@@ -114,6 +128,7 @@ function checkformvalue() {
 
     projecttype = document.querySelector('input[name="project_type"]:checked').value
 
+
     //validation for residential
     if (projecttype === "residential") {
         checkresult[0] = validatevalue('#res_nbapartment');
@@ -148,11 +163,13 @@ function checkformvalue() {
         if ((checkresult[index1][0] == true) && (checkresult[index1][1] == true)) {
             //alert('Please fill all the required information')
             badvalue = true;
+            document.getElementById("quoteform_submit").disabled = true
             break;
         };
     };
 
     if (badvalue === false) {
+        document.getElementById("quoteform_submit").disabled = false
         shaftcalculation();
     };
 };
