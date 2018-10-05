@@ -43,7 +43,7 @@ class QuotesController < ApplicationController
 
         quote.contact = contact
         quote.save!
-
+        redirect_to root_path
     end
 
     def create
