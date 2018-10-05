@@ -4,6 +4,13 @@ var quoteparams = [];
 
 var form;
 
+var quote_first_name;
+var quote_last_name;
+var quote_email;
+var quote_company;
+var quote_project_name;
+var quote_project_location;
+
 //residential link
 var quote_res_nbunit;
 var quote_res_nbfloor;
@@ -36,6 +43,11 @@ var quote_nbshafttotal;
 var quote_result_unitcost;
 var quote_result_installcost;
 var quote_result_totalcost;
+
+var temp_nbshafttotal;
+var temp_unitcost;
+var temp_installcost;
+var temp_totalcost;
 
 const stardardcost = 7565, premiumcost = 12345, exceliumcost = 15400;
 
@@ -71,6 +83,13 @@ function validatevalue(itemToCheck) {
 
 function getElement(){
     form = document.getElementById('quoteform');
+
+    quote_first_name = document.getElementById('contact_first_name');
+    quote_last_name = document.getElementById('contact_last_name');
+    quote_email = document.getElementById('contact_email');
+    quote_company = document.getElementById('contact_company');
+    quote_project_name = document.getElementById('project_name');
+    quote_project_location = document.getElementById('project_location');
 
     //residential link
     quote_res_nbunit = document.getElementById('res_nbapartment');
@@ -114,6 +133,7 @@ function checkformvalue() {
 
     projecttype = document.querySelector('input[name="project_type"]:checked').value
 
+
     //validation for residential
     if (projecttype === "residential") {
         checkresult[0] = validatevalue('#res_nbapartment');
@@ -148,11 +168,13 @@ function checkformvalue() {
         if ((checkresult[index1][0] == true) && (checkresult[index1][1] == true)) {
             //alert('Please fill all the required information')
             badvalue = true;
+            document.getElementById("quoteform_submit").disabled = true
             break;
         };
     };
 
     if (badvalue === false) {
+        document.getElementById("quoteform_submit").disabled = false
         shaftcalculation();
     };
 };
@@ -243,21 +265,28 @@ function shaftcalculation(){
         quote_nbshafttotal.innerText = ''
     } else {
         quote_nbshafttotal.innerText = resultNbElevator;
+        $(temp_nbshafttotal).val(resultNbElevator)
+        //temp_nbshafttotal.innerText = resultNbElevator;
     };
-
     if (!unitcost){
         quote_result_unitcost.innerText = ''
     } else {
         quote_result_unitcost.innerText = parseInt(unitcost);
+        $(temp_unitcost).val(parseInt(unitcost))
+        //temp_unitcost.innerText = parseInt(unitcost);
     };
     if (!installcost){
         quote_result_installcost.innerText = ''
     } else {
         quote_result_installcost.innerText = parseInt(installcost);
+        //temp_installcost.innerText = parseInt(installcost);
+        $(temp_installcost).val(parseInt(installcost))
     };
     if (!totalcost){
         quote_result_totalcost.innerText = ''
     } else {
         quote_result_totalcost.innerText = parseInt(totalcost);
+        $(temp_totalcost).val(parseInt(totalcost))
+        //temp_totalcost.innerText = parseInt(totalcost);
     };
 };
