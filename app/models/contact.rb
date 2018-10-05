@@ -1,3 +1,3 @@
 class Contact < ApplicationRecord
-    has_many :quotes
+    has_many :quote
 end
