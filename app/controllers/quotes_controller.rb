@@ -1,5 +1,13 @@
 class QuotesController < ApplicationController
-    def new
+    def new_quote
+        puts 'rje suis dans new quote'
+
+        puts params["nb_floors"]
+
+        quote = Quote.new
+        quote.nb_of_floors = params["nb_floors"]
+        quote.save
+
     end
 
     def create
