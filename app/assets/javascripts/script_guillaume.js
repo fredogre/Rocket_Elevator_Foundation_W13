@@ -6,11 +6,12 @@ $(document).ready(function(){
   
   });
 
-$('#quoteform_submit').submit(fonction(x)) {
-    x.e.preventDefault();
-    $('#myModal').modal('toggle');
+$('#button').submit(function(e) {
+    e.preventDefault();
+    // Coding
+    $('##myModal').modal('toggle'); //or  $('#IDModal').modal('hide');
     return false;
-}
+});
 
 function show_form_section(id_show,id_hide1,id_hide2,id_hide3){
     document.getElementById(id_show).style.display ='block';

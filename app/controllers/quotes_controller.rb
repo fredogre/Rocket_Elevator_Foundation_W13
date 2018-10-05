@@ -41,6 +41,15 @@ class QuotesController < ApplicationController
         quote.Project_Type = params["project_type"]
         quote.product_type = params["product_type"]
 
+        quote.nbshaft = params["nbshaft"]
+        quote.unitcost = params["unitcost"]
+        quote.installcost = params["installcost"]
+        quote.totalcost = params["totalcost"]
+
+        pp params["unitcost"]
+        pp params["installcost"]
+        pp params["totalcost"]
+
         quote.contact = contact
         quote.save!
         redirect_to root_path

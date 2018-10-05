@@ -44,6 +44,11 @@ var quote_result_unitcost;
 var quote_result_installcost;
 var quote_result_totalcost;
 
+var temp_nbshafttotal;
+var temp_unitcost;
+var temp_installcost;
+var temp_totalcost;
+
 const stardardcost = 7565, premiumcost = 12345, exceliumcost = 15400;
 
 function validatevalue(itemToCheck) {
@@ -260,21 +265,28 @@ function shaftcalculation(){
         quote_nbshafttotal.innerText = ''
     } else {
         quote_nbshafttotal.innerText = resultNbElevator;
+        $(temp_nbshafttotal).val(resultNbElevator)
+        //temp_nbshafttotal.innerText = resultNbElevator;
     };
-
     if (!unitcost){
         quote_result_unitcost.innerText = ''
     } else {
         quote_result_unitcost.innerText = parseInt(unitcost);
+        $(temp_unitcost).val(parseInt(unitcost))
+        //temp_unitcost.innerText = parseInt(unitcost);
     };
     if (!installcost){
         quote_result_installcost.innerText = ''
     } else {
         quote_result_installcost.innerText = parseInt(installcost);
+        //temp_installcost.innerText = parseInt(installcost);
+        $(temp_installcost).val(parseInt(installcost))
     };
     if (!totalcost){
         quote_result_totalcost.innerText = ''
     } else {
         quote_result_totalcost.innerText = parseInt(totalcost);
+        $(temp_totalcost).val(parseInt(totalcost))
+        //temp_totalcost.innerText = parseInt(totalcost);
     };
 };
