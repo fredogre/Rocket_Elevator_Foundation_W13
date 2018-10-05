@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/index2'
   get 'pages/indextemp'
-
+  post '/new_quote' => 'quotes#new_quote'
   resource :quotes
   
   root 'pages#index'
