@@ -30,13 +30,9 @@ ActiveRecord::Schema.define(version: 2018_10_05_141111) do
     t.string "Email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
     t.string "userid"
     t.integer "user_id"
     t.index ["userid"], name: "index_employees_on_userid"
-=======
-    t.integer "user_id"
->>>>>>> master
   end
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
