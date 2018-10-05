@@ -22,6 +22,8 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'devise'
 
+gem 'auto-session-timeout'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
