@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/index2'
   get 'pages/indextemp'
+<<<<<<< HEAD
+=======
+  post '/new_quote' => 'quotes#new_quote'
+>>>>>>> master
   resource :quotes
   resource :employees
   

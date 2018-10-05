@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_10_04_215319) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -21,9 +22,22 @@ ActiveRecord::Schema.define(version: 2018_10_04_215319) do
     t.datetime "updated_at", null: false
     t.string "userid"
     t.index ["userid"], name: "index_employees_on_userid"
+=======
+ActiveRecord::Schema.define(version: 2018_10_05_040843) do
+
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "First_Name"
+    t.string "Last_Name"
+    t.string "Project_Name"
+    t.string "Location"
+    t.string "Company"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> master
   end
 
-  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "nb_of_units"
     t.integer "nb_of_floors"
     t.integer "nb_of_basements"
@@ -33,9 +47,15 @@ ActiveRecord::Schema.define(version: 2018_10_04_215319) do
     t.integer "business_hours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "Project_Type"
+    t.string "product_type"
   end
 
+<<<<<<< HEAD
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+=======
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+>>>>>>> master
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
