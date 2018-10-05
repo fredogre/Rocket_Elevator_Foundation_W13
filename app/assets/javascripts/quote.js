@@ -265,28 +265,25 @@ function shaftcalculation(){
         quote_nbshafttotal.innerText = ''
     } else {
         quote_nbshafttotal.innerText = resultNbElevator;
-        $(temp_nbshafttotal).val(resultNbElevator)
-        //temp_nbshafttotal.innerText = resultNbElevator;
+        document.getElementById("nbshaft").value = resultNbElevator;
     };
     if (!unitcost){
         quote_result_unitcost.innerText = ''
     } else {
         quote_result_unitcost.innerText = parseInt(unitcost);
-        $(temp_unitcost).val(parseInt(unitcost))
-        //temp_unitcost.innerText = parseInt(unitcost);
+        document.getElementById("unitcost").value = parseInt(unitcost);
     };
     if (!installcost){
         quote_result_installcost.innerText = ''
     } else {
         quote_result_installcost.innerText = parseInt(installcost);
-        //temp_installcost.innerText = parseInt(installcost);
-        $(temp_installcost).val(parseInt(installcost))
+        document.getElementById("installcost").value = parseInt(installcost);
+
     };
     if (!totalcost){
         quote_result_totalcost.innerText = ''
     } else {
         quote_result_totalcost.innerText = parseInt(totalcost);
-        $(temp_totalcost).val(parseInt(totalcost))
-        //temp_totalcost.innerText = parseInt(totalcost);
+        document.getElementById("totalcost").value = parseInt(totalcost);
     };
 };
