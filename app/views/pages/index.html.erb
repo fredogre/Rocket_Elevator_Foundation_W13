@@ -669,32 +669,32 @@
 										<div class="row" >
 											<div class="col-sm-12 col-lg-6">
 												<label>First Name *</label>
-												<input type="text" id="contact_first_name" value="" class="form-control required">
+												<input type="text" id="contact_first_name" name="contact[first_name]" value="" class="form-control required">
 											</div>
 											<div class="col-sm-12 col-lg-6">
 												<label>Last Name *</label>
-												<input type="text" id="contact_last_name" value="" class="form-control required">
+												<input type="text" id="contact_last_name" name="contact[last_name]" value="" class="form-control required">
 											</div>
 										</div>
 										<div class="row row_modal">
 											<div class="col-sm-12 col-lg-6">
 												<label>Email *</label>
-												<input type="text" id="contact_email" value="" class="form-control required">
+												<input type="text" id="contact_email" name="contact[email]" value="" class="form-control required">
 											</div>
 											<div class="col-sm-12 col-lg-6">
 												<label>Company</label>
-												<input type="text" id="contact_company" value="" class="form-control">
+												<input type="text" id="contact_company" name="contact[company]" value="" class="form-control">
 											</div>
 										</div>
 										<!-- Project information-->
 										<div class="row modal_section">
 											<div class="col-sm-12 col-md-6">
 												<label>Project name</label>
-												<input type="text" id="project_name" value="" class="form-control required">
+												<input type="text" id="project_name" name="contact[project]" value="" class="form-control required">
 											</div>
 											<div class="col-sm-12 col-md-6">
 												<label>Location</label>
-												<input type="text" id="project_location" value="" class="form-control">
+												<input type="text" id="project_location" name="contact[location]" value="" class="form-control">
 											</div>
 										</div>
 
@@ -734,15 +734,15 @@
 														<div class="row">
 															<div class="col-sm-12 col-md-4">
 																<label>Number of apartment unit *</label>
-																<input type="text" id="res_nbapartment" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="res_nbapartment" name="res_nbapartment" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of floors *</label>
-																<input type="text" id="res_floors" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="res_floors" name="res_floors" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of basement</label>
-																<input type="text" id="res_basement" class="form-control" onchange="checkformvalue();">
+																<input type="text" id="res_basement" name="res_basement" class="form-control" onchange="checkformvalue();">
 															</div>
 														</div>	
 													</div>
@@ -752,26 +752,26 @@
 														<div class="row">
 															<div class="col-sm-12 col-md-4">
 																<label>Number of distint stores</label>
-																<input type="text" id="com_nbbusiness" value="" class="form-control " onchange="checkformvalue();">
+																<input type="text" id="com_nbbusiness" name="com_nbbusiness" value="" class="form-control " onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of floors</label>
-																<input type="text" id="com_floors" value="" class="form-control " onchange="checkformvalue();">
+																<input type="text" id="com_floors" name="com_floors" value="" class="form-control " onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of basement</label>
-																<input type="text" id="com_basement" value="" class="form-control " onchange="checkformvalue();">
+																<input type="text" id="com_basement" name="com_basement" value="" class="form-control " onchange="checkformvalue();">
 															</div>
 														</div>
 														<br>
 														<div class="row">
 															<div class="col-sm-12 col-md-4">
 																<label>Number parking spaces</label>
-																<input type="text" id="com_nbparking" value="" class="form-control " onchange="checkformvalue();">
+																<input type="text" id="com_nbparking" name="com_nbparking" value="" class="form-control " onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of elevator shaft required *</label>
-																<input type="text" id="com_nbshaft" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="com_nbshaft" name="com_nbshaft" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																
@@ -784,26 +784,26 @@
 														<div class="row">
 															<div class="col-sm-12 col-md-4">
 																<label>Number of distint businesses *</label>
-																<input type="text" id="corp_nbbusiness" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="corp_nbbusiness" name="corp_nbbusiness" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of floors *</label>
-																<input type="text" id="corp_floors" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="corp_floors" name="corp_floors" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of basement *</label>
-																<input type="text" id="corp_basement" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="corp_basement" name="corp_basement" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 														</div>
 														<br>
 														<div class="row">
 															<div class="col-sm-12 col-md-4">
 																<label>Number parking spaces</label>
-																<input type="text" id="corp_nbparking" value="" class="form-control" onchange="checkformvalue();">
+																<input type="text" id="corp_nbparking" name="corp_nbparking" value="" class="form-control" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of peoples per floor *</label>
-																<input type="text" id="corp_pplefloors" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="corp_pplefloors" name="corp_pplefloors" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																
@@ -816,30 +816,30 @@
 														<div class="row">
 															<div class="col-sm-12 col-md-4">
 																<label>Number of distint businesses *</label>
-																<input type="text" id="hybrid_nbbusiness" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="hybrid_nbbusiness" name="hybrid_nbbusiness" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of floors *</label>
-																<input type="text" id="hybrid_floors" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="hybrid_floors" name="hybrid_floors" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of basement *</label>
-																<input type="text" id="hybrid_basement" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="hybrid_basement" name="hybrid_basement" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 														</div>
 														<br>
 														<div class="row">
 															<div class="col-sm-12 col-md-4">
 																<label>Number parking spaces </label>
-																<input type="text" id="hybrid_nbparking" value="" class="form-control" onchange="checkformvalue();">
+																<input type="text" id="hybrid_nbparking" name="hybrid_nbparking" value="" class="form-control" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Number of peoples per floor *</label>
-																<input type="text" id="hybrid_pplefloors" value="" class="form-control required" onchange="checkformvalue();">
+																<input type="text" id="hybrid_pplefloors" name="hybrid_pplefloors" value="" class="form-control required" onchange="checkformvalue();">
 															</div>
 															<div class="col-sm-12 col-md-4">
 																<label>Hours of activity per day *</label>
-																<input type="number" id="hybrid_hrsactivity" min="1" max="24" class="form-control required" onchange="checkformvalue();">
+																<input type="number" id="hybrid_hrsactivity" name="hybrid_hrsactivity" min="1" max="24" class="form-control required" onchange="checkformvalue();">
 															</div>
 														</div>
 													</div>

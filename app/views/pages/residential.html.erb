@@ -393,5 +393,69 @@
 	<!-- SCROLL TO TOP -->
 	<a href="#top" id="toTop"></a>
 
+<script>var plugin_path = '/assets/';</script>
+
+<!-- PAGE LEVEL SCRIPTS [cart js] -->
+	<script>
+		jQuery(window).on('load', function () {
+
+			/**
+				Chart.js
+				http://www.chartjs.org/
+			**/
+			loadScript('/assets/chart.chartjs/Chart.min.js', function () {
+
+				// polarAreaChartCanvas
+				var polarAreaChartCanvas = [
+					{
+						value: 43,
+						color: "#D97041"
+					},
+					{
+						value: 56,
+						color: "#C7604C"
+					},
+					{
+						value: 22,
+						color: "#21323D"
+					},
+					{
+						value: 77,
+						color: "#9D9B7F"
+					},
+					{
+						value: 55,
+						color: "#7D4F6D"
+					},
+					{
+						value: 95,
+						color: "#584A5E"
+					}
+				];
+
+				var ctx = document.getElementById("polarAreaChartCanvas").getContext("2d");
+				new Chart(ctx).PolarArea(polarAreaChartCanvas);
 
 
+
+				// barChartCanvas
+				var barChartCanvas = {
+					labels: ["January", "February", "March", "April", "May", "June", "July"],
+					datasets: [
+						{
+							fillColor: "rgba(220,220,220,0.5)",
+							strokeColor: "rgba(220,220,220,0.8)",
+							highlightFill: "rgba(220,220,220,0.75)",
+							highlightStroke: "rgba(220,220,220,1)",
+							data: [12, 22, 18, 32, 41, 35, 38]
+						}
+					]
+				};
+
+				var ctx = document.getElementById("barChartCanvas").getContext("2d");
+				new Chart(ctx).Bar(barChartCanvas);
+
+			});
+
+		});
+	</script>

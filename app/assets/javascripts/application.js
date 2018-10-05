@@ -18,6 +18,7 @@
 //= require plugins/slider.revolution/js/jquery.themepunch.tools.min.js
 //= require plugins/slider.revolution/js/jquery.themepunch.revolution.min.js
 //= require view/demo.revolution_slider.js
+//= require plugins/chart.chartjs/Chart.min.js
 //= require script_guillaume.js
 //= require scripts.js
 //= require quote.js

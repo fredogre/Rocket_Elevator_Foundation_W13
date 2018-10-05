@@ -3,7 +3,14 @@ $(document).ready(function(){
   //document.getElementById(residential-tab-button).attr('aria-selected', false);
   $('input:radio[name=project_type]:nth(0)').attr('checked', true);
   $('input:radio[name=product_type]:nth(0)').attr('checked', true);
+  
   });
+
+$('#quoteform_submit').submit(fonction(x)) {
+    x.e.preventDefault();
+    $('#myModal').modal('toggle');
+    return false;
+}
 
 function show_form_section(id_show,id_hide1,id_hide2,id_hide3){
     document.getElementById(id_show).style.display ='block';
