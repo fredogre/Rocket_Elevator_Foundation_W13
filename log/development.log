@@ -1,605 +1,221 @@
   [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  ↳ bin/rails:9
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('8490188920337049135', 0)[0m
-  ↳ bin/rails:9
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  ↳ bin/rails:9
-Migrating to DeviseInvitableAddToUsers (20181005182556)
-  [1m[35m (157.0ms)[0m  [1m[35mALTER TABLE `users` ADD `invitation_token` varchar(255)[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:4
-  [1m[35m (42.7ms)[0m  [1m[35mALTER TABLE `users` ADD `invitation_created_at` datetime[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:5
-  [1m[35m (39.9ms)[0m  [1m[35mALTER TABLE `users` ADD `invitation_sent_at` datetime[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:6
-  [1m[35m (37.9ms)[0m  [1m[35mALTER TABLE `users` ADD `invitation_accepted_at` datetime[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:7
-  [1m[35m (44.6ms)[0m  [1m[35mALTER TABLE `users` ADD `invitation_limit` int[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:8
-  [1m[35m (42.9ms)[0m  [1m[35mALTER TABLE `users` ADD `invited_by_type` varchar(255)[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:9
-  [1m[35m (87.2ms)[0m  [1m[35mALTER TABLE `users` ADD `invited_by_id` bigint[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:9
-  [1m[35m (84.1ms)[0m  [1m[35mCREATE  INDEX `index_users_on_invited_by_type_and_invited_by_id`  ON `users` (`invited_by_type`, `invited_by_id`) [0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:9
-  [1m[35m (41.1ms)[0m  [1m[35mALTER TABLE `users` ADD `invitations_count` int DEFAULT 0[0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:10
-  [1m[35m (73.3ms)[0m  [1m[35mCREATE  INDEX `index_users_on_invitations_count`  ON `users` (`invitations_count`) [0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:11
-  [1m[35m (71.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_invitation_token`  ON `users` (`invitation_token`) [0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:12
-  [1m[35m (53.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_invited_by_id`  ON `users` (`invited_by_id`) [0m
-  ↳ db/migrate/20181005182556_devise_invitable_add_to_users.rb:13
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ bin/rails:9
-  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181005182556')[0m
-  ↳ bin/rails:9
-  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ bin/rails:9
-  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8490188920337049135')[0m
-  ↳ bin/rails:9
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  ↳ bin/rails:9
-Started GET "/admin" for 127.0.0.1 at 2018-10-05 14:39:08 -0400
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Processing by RailsAdmin::MainController#dashboard as HTML
-Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:39:08 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.7ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (9.0ms)
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:39:13 -0400
-  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Processing by Devise::SessionsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.2ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (7.9ms)
-Completed 200 OK in 5751ms (Views: 5729.3ms | ActiveRecord: 9.2ms)
-
-
-Completed 200 OK in 5545ms (Views: 5544.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/confirmation/new" for 127.0.0.1 at 2018-10-05 14:39:34 -0400
-Processing by Devise::ConfirmationsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.5ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application (8.4ms)
-Completed 200 OK in 71ms (Views: 66.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:39:54 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.9ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (12.6ms)
-Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:39:59 -0400
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sQPfnmkS5yxlRsrw+yIlQP3Wj9BV9dof5rIPd3jWY/s3Ck1qbMYQnvz+6p+giCYKqJQLgFZEKNFewOcRR/fMNg==", "user"=>{"email"=>"matlortie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'matlortie@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/admin/
-Completed 302 Found in 126ms (ActiveRecord: 2.8ms)
-
-
-Started GET "/admin/" for 127.0.0.1 at 2018-10-05 14:39:59 -0400
-Processing by RailsAdmin::MainController#dashboard as HTML
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `contacts`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  `contacts`.* FROM `contacts` ORDER BY `contacts`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mEmployees Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `quotes`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY `quotes`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (11.5ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.7ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (17.9ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.5ms)
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (6.6ms)
-Completed 200 OK in 676ms (Views: 404.0ms | ActiveRecord: 34.9ms)
-
-
-Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-10-05 14:40:04 -0400
-Processing by RailsAdmin::MainController#index as HTML
-  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (89.8ms)
-Completed 200 OK in 142ms (Views: 123.1ms | ActiveRecord: 1.6ms)
-
-
-Started GET "/admin/user/3/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-10-05 14:40:10 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"3"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_delete_notice.html.haml (2.5ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (26.4ms)
-Completed 200 OK in 69ms (Views: 48.7ms | ActiveRecord: 1.4ms)
-
-
-Started DELETE "/admin/user/3/delete" for 127.0.0.1 at 2018-10-05 14:40:12 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"klfWNK00B8aoNjZzKMzhytKSD2VOSTBTfLMTALLIGhAXYcpNFlWQuH/4EQXE+LfCejAKezHrbQ3Tmz0a2CBPlw==", "return_to"=>"http://localhost:3000/admin/user", "model_name"=>"user", "id"=>"3"}
-  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Destroy (10.5ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 3[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (81.2ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/admin/user
-Completed 302 Found in 115ms (ActiveRecord: 94.2ms)
-
-
-Started GET "/admin/user" for 127.0.0.1 at 2018-10-05 14:40:12 -0400
-Processing by RailsAdmin::MainController#index as HTML
-  Parameters: {"model_name"=>"user"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (42.1ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (14.9ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.7ms)
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (6.1ms)
-Completed 200 OK in 275ms (Views: 266.6ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/admin/user/2/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-10-05 14:40:19 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_delete_notice.html.haml (2.5ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (14.0ms)
-Completed 200 OK in 56ms (Views: 39.7ms | ActiveRecord: 1.5ms)
-
-
-Started DELETE "/admin/user/2/delete" for 127.0.0.1 at 2018-10-05 14:40:20 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pd0mCBRjfLSAPEPgKnwsK3K3k7FUd5JzmzwWlZS7+FAsYgoVw10QkTuXAo9qZVPB3sKb2wxG+HbZ7NXapSoj7g==", "return_to"=>"http://localhost:3000/admin/user", "model_name"=>"user", "id"=>"2"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '236f3dc8cd36e5133439efd8730b249903f2d42a80fa178a2b53941d3ed6d959' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Destroy (3.1ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 2[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (21.2ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/admin/user
-Completed 302 Found in 52ms (ActiveRecord: 26.3ms)
-
-
-Started GET "/admin/user" for 127.0.0.1 at 2018-10-05 14:40:20 -0400
-Processing by RailsAdmin::MainController#index as HTML
-  Parameters: {"model_name"=>"user"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (56.2ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.5ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (14.3ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.4ms)
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (5.4ms)
-Completed 200 OK in 260ms (Views: 250.9ms | ActiveRecord: 1.2ms)
-
-
-Started GET "/admin/user/4/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-10-05 14:40:23 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"4"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_delete_notice.html.haml (2.6ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (12.5ms)
-Completed 200 OK in 52ms (Views: 28.8ms | ActiveRecord: 1.9ms)
-
-
-Started DELETE "/admin/user/4/delete" for 127.0.0.1 at 2018-10-05 14:40:24 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dmdNbJ7ab+wtqlydtQ1/UfjH/1+PGwKiWBuuLHoCKY/FC7Pis8OuQZ2KmyFVl/WMhkrC8HaxQ/mLTd4b8NM4IQ==", "return_to"=>"http://localhost:3000/admin/user", "model_name"=>"user", "id"=>"4"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '236f3dc8cd36e5133439efd8730b249903f2d42a80fa178a2b53941d3ed6d959', `invitation_created_at` = '2018-10-05 19:28:24', `invitation_sent_at` = '2018-10-05 19:28:24', `updated_at` = '2018-10-05 19:28:24' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.5ms
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'b23b60511c98001a25c530159bc0ab1742bf4ebb836956d2593a927208ebb51b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Destroy (9.2ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 4[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/admin/user
-Completed 302 Found in 60ms (ActiveRecord: 39.1ms)
-
-
-Started GET "/admin/user" for 127.0.0.1 at 2018-10-05 14:40:24 -0400
-Processing by RailsAdmin::MainController#index as HTML
-  Parameters: {"model_name"=>"user"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (33.5ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.4ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (10.6ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.4ms)
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (5.2ms)
-Completed 200 OK in 242ms (Views: 228.5ms | ActiveRecord: 1.4ms)
-
-
-Started GET "/admin/user/1/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-10-05 14:40:28 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_delete_notice.html.haml (2.8ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (13.5ms)
-Completed 200 OK in 47ms (Views: 31.3ms | ActiveRecord: 0.8ms)
-
-
-Started DELETE "/admin/user/1/delete" for 127.0.0.1 at 2018-10-05 14:40:29 -0400
-Processing by RailsAdmin::MainController#delete as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j46mkpRJAi0ElFKIJu564Z0n4Zku2gXZcuzcKmHRC+YJCBQcHyYv86GOPt5k82yubd389BTWFg2MkWhaBBbihg==", "return_to"=>"http://localhost:3000/admin/user", "model_name"=>"user", "id"=>"1"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Destroy (1.3ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/admin/user
-Completed 302 Found in 51ms (ActiveRecord: 30.3ms)
-
-
-Started GET "/admin/user" for 127.0.0.1 at 2018-10-05 14:40:29 -0400
-Processing by RailsAdmin::MainController#index as HTML
-  Parameters: {"model_name"=>"user"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-Completed 401 Unauthorized in 4ms (ActiveRecord: 0.6ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:40:29 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.7ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (8.2ms)
-Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/confirmation/new" for 127.0.0.1 at 2018-10-05 14:40:35 -0400
-Processing by Devise::ConfirmationsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.8ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application (7.2ms)
-Completed 200 OK in 64ms (Views: 54.1ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users/confirmation" for 127.0.0.1 at 2018-10-05 14:40:39 -0400
-Processing by Devise::ConfirmationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AOTE9yelyEv9RFoQbEEs/gdfbDByx9cwO/SVynT/l621B2XTubQ9yWJ94E/tBEp4qGJ8QAxa7HZ4IkbZurdIpA==", "user"=>{"email"=>"matlortie@gmail.com"}, "commit"=>"Resend confirmation instructions"}
-  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'matlortie@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.8ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application (7.8ms)
-Completed 200 OK in 75ms (Views: 51.0ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/users/sign_up" for 127.0.0.1 at 2018-10-05 14:40:52 -0400
-Processing by DeviseInvitable::RegistrationsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.1ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (7.9ms)
-Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users" for 127.0.0.1 at 2018-10-05 14:41:16 -0400
-Processing by DeviseInvitable::RegistrationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dUp3eY9ELUZROe9FIQhAtuXje9TbAV26IKP/b91dbc8QdL+n8hU383KI+Wm7S+O0C6zLQlz1BgFVBzr9lg80g==", "user"=>{"email"=>"matlortie@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'matlortie@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'matlortie@gmail.com' LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Create (8.1ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `confirmation_token`, `confirmation_sent_at`) VALUES ('matlortie@gmail.com', '$2a$11$eOrge9noJF0z0fdG7cihhuyu5AWwPhVp6M4ZWYAfz7z95PyWZ2YnW', '2018-10-05 18:41:17', '2018-10-05 18:41:17', '-5z8KriNWszF6gjznaPG', '2018-10-05 18:41:17')[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/mailer/confirmation_instructions.html.erb
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/mailer/confirmation_instructions.html.erb (0.7ms)
-Devise::Mailer#confirmation_instructions: processed outbound mail in 86.3ms
-Sent mail to matlortie@gmail.com (1173.9ms)
-Date: Fri, 05 Oct 2018 14:41:17 -0400
-From: rocketelevators.xyz@gmail.com
-Reply-To: rocketelevators.xyz@gmail.com
-To: matlortie@gmail.com
-Message-ID: <5bb7b04d2315d_6643f8672011e6c203ca@DESKTOP-SPQ6I7C.mail>
-Subject: Confirmation instructions
-Mime-Version: 1.0
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<p>Welcome matlortie@gmail.com!</p>
-
-<p>You can confirm your account email through the link below:</p>
-
-<p><a href="http://localhost:3000/users/confirmation?confirmation_token=-5z8KriNWszF6gjznaPG">Confirm my account</a></p>
-
-Redirected to http://localhost:3000/admin/user
-Completed 302 Found in 1441ms (ActiveRecord: 29.8ms)
-
-
-Started GET "/admin/user" for 127.0.0.1 at 2018-10-05 14:41:18 -0400
-Processing by RailsAdmin::MainController#index as HTML
-  Parameters: {"model_name"=>"user"}
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (42.3ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.6ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (12.8ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.4ms)
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (4.8ms)
-Completed 200 OK in 229ms (Views: 219.9ms | ActiveRecord: 1.3ms)
-
-
-Started GET "/admin" for 127.0.0.1 at 2018-10-05 14:41:26 -0400
-Processing by RailsAdmin::MainController#dashboard as HTML
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `contacts`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mContact Load (0.7ms)[0m  [1m[34mSELECT  `contacts`.* FROM `contacts` ORDER BY `contacts`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mEmployees Load (0.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `quotes`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mQuote Load (0.9ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY `quotes`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (12.3ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.0ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (9.8ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.3ms)
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (2.7ms)
-Completed 200 OK in 251ms (Views: 205.4ms | ActiveRecord: 6.7ms)
-
-
-Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-10-05 14:41:30 -0400
-Processing by Devise::SessionsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"l9tzO/yJgQtlsYIyjzCrOB9qladN9seYKOiT853j3N2QE/DkbEVewIr6nhvBongxyOKIZHa7DQbBt4QqJQ/w6A=="}
-  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/
-Completed 302 Found in 21ms (ActiveRecord: 2.3ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-10-05 14:41:30 -0400
-Processing by PagesController#index as HTML
-  Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (6.2ms)
-Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/admin" for 127.0.0.1 at 2018-10-05 14:41:34 -0400
-Processing by RailsAdmin::MainController#dashboard as HTML
-Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:41:34 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.1ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (7.9ms)
-Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/confirmation/new" for 127.0.0.1 at 2018-10-05 14:41:39 -0400
-Processing by Devise::ConfirmationsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.7ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/confirmations/new.html.erb within layouts/application (7.9ms)
-Completed 200 OK in 71ms (Views: 64.0ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users/confirmation" for 127.0.0.1 at 2018-10-05 14:41:42 -0400
-Processing by Devise::ConfirmationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fdYWDGkyYBjJdNVERGaKRgnmkAmhmvSQ1abCXJFSry7wGLzP4yZqNqCWQn05fsElOR7BxI54rP9jAcLlQQpq5A==", "user"=>{"email"=>"matlortie@gmail.com"}, "commit"=>"Resend confirmation instructions"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'matlortie@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'b23b60511c98001a25c530159bc0ab1742bf4ebb836956d2593a927208ebb51b', `invitation_created_at` = '2018-10-05 19:28:24', `invitation_sent_at` = '2018-10-05 19:28:24', `updated_at` = '2018-10-05 19:28:24' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 1.2ms
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'b9373d02a8738d77ba15343375f13357f7a4d29c90a2d774e68a746fd48c05d9' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
   [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/mailer/confirmation_instructions.html.erb
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/mailer/confirmation_instructions.html.erb (0.6ms)
-Devise::Mailer#confirmation_instructions: processed outbound mail in 58.8ms
-Sent mail to matlortie@gmail.com (916.0ms)
-Date: Fri, 05 Oct 2018 14:41:42 -0400
-From: rocketelevators.xyz@gmail.com
-Reply-To: rocketelevators.xyz@gmail.com
-To: matlortie@gmail.com
-Message-ID: <5bb7b066b0432_6643f8672011f8420453@DESKTOP-SPQ6I7C.mail>
-Subject: Confirmation instructions
-Mime-Version: 1.0
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<p>Welcome matlortie@gmail.com!</p>
-
-<p>You can confirm your account email through the link below:</p>
-
-<p><a href="http://localhost:3000/users/confirmation?confirmation_token=-5z8KriNWszF6gjznaPG">Confirm my account</a></p>
-
-Redirected to http://localhost:3000/users/sign_in
-Completed 302 Found in 1019ms (ActiveRecord: 2.5ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:41:43 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.7ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (7.9ms)
-Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/confirmation?confirmation_token=-5z8KriNWszF6gjznaPG" for 127.0.0.1 at 2018-10-05 14:41:59 -0400
-Processing by Devise::ConfirmationsController#show as HTML
-  Parameters: {"confirmation_token"=>"-5z8KriNWszF6gjznaPG"}
-  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = '-5z8KriNWszF6gjznaPG' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE `users` SET `confirmed_at` = '2018-10-05 18:41:59', `updated_at` = '2018-10-05 18:41:59' WHERE `users`.`id` = 5[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (71.0ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/users/sign_in
-Completed 302 Found in 91ms (ActiveRecord: 74.0ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:41:59 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.7ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (7.8ms)
-Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users/sign_in" for 127.0.0.1 at 2018-10-05 14:42:01 -0400
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vk1fNx8cY2nMh9pad8pjqe+zBrm9wFCAEO3okRgcF5eK2636UCxQaf36bvpzNkfWF9iahV9+WZ+WxsEOCSHOUA==", "user"=>{"email"=>"matlortie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'matlortie@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/admin/
-Completed 302 Found in 132ms (ActiveRecord: 0.6ms)
-
-
-Started GET "/admin/" for 127.0.0.1 at 2018-10-05 14:42:01 -0400
-Processing by RailsAdmin::MainController#dashboard as HTML
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ config/initializers/rails_admin.rb:7
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `contacts`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  `contacts`.* FROM `contacts` ORDER BY `contacts`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mEmployees Load (0.2ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `quotes`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY `quotes`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (12.0ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.5ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (12.3ms)
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.2ms)
-  Rendering /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
-  Rendered /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (2.8ms)
-Completed 200 OK in 218ms (Views: 195.1ms | ActiveRecord: 2.8ms)
-
-
-Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-10-05 14:42:46 -0400
-Processing by Devise::SessionsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"dUPiVtdVABRn2i+4oSYW8b4OZnB4Ub1Ep/nyco4auWRvN0TnfW+NqIakawq5GsLa3SGf3Vpkn5upy/kzkLXcJA=="}
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'b9373d02a8738d77ba15343375f13357f7a4d29c90a2d774e68a746fd48c05d9', `invitation_created_at` = '2018-10-05 19:28:43', `invitation_sent_at` = '2018-10-05 19:28:43', `updated_at` = '2018-10-05 19:28:43' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (49.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 1.0ms
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '841b2cbca2b1e1a8df68577b9531b83b3f7d00b29ec8120f58b721b89421240b' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (8.1ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '841b2cbca2b1e1a8df68577b9531b83b3f7d00b29ec8120f58b721b89421240b', `invitation_created_at` = '2018-10-05 19:30:27', `invitation_sent_at` = '2018-10-05 19:30:27', `updated_at` = '2018-10-05 19:30:27' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (97.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 1.5ms
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '6e1e80bf4b00eb7bdee56c0b0e6fc3025397668f9e4948e0f5385137de37e87a' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ /home/matlo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Redirected to http://localhost:3000/
-Completed 302 Found in 20ms (ActiveRecord: 1.4ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-10-05 14:42:46 -0400
-Processing by PagesController#index as HTML
-  Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (5.7ms)
-Completed 200 OK in 55ms (Views: 49.3ms | ActiveRecord: 0.0ms)
-
-
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (8.1ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '6e1e80bf4b00eb7bdee56c0b0e6fc3025397668f9e4948e0f5385137de37e87a', `invitation_created_at` = '2018-10-05 19:41:42', `invitation_sent_at` = '2018-10-05 19:41:42', `updated_at` = '2018-10-05 19:41:42' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (94.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.8ms
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'aa47f5af26e30222ba16d009ce1019955b4b181a9cd48ca4ac5e3df02f03a2f6' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (8.1ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'aa47f5af26e30222ba16d009ce1019955b4b181a9cd48ca4ac5e3df02f03a2f6', `invitation_created_at` = '2018-10-05 19:41:48', `invitation_sent_at` = '2018-10-05 19:41:48', `updated_at` = '2018-10-05 19:41:48' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 1.9ms
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'd22f1b0ae08b16370acdfb1bc443289ccc09b2de5e114b809867e390562a0829' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (8.5ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'd22f1b0ae08b16370acdfb1bc443289ccc09b2de5e114b809867e390562a0829', `invitation_created_at` = '2018-10-05 20:02:05', `invitation_sent_at` = '2018-10-05 20:02:05', `updated_at` = '2018-10-05 20:02:05' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (60.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.8ms
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'db0c900a01a60443a4ef743c46ff569665c4918c8806cd15ba9c9aaf873e099d' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (8.3ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'db0c900a01a60443a4ef743c46ff569665c4918c8806cd15ba9c9aaf873e099d' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 1.6ms
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '1cc00a2b7380533abd520b53eeee60a31028f493680e8df860c43c47d799ad14' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (8.5ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '1cc00a2b7380533abd520b53eeee60a31028f493680e8df860c43c47d799ad14', `invitation_created_at` = '2018-10-05 20:02:23', `invitation_sent_at` = '2018-10-05 20:02:23', `updated_at` = '2018-10-05 20:02:23' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (97.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.8ms
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '85b693f463164ab3435044cd03ed3c147c6e8d6aa4794bea6fd7eb4f2262adf9' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '85b693f463164ab3435044cd03ed3c147c6e8d6aa4794bea6fd7eb4f2262adf9', `invitation_created_at` = '2018-10-05 20:03:54', `invitation_sent_at` = '2018-10-05 20:03:54', `updated_at` = '2018-10-05 20:03:54' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:10
+  [1m[35m (79.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:10
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.7ms
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:9
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '68c286f126b3c172e98700961af5e48cbb0055b17f2121b58213150fb4fed445' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:10
+  [1m[36mUser Update (3.2ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '68c286f126b3c172e98700961af5e48cbb0055b17f2121b58213150fb4fed445', `invitation_created_at` = '2018-10-05 20:03:55', `invitation_sent_at` = '2018-10-05 20:03:55', `updated_at` = '2018-10-05 20:03:55' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:10
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:10
+Devise::Mailer#invitation_instructions: processed outbound mail in 1.2ms
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'f03a5b73df0f10a4d763354e2922ec7c545b2b4ebff82c44e7d166c9a41ecc1f' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'f03a5b73df0f10a4d763354e2922ec7c545b2b4ebff82c44e7d166c9a41ecc1f', `invitation_created_at` = '2018-10-05 20:04:17', `invitation_sent_at` = '2018-10-05 20:04:17', `updated_at` = '2018-10-05 20:04:17' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.6ms
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '17f9c00fc7c58a603146c8b0831e1761607009cdf493a37df816718873ed95e9' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '17f9c00fc7c58a603146c8b0831e1761607009cdf493a37df816718873ed95e9', `invitation_created_at` = '2018-10-05 20:06:14', `invitation_sent_at` = '2018-10-05 20:06:14', `updated_at` = '2018-10-05 20:06:14' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (77.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.6ms
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'ddb40d22577610d7d2e059d594705c1e678827966bae6d7e86914d945bdb4f93' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'ddb40d22577610d7d2e059d594705c1e678827966bae6d7e86914d945bdb4f93' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 1.7ms
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = 'd4e797a42fcb70b2a69b2a74e40484cfb094a9f8c1ef30abe266d8820dd96f36' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (8.3ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = 'd4e797a42fcb70b2a69b2a74e40484cfb094a9f8c1ef30abe266d8820dd96f36', `invitation_created_at` = '2018-10-05 20:06:28', `invitation_sent_at` = '2018-10-05 20:06:28', `updated_at` = '2018-10-05 20:06:28' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (79.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.6ms
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '19c50ae99e57cef135440e70ec2e2adb6dab8a9bd296396476824f874430da65' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '19c50ae99e57cef135440e70ec2e2adb6dab8a9bd296396476824f874430da65', `invitation_created_at` = '2018-10-05 20:06:39', `invitation_sent_at` = '2018-10-05 20:06:39', `updated_at` = '2018-10-05 20:06:39' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (52.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.7ms
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`invitation_token` = '5718d081a693eddce88f98a07779ad70f5adbad4beb4907eeae8f0401d6131e6' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:8
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE `users` SET `invitation_token` = '5718d081a693eddce88f98a07779ad70f5adbad4beb4907eeae8f0401d6131e6', `invitation_created_at` = '2018-10-05 20:06:52', `invitation_sent_at` = '2018-10-05 20:06:52', `updated_at` = '2018-10-05 20:06:52' WHERE `users`.`id` = 6[0m
+  ↳ app/models/user.rb:8
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:8
+Devise::Mailer#invitation_instructions: processed outbound mail in 0.7ms

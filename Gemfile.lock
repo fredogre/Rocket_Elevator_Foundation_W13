@@ -88,9 +88,6 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    devise_invitable (1.7.4)
-      actionmailer (>= 4.1.0)
-      devise (>= 4.0.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -269,8 +266,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   coffee-script-source (~> 1.11, >= 1.11.1)
-  devise (~> 4.2)
-  devise_invitable (~> 1.7.0)
+  devise
   font-awesome-sass (~> 4.3.0)
   jbuilder (~> 2.5)
   jquery-rails
