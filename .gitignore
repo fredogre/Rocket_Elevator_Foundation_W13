@@ -18,7 +18,6 @@ database.yml
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-log/development.log
 
 # Ignore uploaded files in development
 /storage/*
@@ -31,8 +30,8 @@ log/development.log
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-config/master.key
-log/development.log
-tmp/*
-tmp/*
+/config/master.key
+debug
+tmp/cache/bootsnap-load-path-cache
+debug.log 
 log/development.log
