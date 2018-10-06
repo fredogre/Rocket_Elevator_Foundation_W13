@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_193644) do
     t.integer "unitcost"
     t.integer "installcost"
     t.integer "totalcost"
-    t.integer "recommended_nb_elevator"
+    t.integer "nbshaft"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
