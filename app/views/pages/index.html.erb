@@ -1497,65 +1497,69 @@
 						<!-- FORM -->
 						<div class="col-sm-12 col-md-8">	
 							<h3>Please let us know about our product!</em></strong></h3>	
-							<form id = "contact_form">
+							<form action='/new_lead' id='leadform' name='leadform' method="post">
 								<fieldset>
-									<input type="hidden" name="action" value="contact_send" />	
+									<input type="hidden" name="action" value="lead_send" />	
 									<div class="row">
 										<div class="col-sm-6 col-md-4">
-											<label for="contact:name">Full Name *</label>
-											<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+											<label for="lead:name">Full Name *</label>
+											<input required type="text" value="" class="form-control" name="lead[name]" id="lead:name">
 										</div>
 										<div class="col-sm-6 col-md-4">
-											<label for="contact:email">E-mail Address *</label>
-											<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+											<label for="lead:email">E-mail Address *</label>
+											<input required type="email" value="" class="form-control" name="lead[email]" id="lead:email">
 										</div>
 										<div class="col-sm-6 col-md-4">
-											<label for="contact:phone">Phone</label>
-											<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+											<label for="lead:phone">Phone</label>
+											<input type="text" value="" class="form-control" name="lead[phone]" id="lead:phone">
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-sm-6 col-md-4">
-											<label for="contact:name">Company</label>
-											<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+											<label for="lead:company">Company</label>
+											<input type="text" value="" class="form-control" name="lead[company]" id="lead:company">
 										</div>
 										<div class="col-sm-6 col-md-4">
-											<label for="contact:email">Project name</label>
-											<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+											<label for="lead:project_name">Project name</label>
+											<input type="text" value="" class="form-control" name="lead[project_name]" id="lead:project_name">
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<label for="lead:department">Department in charge of elevators</label>
+											<input type="text" value="" class="form-control" name="lead[department]" id="lead:department">
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12">
-											<label for="contact:name">Project description</label>
-											<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+											<label for="lead:project_desc">Project description</label>
+											<input type="text" value="" class="form-control" name="lead[project_description]" id="lead:project_desc">
 										</div>
 									</div>
-									<div class="row">
+									<!--<div class="row">
 										<div class="col-sm-12 col-md-8">
-											<label for="contact:subject">Subject *</label>
-											<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											<label for="lead:subject">Subject *</label>
+											<input required type="text" value="" class="form-control" name="lead[subject][required]" id="lead:subject">
 										</div>
 										<div class="col-sm-12 col-md-4">
-											<label for="contact_department">Department</label>
-											<select class="form-control pointer" name="contact[department]">
+											<label for="lead_department">Department</label>
+											<select class="form-control pointer" name="lead[department]">
 												<option value="">--- Select ---</option>
 												<option value="Marketing">Support</option>
 												<option value="Webdesign">Accounting</option>
 												<option value="Architecture">Sales</option>
 											</select>
 										</div>
-									</div>
+									</div>-->
 									<div class="row">
 										<div class="col-md-12">
-											<label for="contact:message">Message *</label>
-											<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+											<label for="lead:message">Message *</label>
+											<textarea required maxlength="10000" rows="8" class="form-control" name="lead[message]" id="lead:message"></textarea>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12">
-											<label for="contact:attachment">File Attachment</label>
+											<label for="lead:attachment">File Attachment</label>
 											<!-- custom file upload -->
-											<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+											<input class="custom-file-upload" type="file" id="file" name="lead[attachment]" id="lead:attachment" data-btn-text="Select a File" />
 											<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 										</div>
 									</div>	
