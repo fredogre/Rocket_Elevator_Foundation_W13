@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_10_10_135744) do
+=======
+ActiveRecord::Schema.define(version: 2018_10_10_141037) do
+>>>>>>> master
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Type"
@@ -145,7 +149,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_135744) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.datetime "creation_date"
     t.string "Company"
     t.bigint "address_id"
     t.string "Contact_Name"
@@ -155,11 +158,9 @@ ActiveRecord::Schema.define(version: 2018_10_10_135744) do
     t.string "Service_Tech_Name"
     t.string "Service_Tech_Phone"
     t.string "Service_Tech_Email"
-    t.string "customerid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address_id"], name: "index_customers_on_address_id"
-    t.index ["customerid"], name: "index_customers_on_customerid", unique: true
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
@@ -180,13 +181,13 @@ ActiveRecord::Schema.define(version: 2018_10_10_135744) do
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
     t.string "Last_Name"
     t.string "First_Name"
     t.string "Function"
     t.string "Email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -205,8 +206,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_135744) do
   end
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "Project_Type"
-    t.string "product_type"
     t.integer "nb_of_units"
     t.integer "nb_of_floors"
     t.integer "nb_of_basements"
@@ -214,14 +213,14 @@ ActiveRecord::Schema.define(version: 2018_10_10_135744) do
     t.integer "nb_of_elevators"
     t.integer "max_occupants"
     t.integer "business_hours"
-    t.integer "recommended_nb_elevator"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "Project_Type"
+    t.string "product_type"
+    t.integer "contact_id"
     t.integer "unitcost"
     t.integer "installcost"
     t.integer "totalcost"
-    t.integer "contact_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "nb_shaft"
     t.integer "nbshaft"
   end
 

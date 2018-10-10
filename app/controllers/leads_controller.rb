@@ -15,7 +15,7 @@ class LeadsController < ApplicationController
     lead.Elevators_Department = lead_params[:department]
     lead.Message = lead_params[:message]
     lead.Attached_File = lead_params[:attachment]
-    lead.Request_Date = Time.now.strftime("%Y/%m/%d %H:%M:%S")
+    #lead.Request_Date = Time.now.strftime("%Y/%m/%d %H:%M:%S")
 
     lead.save!
     redirect_to root_path
