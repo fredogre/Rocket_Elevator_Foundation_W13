@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_09_194619) do
+ActiveRecord::Schema.define(version: 2018_10_10_141037) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Type"
@@ -91,7 +91,6 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.datetime "creation_date"
     t.string "Company"
     t.bigint "address_id"
     t.string "Contact_Name"
@@ -101,11 +100,9 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
     t.string "Service_Tech_Name"
     t.string "Service_Tech_Phone"
     t.string "Service_Tech_Email"
-    t.string "customerid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address_id"], name: "index_customers_on_address_id"
-    t.index ["customerid"], name: "index_customers_on_customerid", unique: true
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
@@ -126,19 +123,13 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-<<<<<<< HEAD
-=======
-    t.integer "user_id"
->>>>>>> b2eee605bfa4f5f139655c61f2e84e718dd1c540
     t.string "Last_Name"
     t.string "First_Name"
     t.string "Function"
     t.string "Email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "userid"
     t.integer "user_id"
-    t.index ["userid"], name: "index_employees_on_userid"
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -157,11 +148,6 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
   end
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-<<<<<<< HEAD
-=======
-    t.string "Project_Type"
-    t.string "product_type"
->>>>>>> b2eee605bfa4f5f139655c61f2e84e718dd1c540
     t.integer "nb_of_units"
     t.integer "nb_of_floors"
     t.integer "nb_of_basements"
@@ -177,13 +163,6 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
     t.integer "unitcost"
     t.integer "installcost"
     t.integer "totalcost"
-<<<<<<< HEAD
-=======
-    t.integer "contact_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "nb_shaft"
->>>>>>> b2eee605bfa4f5f139655c61f2e84e718dd1c540
     t.integer "nbshaft"
   end
 

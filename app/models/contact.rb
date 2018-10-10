@@ -1,12 +1,8 @@
 class Contact < ApplicationRecord
     has_many :quote
 
-<<<<<<< HEAD
-
     def name
-        "#{self.first_name} #{self.last_name}"
+        "#{self.First_Name} #{self.Last_Name}"
     end
-=======
     
->>>>>>> master
 end
