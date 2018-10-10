@@ -126,6 +126,10 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+<<<<<<< HEAD
+=======
+    t.integer "user_id"
+>>>>>>> b2eee605bfa4f5f139655c61f2e84e718dd1c540
     t.string "Last_Name"
     t.string "First_Name"
     t.string "Function"
@@ -153,6 +157,11 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
   end
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+<<<<<<< HEAD
+=======
+    t.string "Project_Type"
+    t.string "product_type"
+>>>>>>> b2eee605bfa4f5f139655c61f2e84e718dd1c540
     t.integer "nb_of_units"
     t.integer "nb_of_floors"
     t.integer "nb_of_basements"
@@ -168,6 +177,13 @@ ActiveRecord::Schema.define(version: 2018_10_09_194619) do
     t.integer "unitcost"
     t.integer "installcost"
     t.integer "totalcost"
+<<<<<<< HEAD
+=======
+    t.integer "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "nb_shaft"
+>>>>>>> b2eee605bfa4f5f139655c61f2e84e718dd1c540
     t.integer "nbshaft"
   end
 
