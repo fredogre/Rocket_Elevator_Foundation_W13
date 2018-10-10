@@ -8,4 +8,7 @@ class Address < ApplicationRecord
         ['Active', 'Inactive', 'Deleted']
     end
 
+    def address
+        "#{self.Street} #{self.Suite}, #{self.City}, #{self.PostalCode}, #{self.Country}"
+    end
 end
