@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'leads/lead'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount Blazer::Engine, at: "blazer"
   get 'pages/index'
   get 'pages/residential'
   get 'pages/commercial'
