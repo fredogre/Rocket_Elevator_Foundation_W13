@@ -5,20 +5,25 @@ conn = PG::Connection.new( :host => "codeboxx-postgresql.cq6zrczewpu2.us-east-1.
 namespace :feed_dwh do
   desc "Take some colums in tables an create fact tables for the DWH"
   task create_fact_tables: :environment do
-    quotes = Quote.all
-    #contacts = Contact.all   
+    
+    conn.exec('TRUNCATE "FactQuotes";')
 
-    quotes.each do |quote|
-      query = "INSERT INTO "+ 34.chr + "FactQuotes" + 34.chr + "(quote_id, creation_date, nb_elevator) VALUES (#{quote.id}," + 39.chr + "#{quote.created_at.strftime('%Y-%m-%d')}" + 39.chr + ",#{quote.nbshaft});"
-      conn.exec('TRUNCATE "FactQuotes";')
-      conn.exec(query)#"INSERT INTO "FactQuotes" (quote_id, created_at, nb_of_elevators) VALUES  #{quote.id}, #{quote.created_at}, #{quote.nb_of_elevators};")
+    Quote.all.each do |q|
+      query = "INSERT INTO \"FactQuotes\" (quote_id, creation_date, nb_elevator, email, company) VALUES (#{q.id}, \'#{q.created_at.strftime('%Y-%m-%d')}\', #{q.nbshaft}, \'#{q.contact.email}\', \'#{q.contact.Company}\')"
+      conn.exec(query) 
     end
 
-    # contacts.each do |contact|
-    #   query2 = "INSERT INTO"+34.chr+ "FactQuotes" +34.chr+ "(email, company) VALUES (" + 39.chr + "#{contact.email}" + 39.chr + ", " + 39.chr + "#{contact.Company}" + 39.chr + ");"
-    #   conn.exec(query2)#"INSERT INTO "FactQuotes" (email, company) VALUES #{contact.email}, #{contact.company};")
-    # end
+    conn.exec('TRUNCATE "FactElevator";')
 
+    Elevator.all.each do |elev|
+      query2 = "INSERT INTO \"FactElevator\" ()"
+
+   #leads.each do |lead|
+   #  conn.exec("TRUNCATE FactContacts")
+    # conn.exec(INSERT INTO FactContacts(created_at, Company, Email, Project_Name, Lead_Id) VALUES #{lead.created_at}, #{lead.Company}, #{lead.Email}, #{lead.Project_Name}, #{lead.Lead_Id}")
+     #FactContacts.create( created_at: lead.created_at, Company: lead.Company, Email: lead.Email, Project_Name: lead.Project_Name, Lead_Id: lead.lead_id)
+  # end
+    
   end
-
+  
 end
