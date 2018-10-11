@@ -4,7 +4,7 @@ class LeadsController < ApplicationController
 
     lead = Lead.new
 
-    lead_params = params[:lead]
+    lead_params = params[:lead].permit!
 
     lead.Full_Name = lead_params[:name]
     lead.Email = lead_params[:email]
