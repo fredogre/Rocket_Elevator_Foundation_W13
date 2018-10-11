@@ -1,7 +1,7 @@
 class CreateQuotes < ActiveRecord::Migration[5.2]
   def change
     create_table :quotes do |t|
-      t.string :Project_Type
+      t.string :project_type
       t.string :product_type
       t.integer :nb_of_units
       t.integer :nb_of_floors
@@ -10,7 +10,7 @@ class CreateQuotes < ActiveRecord::Migration[5.2]
       t.integer :nb_of_elevators
       t.integer :max_occupants
       t.integer :business_hours
-      t.integer :recommended_nb_elevator
+      t.integer :nbshaft
       t.integer :unitcost
       t.integer :installcost
       t.integer :totalcost
