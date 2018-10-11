@@ -3,6 +3,6 @@ class Customer < ApplicationRecord
   belongs_to :address
 
   def title
-    "#{self.Company}"
+    "#{self.company}"
   end
 end
