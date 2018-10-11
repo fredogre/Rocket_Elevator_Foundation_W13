@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #namespace :feed_dwh do
 
   #conn = PG::Connection.new( :host => "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", :port => 5432, :dbname => 'guillaume', :user => 'guillaume', :password => 'guillaume123' )
@@ -40,7 +39,6 @@
   #end
 
 #end
-=======
 # require 'pg'
 
 conn = PG::Connection.new( :host => "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", :port => 5432, :dbname => 'guillaume', :user => 'guillaume', :password => 'guillaume123' )
@@ -65,4 +63,3 @@ namespace :feed_dwh do
   end
 
 end
->>>>>>> master
