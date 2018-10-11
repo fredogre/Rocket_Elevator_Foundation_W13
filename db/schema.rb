@@ -123,13 +123,13 @@ ActiveRecord::Schema.define(version: 2018_10_10_215853) do
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
     t.string "Last_Name"
     t.string "First_Name"
     t.string "Function"
     t.string "Email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -151,6 +151,8 @@ ActiveRecord::Schema.define(version: 2018_10_10_215853) do
   end
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Project_Type"
+    t.string "product_type"
     t.integer "nb_of_units"
     t.integer "nb_of_floors"
     t.integer "nb_of_basements"
@@ -158,14 +160,13 @@ ActiveRecord::Schema.define(version: 2018_10_10_215853) do
     t.integer "nb_of_elevators"
     t.integer "max_occupants"
     t.integer "business_hours"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "Project_Type"
-    t.string "product_type"
-    t.integer "contact_id"
+    t.integer "recommended_nb_elevator"
     t.integer "unitcost"
     t.integer "installcost"
     t.integer "totalcost"
+    t.integer "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "nbshaft"
   end
 
