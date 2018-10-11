@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
   get 'leads/new'
   get 'leads/lead'
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   get 'pages/index'
   get 'pages/residential'
   get 'pages/commercial'
   
   post '/new_quote' => 'quotes#new_quote'
   post '/new_lead' => 'leads#new_lead'
+  
   resource :quotes
   resource :employees
   resource :lead
