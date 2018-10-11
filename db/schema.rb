@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_141037) do
+ActiveRecord::Schema.define(version: 2018_10_10_215853) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Type"
@@ -142,9 +142,12 @@ ActiveRecord::Schema.define(version: 2018_10_10_141037) do
     t.string "Elevators_Department"
     t.text "Message"
     t.binary "Attached_File"
-    t.datetime "Request_Date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "attached_file_file_name"
+    t.string "attached_file_content_type"
+    t.integer "attached_file_file_size"
+    t.datetime "attached_file_updated_at"
   end
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

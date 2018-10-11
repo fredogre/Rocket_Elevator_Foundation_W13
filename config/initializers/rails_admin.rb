@@ -8,9 +8,10 @@ RailsAdmin.config do |config|
    end
    config.current_user_method(&:current_user)
 
-   config.label_methods << :name
-   config.label_methods << :address
-   config.label_methods << :user
+   #config.label_methods << :name
+   #config.label_methods << :address
+   #config.label_methods << :user
+   #config.label_methods << :Customer
 
   ## == Cancan ==
   # config.authorize_with :cancan

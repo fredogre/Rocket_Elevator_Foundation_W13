@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, 
          :recoverable, :rememberable, :validatable, :timeoutable, :registerable
 
-  def user
+  def title
     "#{self.email}"
   end
 end
