@@ -22,6 +22,8 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'devise'
 
+gem 'pg'
+
 #gem 'devise_invitable', '~> 1.7.0'
 
 gem 'auto-session-timeout'
