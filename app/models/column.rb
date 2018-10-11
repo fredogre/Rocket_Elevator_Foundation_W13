@@ -5,5 +5,8 @@ class Column < ApplicationRecord
     ['Residential','Commercial','Corporate']
   end
 
+  #def name
+  #  "#{customer.battery.} Column #{self.id}"
+  #end
 
 end
