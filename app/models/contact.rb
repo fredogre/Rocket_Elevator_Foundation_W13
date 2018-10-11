@@ -1,7 +1,7 @@
 class Contact < ApplicationRecord
     has_many :quote
 
-    def name
+    def title
         "#{self.First_Name} #{self.Last_Name}"
     end
     

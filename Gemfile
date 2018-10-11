@@ -22,7 +22,11 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'devise'
 
+<<<<<<< HEAD
 gem 'blazer'
+=======
+gem "paperclip", "~> 6.0.0"
+>>>>>>> master
 
 #gem 'devise_invitable', '~> 1.7.0'
 
