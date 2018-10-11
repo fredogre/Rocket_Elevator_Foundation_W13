@@ -1,12 +1,12 @@
 class CreateColumns < ActiveRecord::Migration[5.2]
   def change
     create_table :columns do |t|
-      t.references :Battery, foreign_key: true
-      t.string :Type
-      t.integer :Number_Of_Floors
-      t.string :Status
-      t.text :Information
-      t.text :Notes
+      t.bigint :battery
+      t.string :project_type
+      t.integer :number_of_floors
+      t.string :status
+      t.text :information
+      t.text :notes
 
       t.timestamps
     end

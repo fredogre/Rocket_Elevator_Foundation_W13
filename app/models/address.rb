@@ -9,6 +9,6 @@ class Address < ApplicationRecord
     end
 
     def title
-        "#{self.Street} #{self.Suite}, #{self.City}, #{self.PostalCode}, #{self.Country}"
+        "#{self.street} #{self.suite}, #{self.city}, #{self.postalcode}, #{self.country}"
     end
 end
