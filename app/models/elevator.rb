@@ -1,5 +1,6 @@
 class Elevator < ApplicationRecord
-  belongs_to :Column
+  belongs_to :column
+  belongs_to :building
 
   def Model_enum
     ['Standard', 'Premium', 'Excelium']

@@ -1,5 +1,5 @@
 class Column < ApplicationRecord
-  belongs_to :Battery
+  belongs_to :battery
 
   def Type_enum
     ['Residential','Commercial','Corporate']
