@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_10_11_191651) do
+=======
+ActiveRecord::Schema.define(version: 2018_10_12_141128) do
+>>>>>>> c87d23964d138cd4dc3ac3dbfe781906112457c6
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "address_type"
@@ -26,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "addresstemp", id: :integer, limit: 3, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "address_type"
     t.string "Status"
@@ -39,6 +44,8 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.string "created_at"
   end
 
+=======
+>>>>>>> c87d23964d138cd4dc3ac3dbfe781906112457c6
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "building_id"
     t.string "project_type"
@@ -53,6 +60,63 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "blazer_audits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "query_id"
+    t.text "statement"
+    t.string "data_source"
+    t.timestamp "created_at"
+    t.index ["query_id"], name: "index_blazer_audits_on_query_id"
+    t.index ["user_id"], name: "index_blazer_audits_on_user_id"
+  end
+
+  create_table "blazer_checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "creator_id"
+    t.bigint "query_id"
+    t.string "state"
+    t.string "schedule"
+    t.text "emails"
+    t.string "check_type"
+    t.text "message"
+    t.timestamp "last_run_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_blazer_checks_on_creator_id"
+    t.index ["query_id"], name: "index_blazer_checks_on_query_id"
+  end
+
+  create_table "blazer_dashboard_queries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "dashboard_id"
+    t.bigint "query_id"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dashboard_id"], name: "index_blazer_dashboard_queries_on_dashboard_id"
+    t.index ["query_id"], name: "index_blazer_dashboard_queries_on_query_id"
+  end
+
+  create_table "blazer_dashboards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "creator_id"
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_blazer_dashboards_on_creator_id"
+  end
+
+  create_table "blazer_queries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "creator_id"
+    t.string "name"
+    t.text "description"
+    t.text "statement"
+    t.string "data_source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_blazer_queries_on_creator_id"
+  end
+
+>>>>>>> c87d23964d138cd4dc3ac3dbfe781906112457c6
   create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "building_id"
     t.string "information_key"
@@ -72,22 +136,6 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.string "technician_phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "buildingtemp", id: :integer, limit: 3, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "customer_id", limit: 3
-    t.integer "address_id", limit: 3
-    t.string "admin_first_name"
-    t.string "admin_last_name"
-    t.string "admin_phone", limit: 100
-    t.string "tech_first_name"
-    t.string "tech_last_name"
-    t.string "tech_phone", limit: 100
-    t.string "created_at"
-    t.string "admin_name"
-    t.string "tech_name"
-    t.string "admin_email"
-    t.string "tech_email"
   end
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -125,24 +173,6 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.string "service_tech_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "customertemp", id: :integer, limit: 3, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id", limit: 3
-    t.string "company"
-    t.integer "address_id", limit: 3
-    t.string "contact_first_name"
-    t.string "contact_last_name"
-    t.string "contact_phone", limit: 100
-    t.string "company_description"
-    t.string "service_tech_first_name"
-    t.string "service_tech_last_name"
-    t.string "service_tech_phone", limit: 100
-    t.string "created_at"
-    t.string "contact_name"
-    t.string "contact_email"
-    t.string "service_tech_name"
-    t.string "service_tech_email"
   end
 
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -212,6 +242,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

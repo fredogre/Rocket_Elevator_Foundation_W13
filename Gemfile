@@ -22,6 +22,9 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'devise'
 
+gem 'blazer'
+
+gem "paperclip", "~> 6.0.0"
 
 gem 'pg'
 
