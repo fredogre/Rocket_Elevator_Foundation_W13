@@ -53,6 +53,10 @@ RailsAdmin.config do |config|
     parent Quote
   end
 
+  config.navigation_static_links = {
+    'Graph' => '/blazer'
+  }
+
    #config.label_methods << :name
    #config.label_methods << :address
    #config.label_methods << :user
