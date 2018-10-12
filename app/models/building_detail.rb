@@ -1,5 +1,5 @@
 class BuildingDetail < ApplicationRecord
-  belongs_to :Building
+  belongs_to :building
 
   
 end
