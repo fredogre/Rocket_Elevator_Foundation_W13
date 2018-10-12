@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     mount Blazer::Engine, at: "blazer"
   end
 
+  
   get 'pages/index'
   get 'pages/residential'
   get 'pages/commercial'
