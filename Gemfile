@@ -24,8 +24,6 @@ gem 'devise'
 
 gem 'blazer'
 
-gem "paperclip", "~> 6.0.0"
-
 gem 'pg'
 
 
