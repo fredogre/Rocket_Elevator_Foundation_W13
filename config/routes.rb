@@ -4,7 +4,15 @@ Rails.application.routes.draw do
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount Blazer::Engine, at: "blazer"
+  #authenticate :user, -> (user) {user.admin?} do
+ # authenticate :user, lambda { |u| u.admin? } do
+  mount Blazer::Engine => '/blazer', as: 'blazer'
+  #mount Blazer::Engine, at: 'blazer'
+  #authenticate :user, ->(user) { user.admin? } do
+  #  mount Blazer::Engine, at: "blazer"
+  #end
+  
+
 
   get 'pages/index'
   get 'pages/residential'
