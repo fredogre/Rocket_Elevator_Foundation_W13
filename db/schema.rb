@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "addresstemp", id: :integer, limit: 3, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "address_type"
+    t.string "Status"
+    t.string "Entity"
+    t.string "street"
+    t.string "suite"
+    t.string "city"
+    t.string "postalcode", limit: 10
+    t.string "country", limit: 100
+    t.string "notes"
+    t.string "created_at"
+  end
+
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "building_id"
     t.string "project_type"
@@ -59,6 +72,22 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.string "technician_phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "buildingtemp", id: :integer, limit: 3, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "customer_id", limit: 3
+    t.integer "address_id", limit: 3
+    t.string "admin_first_name"
+    t.string "admin_last_name"
+    t.string "admin_phone", limit: 100
+    t.string "tech_first_name"
+    t.string "tech_last_name"
+    t.string "tech_phone", limit: 100
+    t.string "created_at"
+    t.string "admin_name"
+    t.string "tech_name"
+    t.string "admin_email"
+    t.string "tech_email"
   end
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -96,6 +125,24 @@ ActiveRecord::Schema.define(version: 2018_10_11_191651) do
     t.string "service_tech_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "customertemp", id: :integer, limit: 3, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id", limit: 3
+    t.string "company"
+    t.integer "address_id", limit: 3
+    t.string "contact_first_name"
+    t.string "contact_last_name"
+    t.string "contact_phone", limit: 100
+    t.string "company_description"
+    t.string "service_tech_first_name"
+    t.string "service_tech_last_name"
+    t.string "service_tech_phone", limit: 100
+    t.string "created_at"
+    t.string "contact_name"
+    t.string "contact_email"
+    t.string "service_tech_name"
+    t.string "service_tech_email"
   end
 
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
