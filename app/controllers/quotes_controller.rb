@@ -8,7 +8,7 @@ class QuotesController < ApplicationController
         
         #quote.nb_of_floors = params["nb_floors"]
         contact_params = params[:contact]
-        contact = Contact.find_or_create_by!({first_name: contact_params[:first_name],last_name: contact_params[:last_name],company: contact_params[:company],email: contact_params[:email],project_name: contact_params[:project],location: contact_params[:location]}) 
+        contact = Contact.find_or_create_by!({first_fame: contact_params[:first_name],last_lame: contact_params[:last_name],company: contact_params[:company],email: contact_params[:email],project_name: contact_params[:project],location: contact_params[:location]}) 
 
         if params["project_type"] == "residential"
             quote.nb_of_units = params["res_nbapartment"]

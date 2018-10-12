@@ -1,5 +1,5 @@
 class Elevator < ApplicationRecord
-  belongs_to :column
+  belongs_to :column, foreign_key: "column_id"
   belongs_to :building
 
   def Model_enum
