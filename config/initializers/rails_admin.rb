@@ -53,6 +53,17 @@ RailsAdmin.config do |config|
     parent Quote
   end
 
+  ## == Blazer ==
+
+  config.navigation_static_label = "Business Intelligence"
+
+  config.navigation_static_links = {
+    'Graph' => '/blazer'
+  }
+  #config.excluded_models << "Blazer::Audit"
+
+  config.excluded_models = ["Blazer::Audit", "Blazer::Check", "Blazer::Dashboard", "Blazer::DashboardQuery", "Blazer::Query"]
+
    #config.label_methods << :name
    #config.label_methods << :address
    #config.label_methods << :user
