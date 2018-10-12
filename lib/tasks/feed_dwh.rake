@@ -1,4 +1,5 @@
-# require 'pg'
+# Call this task to feed the Data Warehouse
+# Use 'rake feed_dwh:create_fact_tables' to run this task
 
 conn = PG::Connection.new( :host => "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", :port => 5432, :dbname => 'guillaume', :user => 'guillaume', :password => 'guillaume123' )
 
@@ -23,7 +24,7 @@ namespace :feed_dwh do
 
     conn.exec('TRUNCATE "DimCustomers";')
     Customer.all.each do |customer|
-
+      # This query calculate the number of elevators per customer 
       query_result = Elevator.select(:id).where(:column_id => Column.where(:battery_id => Battery.where(:building_id => Building.where(:customer_id => customer.id))))
       #p query_result.length
       
@@ -34,11 +35,14 @@ namespace :feed_dwh do
       conn.exec(query3)
     end
 
-    #leads.each do |lead|
-    #  conn.exec("TRUNCATE FactContacts")
-      # conn.exec(INSERT INTO FactContacts(created_at, Company, Email, Project_Name, Lead_Id) VALUES #{lead.created_at}, #{lead.Company}, #{lead.Email}, #{lead.Project_Name}, #{lead.Lead_Id}")
-      #FactContacts.create( created_at: lead.created_at, Company: lead.Company, Email: lead.Email, Project_Name: lead.Project_Name, Lead_Id: lead.lead_id)
-    # end
+    conn.exec('TRUNCATE "FactContacts";')
+
+    Lead.all.each do |lead|
+
+      query4 = "INSERT INTO \"FactContacts\" (contact_id, creation_date, company, email, project_name) VALUES (#{lead.id}, \'#{lead.created_at.strftime('%Y-%m-%d')}\', \'#{lead.company}\', \'#{lead.email}\', \'#{lead.project_name}\')"
+      
+      conn.exec(query4)
+    end
     
   end
   
