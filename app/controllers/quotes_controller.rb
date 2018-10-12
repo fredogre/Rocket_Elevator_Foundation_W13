@@ -8,7 +8,7 @@ class QuotesController < ApplicationController
         
         #quote.nb_of_floors = params["nb_floors"]
         contact_params = params[:contact]
-        contact = Contact.find_or_create_by!({First_Name: contact_params[:first_name],Last_Name: contact_params[:last_name],email: contact_params[:email],Company: contact_params[:company],email: contact_params[:email],Project_Name: contact_params[:project],Location: contact_params[:location]}) 
+        contact = Contact.find_or_create_by!({first_name: contact_params[:first_name],last_name: contact_params[:last_name],company: contact_params[:company],email: contact_params[:email],project_name: contact_params[:project],location: contact_params[:location]}) 
 
         if params["project_type"] == "residential"
             quote.nb_of_units = params["res_nbapartment"]
@@ -38,7 +38,7 @@ class QuotesController < ApplicationController
             quote.business_hours = params["hybrid_hrsactivity"]
         end
 
-        quote.Project_Type = params["project_type"]
+        quote.project_type = params["project_type"]
         quote.product_type = params["product_type"]
 
         quote.nbshaft = params["nbshaft"]
