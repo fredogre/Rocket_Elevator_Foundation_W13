@@ -16825,3 +16825,283 @@ Mysql2::Error: Cannot add foreign key constraint
  DEBUG [c82c05a3] 	Command restart sent success
   INFO [c82c05a3] Finished in 1.517 seconds with exit status 0 (successful).
 >>>>>>> master
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-10-12 11:21:28 -0400 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [78f2699e] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/rvm1scripts/ as ubuntu@34.203.94.126
+ DEBUG [78f2699e] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/rvm1scripts/
+  INFO [df76c929] Finished in 1.988 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/gjacques/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /home/gjacques/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [ec73cf8b] Running /usr/bin/env chmod +x /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh as ubuntu@34.203.94.126
+ DEBUG [ec73cf8b] Command: /usr/bin/env chmod +x /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh
+  INFO [375e89d5] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [4911ffa3] Running /usr/bin/env mkdir -p /tmp as ubuntu@34.203.94.126
+ DEBUG [4911ffa3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cad5eb0f] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-guillaume-development-gjacques.sh 0.0%
+  INFO Uploading /tmp/git-ssh-guillaume-development-gjacques.sh 100.0%
+  INFO [7dc263d1] Running /usr/bin/env chmod 700 /tmp/git-ssh-guillaume-development-gjacques.sh as ubuntu@34.203.94.126
+ DEBUG [7dc263d1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-guillaume-development-gjacques.sh
+  INFO [c5cc0cd2] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [116c23e3] Running [ -f /home/ubuntu/apps/guillaume/repo/HEAD ] as ubuntu@34.203.94.126
+ DEBUG [116c23e3] Command: [ -f /home/ubuntu/apps/guillaume/repo/HEAD ]
+ DEBUG [ff979981] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/guillaume/repo
+ DEBUG [82b2169c] Running if test ! -d /home/ubuntu/apps/guillaume/repo; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [82b2169c] Command: if test ! -d /home/ubuntu/apps/guillaume/repo; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/repo'" 1>&2; false; fi
+ DEBUG [dc584dd5] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [c635ed50] Running /usr/bin/env git remote set-url origin https://github.com/RocketElevators/Rocket_Elevators_Information_System.git as ubuntu@34.203.94.126
+ DEBUG [c635ed50] Command: cd /home/ubuntu/apps/guillaume/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guillaume-development-gjacques.sh" ; /usr/bin/env git remote set-url origin https://github.com/RocketElevators/Rocket_Elevators_Information_System.git )
+  INFO [01fa91c7] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [f0014c02] Running /usr/bin/env git remote update --prune as ubuntu@34.203.94.126
+ DEBUG [f0014c02] Command: cd /home/ubuntu/apps/guillaume/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guillaume-development-gjacques.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bd76f14b] 	Fetching origin
+ DEBUG [bd76f14b] 	From https://github.com/RocketElevators/Rocket_Elevators_Information_System
+   6f848386..744d5450  francois          -> francois
+ DEBUG [bd76f14b] 	   8cfb3c93..ba947002  gjacques          -> gjacques
+ DEBUG [bd76f14b] 	   390047d5..744d5450  master            -> master
+ DEBUG [bd76f14b] 	   dd60a080..2e9815b8  matlo             -> matlo
+ DEBUG [bd76f14b] 	   09319fc2..ab653fc9  mb                -> mb
+ DEBUG [bd76f14b] 	 * [new ref]           refs/pull/39/head -> refs/pull/39/head
+ DEBUG [bd76f14b] 	 * [new ref]           refs/pull/40/head -> refs/pull/40/head
+ DEBUG [bd76f14b] 	 * [new ref]           refs/pull/41/head -> refs/pull/41/head
+  INFO [bd76f14b] Finished in 0.414 seconds with exit status 0 (successful).
+ DEBUG [d595a459] Running if test ! -d /home/ubuntu/apps/guillaume/repo; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [d595a459] Command: if test ! -d /home/ubuntu/apps/guillaume/repo; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/repo'" 1>&2; false; fi
+ DEBUG [635f68df] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [9c433843] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131 as ubuntu@34.203.94.126
+ DEBUG [9c433843] Command: cd /home/ubuntu/apps/guillaume/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guillaume-development-gjacques.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131 )
+  INFO [fe39a4ab] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [02523aef] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/guillaume/releases/20181012152131 as ubuntu@34.203.94.126
+ DEBUG [02523aef] Command: cd /home/ubuntu/apps/guillaume/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guillaume-development-gjacques.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/guillaume/releases/20181012152131 )
+  INFO [0c931c67] Finished in 1.056 seconds with exit status 0 (successful).
+ DEBUG [f8f34cab] Running if test ! -d /home/ubuntu/apps/guillaume/repo; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [f8f34cab] Command: if test ! -d /home/ubuntu/apps/guillaume/repo; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/repo'" 1>&2; false; fi
+ DEBUG [d33b71ec] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [07c4d246] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@34.203.94.126
+ DEBUG [07c4d246] Command: cd /home/ubuntu/apps/guillaume/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guillaume-development-gjacques.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ff323268] 	744d5450cb095554dcc7793941c8776624612316
+ DEBUG [ff323268] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [2b4d6e7d] Running if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [2b4d6e7d] Command: if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi
+ DEBUG [880e7bb2] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [87765cad] Running /usr/bin/env echo "744d5450cb095554dcc7793941c8776624612316" > REVISION as ubuntu@34.203.94.126
+ DEBUG [87765cad] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /usr/bin/env echo "744d5450cb095554dcc7793941c8776624612316" > REVISION
+  INFO [37d3bd88] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [f4a25cec] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131/config as ubuntu@34.203.94.126
+ DEBUG [f4a25cec] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131/config
+  INFO [78aa1611] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [75ce97ea] Running [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [75ce97ea] Command: [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/config/secrets.yml ]
+ DEBUG [132d8b12] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [808c3876] Running [ -f /home/ubuntu/apps/guillaume/releases/20181012152131/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [808c3876] Command: [ -f /home/ubuntu/apps/guillaume/releases/20181012152131/config/secrets.yml ]
+ DEBUG [d5800f69] Finished in 0.121 seconds with exit status 1 (failed).
+  INFO [a80e00cb] Running /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/config/secrets.yml /home/ubuntu/apps/guillaume/releases/20181012152131/config/secrets.yml as ubuntu@34.203.94.126
+ DEBUG [a80e00cb] Command: /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/config/secrets.yml /home/ubuntu/apps/guillaume/releases/20181012152131/config/secrets.yml
+  INFO [66d08d11] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [a2b843df] Running [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [a2b843df] Command: [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/config/database.yml ]
+ DEBUG [462e0c14] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [a2219afa] Running [ -f /home/ubuntu/apps/guillaume/releases/20181012152131/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [a2219afa] Command: [ -f /home/ubuntu/apps/guillaume/releases/20181012152131/config/database.yml ]
+ DEBUG [e4ab9330] Finished in 0.119 seconds with exit status 1 (failed).
+  INFO [651c9fb7] Running /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/config/database.yml /home/ubuntu/apps/guillaume/releases/20181012152131/config/database.yml as ubuntu@34.203.94.126
+ DEBUG [651c9fb7] Command: /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/config/database.yml /home/ubuntu/apps/guillaume/releases/20181012152131/config/database.yml
+  INFO [df7ac36f] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [16981aa5] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131/tmp /home/ubuntu/apps/guillaume/releases/20181012152131 /home/ubuntu/apps/guillaume/releases/20181012152131/public as ubuntu@34.203.94.126
+ DEBUG [16981aa5] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131/tmp /home/ubuntu/apps/guillaume/releases/20181012152131 /home/ubuntu/apps/guillaume/releases/20181012152131/public
+  INFO [f6056f96] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [f8adf0f0] Running [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/pids ] as ubuntu@34.203.94.126
+ DEBUG [f8adf0f0] Command: [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/pids ]
+ DEBUG [86221711] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [b61698db] Running [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/pids ] as ubuntu@34.203.94.126
+ DEBUG [b61698db] Command: [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/pids ]
+ DEBUG [016888e8] Finished in 0.121 seconds with exit status 1 (failed).
+  INFO [e1429d6f] Running /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/tmp/pids /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/pids as ubuntu@34.203.94.126
+ DEBUG [e1429d6f] Command: /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/tmp/pids /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/pids
+  INFO [42f0e49b] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [522c2c40] Running [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/sockets ] as ubuntu@34.203.94.126
+ DEBUG [522c2c40] Command: [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/sockets ]
+ DEBUG [48631d87] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [c29a3c4f] Running [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/sockets ] as ubuntu@34.203.94.126
+ DEBUG [c29a3c4f] Command: [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/sockets ]
+ DEBUG [047cdd7a] Finished in 0.120 seconds with exit status 1 (failed).
+  INFO [885b2b90] Running /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/tmp/sockets /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/sockets as ubuntu@34.203.94.126
+ DEBUG [885b2b90] Command: /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/tmp/sockets /home/ubuntu/apps/guillaume/releases/20181012152131/tmp/sockets
+  INFO [fc13ff3b] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [e832d28f] Running [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/log ] as ubuntu@34.203.94.126
+ DEBUG [e832d28f] Command: [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/log ]
+ DEBUG [fae9aaa4] Finished in 0.123 seconds with exit status 1 (failed).
+ DEBUG [b0f6bbcc] Running [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/log ] as ubuntu@34.203.94.126
+ DEBUG [b0f6bbcc] Command: [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/log ]
+ DEBUG [eb1654fc] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [0db78306] Running /usr/bin/env rm -rf /home/ubuntu/apps/guillaume/releases/20181012152131/log as ubuntu@34.203.94.126
+ DEBUG [0db78306] Command: /usr/bin/env rm -rf /home/ubuntu/apps/guillaume/releases/20181012152131/log
+  INFO [cf7c6dac] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [4d102573] Running /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/log /home/ubuntu/apps/guillaume/releases/20181012152131/log as ubuntu@34.203.94.126
+ DEBUG [4d102573] Command: /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/log /home/ubuntu/apps/guillaume/releases/20181012152131/log
+  INFO [b6fc78e0] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [ac850877] Running [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets ] as ubuntu@34.203.94.126
+ DEBUG [ac850877] Command: [ -L /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets ]
+ DEBUG [c910fc3e] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [3d66e2b9] Running [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets ] as ubuntu@34.203.94.126
+ DEBUG [3d66e2b9] Command: [ -d /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets ]
+ DEBUG [49b631b9] Finished in 0.118 seconds with exit status 1 (failed).
+  INFO [09283e2c] Running /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/public/assets /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets as ubuntu@34.203.94.126
+ DEBUG [09283e2c] Command: /usr/bin/env ln -s /home/ubuntu/apps/guillaume/shared/public/assets /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets
+  INFO [e2475dcf] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [4d60ed69] Running if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [4d60ed69] Command: if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi
+ DEBUG [69df1139] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [f8105a8e] Running /usr/bin/env /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh rvm --install install . as ubuntu@34.203.94.126
+ DEBUG [f8105a8e] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /usr/bin/env /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [c2b51bc0] 	Already installed ruby-2.5.1.
+To reinstall use:
+
+    rvm reinstall ruby-2.5.1
+
+  INFO [c2b51bc0] Finished in 0.749 seconds with exit status 0 (successful).
+  INFO [653aa7c6] Running /usr/bin/env git ls-remote https://github.com/RocketElevators/Rocket_Elevators_Information_System.git HEAD as ubuntu@34.203.94.126
+ DEBUG [653aa7c6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guillaume-development-gjacques.sh" ; /usr/bin/env git ls-remote https://github.com/RocketElevators/Rocket_Elevators_Information_System.git HEAD )
+ DEBUG [7189f5be] 	744d5450cb095554dcc7793941c8776624612316	HEAD
+  INFO [7189f5be] Finished in 0.299 seconds with exit status 0 (successful).
+  INFO [6d3775d9] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/shared /home/ubuntu/apps/guillaume/releases as ubuntu@34.203.94.126
+ DEBUG [6d3775d9] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/shared /home/ubuntu/apps/guillaume/releases
+  INFO [ffdbb911] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [64e3afd0] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/shared/tmp/pids /home/ubuntu/apps/guillaume/shared/tmp/sockets /home/ubuntu/apps/guillaume/shared/log /home/ubuntu/apps/guillaume/shared/public/assets as ubuntu@34.203.94.126
+ DEBUG [64e3afd0] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/shared/tmp/pids /home/ubuntu/apps/guillaume/shared/tmp/sockets /home/ubuntu/apps/guillaume/shared/log /home/ubuntu/apps/guillaume/shared/public/assets
+  INFO [682b292d] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [d7be524b] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/shared/config as ubuntu@34.203.94.126
+ DEBUG [d7be524b] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/shared/config
+  INFO [aa351a1c] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [5978f00b] Running [ -f /home/ubuntu/apps/guillaume/shared/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [5978f00b] Command: [ -f /home/ubuntu/apps/guillaume/shared/config/secrets.yml ]
+ DEBUG [30845eb4] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [2efb4560] Running [ -f /home/ubuntu/apps/guillaume/shared/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [2efb4560] Command: [ -f /home/ubuntu/apps/guillaume/shared/config/database.yml ]
+ DEBUG [bbf91219] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [124967ae] Running [ -f /home/ubuntu/apps/guillaume/shared/puma.rb ] as ubuntu@34.203.94.126
+ DEBUG [124967ae] Command: [ -f /home/ubuntu/apps/guillaume/shared/puma.rb ]
+ DEBUG [278833e5] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [20af5349] Running [ -f /home/ubuntu/apps/guillaume/releases/20181012152131/REVISION ] as ubuntu@34.203.94.126
+ DEBUG [20af5349] Command: [ -f /home/ubuntu/apps/guillaume/releases/20181012152131/REVISION ]
+ DEBUG [d11c1fab] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [ff2830cf] Running /usr/bin/env cat /home/ubuntu/apps/guillaume/releases/20181012152131/REVISION 2>/dev/null as ubuntu@34.203.94.126
+ DEBUG [ff2830cf] Command: /usr/bin/env cat /home/ubuntu/apps/guillaume/releases/20181012152131/REVISION 2>/dev/null
+ DEBUG [2cc1b126] 	744d5450cb095554dcc7793941c8776624612316
+ DEBUG [2cc1b126] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [e7adfdf3] Running if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [e7adfdf3] Command: if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi
+ DEBUG [52928440] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [b40c53f5] Running /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle check --path /home/ubuntu/apps/guillaume/shared/bundle as ubuntu@34.203.94.126
+ DEBUG [b40c53f5] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle check --path /home/ubuntu/apps/guillaume/shared/bundle
+ DEBUG [ddfdfa4c] 	Warning: the running version of Bundler (1.16.2) is older than the version that created the lockfile (1.16.6). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+ DEBUG [ddfdfa4c] 	The following gems are missing
+ * chartkick (3.0.1)
+ * errbase (0.1.1)
+ DEBUG [ddfdfa4c] 	 * safely_block (0.2.1)
+ * blazer (1.9.0)
+Install missing gems with `bundle install`
+ DEBUG [ddfdfa4c] Finished in 2.267 seconds with exit status 1 (failed).
+  INFO [4fcd4ec6] Running /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle install --path /home/ubuntu/apps/guillaume/shared/bundle --without production --deployment --quiet as ubuntu@34.203.94.126
+ DEBUG [4fcd4ec6] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle install --path /home/ubuntu/apps/guillaume/shared/bundle --without production --deployment --quiet
+  INFO [86283528] Finished in 7.152 seconds with exit status 0 (successful).
+ DEBUG [89612147] Running if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [89612147] Command: if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi
+ DEBUG [7acaf7f8] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [adcfb47e] Running /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as ubuntu@34.203.94.126
+ DEBUG [adcfb47e] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.568375 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/application-a48798764e97dcd75b92d43e27c84ce70253a3ab3260443a7730b32ee7ab5ba5.css
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.568880 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/application-a48798764e97dcd75b92d43e27c84ce70253a3ab3260443a7730b32ee7ab5ba5.css.gz
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.872897 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.878598 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot.gz
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.881747 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.882133 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg.gz
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.884981 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.887221 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf.gz
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.892321 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:43.894273 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:44.521170 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/application-a128649979bf204e86a92ed1924e9dfafba51e48157eea10f36b93690073ae17.js
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:44.521433 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/application-a128649979bf204e86a92ed1924e9dfafba51e48157eea10f36b93690073ae17.js.gz
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:44.676527 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/application-eb61037a1ae79d47d39b364166f68d91cd19647502676041accd2358855504f4.css
+ DEBUG [4e48af3b] 	I, [2018-10-12T15:22:44.676886 #20139]  INFO -- : Writing /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/blazer/application-eb61037a1ae79d47d39b364166f68d91cd19647502676041accd2358855504f4.css.gz
+  INFO [4e48af3b] Finished in 56.056 seconds with exit status 0 (successful).
+ DEBUG [5a292ef9] Running if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [5a292ef9] Command: if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi
+ DEBUG [44401066] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [5e6479e5] Running /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131/assets_manifest_backup as ubuntu@34.203.94.126
+ DEBUG [5e6479e5] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /usr/bin/env mkdir -p /home/ubuntu/apps/guillaume/releases/20181012152131/assets_manifest_backup
+  INFO [b091bf62] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [694cea10] Running /usr/bin/env ls /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest* as ubuntu@34.203.94.126
+ DEBUG [694cea10] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /usr/bin/env ls /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest*
+ DEBUG [b5222baf] 	/home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest-39a187c97efbc111a87b4f279ad0bf6f.json
+ DEBUG [b5222baf] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [b42e1dc1] Running /usr/bin/env ls /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest* as ubuntu@34.203.94.126
+ DEBUG [b42e1dc1] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /usr/bin/env ls /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest*
+ DEBUG [47ba4dbb] 	/home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest-39a187c97efbc111a87b4f279ad0bf6f.json
+ DEBUG [47ba4dbb] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [25aca245] Running /usr/bin/env cp /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest-39a187c97efbc111a87b4f279ad0bf6f.json /home/ubuntu/apps/guillaume/releases/20181012152131/assets_manifest_backup as ubuntu@34.203.94.126
+ DEBUG [25aca245] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && /usr/bin/env cp /home/ubuntu/apps/guillaume/releases/20181012152131/public/assets/.sprockets-manifest-39a187c97efbc111a87b4f279ad0bf6f.json /home/ubuntu/apps/guillaume/releases/20181012152131/assets_manifest_backup
+  INFO [773f5be2] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [8629fd92] Running if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [8629fd92] Command: if test ! -d /home/ubuntu/apps/guillaume/releases/20181012152131; then echo "Directory does not exist '/home/ubuntu/apps/guillaume/releases/20181012152131'" 1>&2; false; fi
+ DEBUG [3b3a401b] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [57712bd5] Running /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@34.203.94.126
+ DEBUG [57712bd5] Command: cd /home/ubuntu/apps/guillaume/releases/20181012152131 && ( export RAILS_ENV="development" ; /home/ubuntu/apps/guillaume/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+ DEBUG [af7b4714] 	== 20181010135817 RemoveUseridFromEmployees: migrating ========================
+== 20181010135817 RemoveUseridFromEmployees: migrated (0.0000s) ===============
+
+== 20181011191651 AddEmployeeIdToEmployees: migrating =========================
+-- add_column(:employees, :employee_id, :integer)
+   -> 0.0665s
+== 20181011191651 AddEmployeeIdToEmployees: migrated (0.0666s) ================
+
+== 20181011225933 InstallBlazer: migrating ====================================
+-- create_table(:blazer_queries)
+   -> 0.0345s
+-- create_table(:blazer_audits)
+   -> 0.0277s
+-- create_table(:blazer_dashboards)
+   -> 0.0196s
+-- create_table(:blazer_dashboard_queries)
+   -> 0.0230s
+-- create_table(:blazer_checks)
+   -> 0.0331s
+== 20181011225933 InstallBlazer: migrated (0.1382s) ===========================
+
+ DEBUG [af7b4714] 	rake aborted!
+SyntaxError: /home/ubuntu/apps/guillaume/releases/20181012152131/db/migrate/20181012141128_add_admin_to_users.rb:10: syntax error, unexpected end-of-input, expecting keyword_end
+ DEBUG [af7b4714] 	/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:986:in `load_migration'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:982:in `migration'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:977:in `disable_ddl_transaction'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1350:in `use_transaction?'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1342:in `ddl_transaction'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1291:in `execute_migration_in_transaction'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1263:in `block in migrate_without_lock'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1262:in `each'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1262:in `migrate_without_lock'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1210:in `block in migrate'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1363:in `with_advisory_lock'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1210:in `migrate'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1036:in `up'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/migration.rb:1011:in `migrate'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+/home/ubuntu/apps/guillaume/shared/bundle/ruby/2.5.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+/usr/share/rvm/rubies/ruby-2.5.1/bin/bundle:30:in `block in <main>'
+/usr/share/rvm/rubies/ruby-2.5.1/bin/bundle:22:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-2.5.1@global/bin/ruby_executable_hooks:24:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.5.1@global/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [af7b4714] 	Tasks: TOP => db:migrate
+(See full trace by running task with --trace)

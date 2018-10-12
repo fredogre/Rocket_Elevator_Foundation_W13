@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_141128) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "customer_id"
     t.bigint "address_id"
