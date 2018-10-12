@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   get 'pages/residential'
   get 'pages/commercial'
   
+   
+  get 'blazer' => 'blazer/queries#home'
+
   post '/new_quote' => 'quotes#new_quote'
   post '/new_lead' => 'leads#new_lead'
   
