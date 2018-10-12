@@ -1502,13 +1502,13 @@
 						<!-- FORM -->
 						<div class="col-sm-12 col-md-8">	
 							<h3>Please let us know about our product!</em></strong></h3>	
-							<form action='/new_lead' id='leadform' name='leadform' method="post">
+							<form action='/new_lead' id='leadform' name='leadform' method="post" enctype="multipart/form-data">
 								<fieldset>
 									<input type="hidden" name="action" value="lead_send" />	
 									<div class="row">
 										<div class="col-sm-6 col-md-4">
-											<label for="lead:name">Full Name *</label>
-											<input required type="text" value="" class="form-control" name="lead[name]" id="lead:name">
+											<label for="lead:full_name">Full Name *</label>
+											<input required type="text" value="" class="form-control" name="lead[full_name]" id="lead:full_name">
 										</div>
 										<div class="col-sm-6 col-md-4">
 											<label for="lead:email">E-mail Address *</label>
@@ -1562,10 +1562,10 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12">
-											<label for="lead:attachment">File Attachment</label>
+											<label for="lead:attached_file">File Attachment</label>
 											<!-- custom file upload -->
-											<input class="custom-file-upload" type="file" id="file" name="lead[attachment]" id="lead:attachment" data-btn-text="Select a File" accpet="image/png"/>
-											<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+											<input class="custom-file-upload" type="file" id="file" name="lead[attached_file]" id="lead:attached_file" data-btn-text="Select a File" accpet="image/png"/>
+											<small class="text-muted block">Max file size: 5Mb (zip/pdf/jpg/png)</small>
 										</div>
 									</div>	
 								</fieldset>	
