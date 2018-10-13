@@ -3,6 +3,6 @@ class Employee < ApplicationRecord
     has_many :batteries
     
     def name
-     "#{self.First_Name} #{self.Last_Name}"
+     "#{self.first_name} #{self.last_name}"
     end
 end
