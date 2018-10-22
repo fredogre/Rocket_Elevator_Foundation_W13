@@ -3,7 +3,7 @@ class Column < ApplicationRecord
   #belongs_to :building, foreign_key: "battery_id"
   has_many :elevators
 
-  def Type_enum
+  def project_type_enum
     ['Residential','Commercial','Corporate']
   end
 

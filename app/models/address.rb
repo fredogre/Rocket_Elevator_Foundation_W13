@@ -1,10 +1,10 @@
 class Address < ApplicationRecord
 
-    def Type_enum
+    def address_type_enum
         ['Shipping', 'Billing', 'Physical']
     end
 
-    def Status_enum
+    def status_enum
         ['Active', 'Inactive', 'Deleted']
     end
 
