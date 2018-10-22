@@ -1,7 +1,7 @@
 class Quote < ApplicationRecord
     belongs_to :contact, required: false
 
-    def Project_Type_enum
+    def project_type_enum
         ['Residential','Commercial','Corporate','Hybrid']
     end
 end
