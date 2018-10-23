@@ -26,6 +26,8 @@ gem 'blazer'
 
 gem 'pg'
 
+gem 'rest-client'
+
 
 #gem 'devise_invitable', '~> 1.7.0'
 
