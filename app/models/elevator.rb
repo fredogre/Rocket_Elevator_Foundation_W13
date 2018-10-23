@@ -72,7 +72,7 @@ class Elevator < ApplicationRecord
     
     
     if new_status == "Intervention" 
-      send_message("#{self.column.battery.building.technician_phone}", "The Elevator #{self.id} is now in intervention, please take action.")
+      send_message("#{self.column.battery.building.technician_phone}", "The Elevator #{self.id} in the building number #{self.column.battery.building_id} at #{self.column.battery.building.address.street} is now in need for intervention, please take action.")
         # message = "The Elevator #{elevator.id} with serial number #{elevator.serial_number} changed status from #{old_status} to #{new_status}"
     
     end
