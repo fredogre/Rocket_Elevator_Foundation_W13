@@ -117,6 +117,8 @@ GEM
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
     font-awesome-sass (4.3.2.1)
@@ -316,6 +318,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   coffee-script-source (~> 1.11, >= 1.11.1)
   devise
+  figaro
   font-awesome-sass (~> 4.3.0)
   jbuilder (~> 2.5)
   jquery-rails

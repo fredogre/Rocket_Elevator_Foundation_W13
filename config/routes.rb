@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'twilio/sms'
   get 'leads/new'
   get 'leads/lead'
 
