@@ -35,10 +35,10 @@ class Elevator < ApplicationRecord
   end
 
   def status_validation
-    puts "new value #{self.status}"
+    #puts "new value #{self.status}"
     new_status = self.status
     old_status = Elevator.find(self.id).status
-    puts "old value #{old_status}"
+    #puts "old value #{old_status}"
       if new_status != old_status 
         send_to_slack("The Elevator #{self.id} with serial number #{self.serial_number} changed status from #{old_status} to #{new_status} at #{self.updated_at}")
       end 
@@ -48,11 +48,8 @@ class Elevator < ApplicationRecord
       
 
   def send_message(phone_number, alert_message)
-
-    twilio_accout_sid = 'AC23f8d78c79c30f08afa7887d240cc2df'
-    twilio_auth_token = 'a9842b28a247605bb591d56e83bbcdb6'
+    @client = Twilio::REST::Client.new(ENV['twilio_accout_sid'], ENV['twilio_auth_token'])
     @twilio_number = '+15818802402'
-    @client = Twilio::REST::Client.new(twilio_accout_sid, twilio_auth_token)
     
     message = @client.api.account.messages.create(
       :from => @twilio_number,
@@ -66,15 +63,12 @@ class Elevator < ApplicationRecord
     
   def status_validation
      
-    #elev = Elevator.select(:id).where(:column_id => Column.where(:battery_id => Battery.where(:building_id => Building.where(:technician_phone => technician_phone))))
-    puts "new value #{self.status}"
+    #puts "new value #{self.status}"
     new_status = self.status
     
     
     if new_status == "Intervention" 
-      send_message("#{self.column.battery.building.technician_phone}", "The Elevator #{self.id} in the building number #{self.column.battery.building_id} at #{self.column.battery.building.address.street} is now in need for intervention, please take action.")
-        # message = "The Elevator #{elevator.id} with serial number #{elevator.serial_number} changed status from #{old_status} to #{new_status}"
-    
+      send_message("#{self.column.battery.building.technician_phone}", "The Elevator #{self.id} in the building number #{self.column.battery.building_id} at #{self.column.battery.building.address.street} is now in need for intervention, please take action.")    
     end
 
   end
