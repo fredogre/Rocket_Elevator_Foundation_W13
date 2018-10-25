@@ -20,19 +20,19 @@ class Elevator < ApplicationRecord
     ['Intervention', 'Active', 'Inactive']
   end
   
-    def send_to_slack(message)
-      RestClient.post(
-        'https://hooks.slack.com/services/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', 
-        {
-          payload: {
-            channel: "elevator_operations",
-            text: "#{message}",
-            username: "rocketelevatormanagement",
-            icon_emoji: ':heart:'
-          }.to_json
-        }
-      )
-      end
+  def send_to_slack(message)
+    RestClient.post(
+      'https://hooks.slack.com/services/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', 
+      {
+        payload: {
+          channel: "elevator_operations",
+          text: "#{message}",
+          username: "rocketelevatormanagement",
+          icon_emoji: ':heart:'
+        }.to_json
+      }
+    )
+  end
 
       def status_validation
         puts "new value #{self.status}"
@@ -47,12 +47,12 @@ class Elevator < ApplicationRecord
           end 
          
         
-      end
+  end
       
 
-  def send_message(phone_number, alert_message)
-    @client = Twilio::REST::Client.new(ENV['twilio_accout_sid'], ENV['twilio_auth_token'])
-    @twilio_number = '+15818802402'
+  # def send_message(phone_number, alert_message)
+  #   @client = Twilio::REST::Client.new(ENV['twilio_accout_sid'], ENV['twilio_auth_token'])
+  #   @twilio_number = '+15818802402'
     
     message = @client.api.account.messages.create(
       :from => @twilio_number,
