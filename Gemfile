@@ -26,6 +26,9 @@ gem 'blazer'
 
 gem 'pg'
 
+gem 'twilio-ruby', '~> 5.15', '>= 5.15.1'
+
+gem "figaro"
 
 #gem 'devise_invitable', '~> 1.7.0'
 

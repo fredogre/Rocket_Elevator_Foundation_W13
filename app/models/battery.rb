@@ -4,7 +4,7 @@ class Battery < ApplicationRecord
   #has_many :Columns
   
 
-  def Type_enum
+  def type_enum
     ['Residential','Commercial','Corporate','Hybrid']
   end
 
