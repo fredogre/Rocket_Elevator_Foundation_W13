@@ -29,8 +29,8 @@ Rails.application.routes.draw do
 
   post '/new_quote' => 'quotes#new_quote'
   post '/new_lead' => 'leads#new_lead'
+  get '/audio_info' => 'pages#welcome'
 
-  
   resource :quotes
   resource :employees
   resource :lead

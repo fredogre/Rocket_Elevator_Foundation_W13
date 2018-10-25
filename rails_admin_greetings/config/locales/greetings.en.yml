@@ -1,0 +1,11 @@
+
+en:
+  admin:
+    actions:
+      greetings:
+        title: "Greetings"
+        menu: "Greetings for %{model_label} '%{object_label}'"
+        breadcrumb: "Greetings"
+        link: "Greetings"
+        bulk_link: "Greetings selected %{model_label_plural}"
+        done: "Greetingsed"
