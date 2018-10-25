@@ -27,7 +27,7 @@ class Elevator < ApplicationRecord
             channel: "elevator_operations",
             text: "#{message}",
             username: "rocketelevatormanagement",
-            icon_emoji: ":heart:"
+            icon_emoji: ':heart:'
           }.to_json
         }
       )
