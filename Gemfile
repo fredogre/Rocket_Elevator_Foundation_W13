@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'figaro'
 
+gem 'sendgrid-ruby'
+
 gem 'blazer'
 
 gem 'pg'
