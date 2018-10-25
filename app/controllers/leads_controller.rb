@@ -49,7 +49,7 @@ class LeadsController < ApplicationController
   def create_zendesk_ticket(lead_params)
     ZendeskAPI::Ticket.new($client, :id => 1, :type => "question", :priority => "urgent") # doesn't actually send a request, must explicitly call #save!
  
-  attachement = "#{lead_params[:full_name]} uploaded an attachement : #{lead_params[:attached_file]}" if lead_params[:attached_file]
+    attachement = "#{lead_params[:full_name]} uploaded an attachement : #{lead_params[:attached_file]}" if lead_params[:attached_file]
     zendesk_body = 
     "#{lead_params[:full_name]} from #{lead_params[:company]} can be reached by email at #{lead_params[:email]} and at phone number #{lead_params[:phone]}.
     The department of #{lead_params[:department]} has a new project named #{lead_params[:project_name]} which would require Rocket Elevator's expertise. 
