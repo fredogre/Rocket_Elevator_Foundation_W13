@@ -14,6 +14,7 @@ class LeadsController < ApplicationController
 
     create_lead(lead_params)
     create_zendesk_ticket(lead_params)
+    send_confirmation_email(lead_params)
 
     redirect_to root_path
   end
@@ -80,20 +81,20 @@ class LeadsController < ApplicationController
   end
  
     
-    redirect_to root_path
+  def send_confirmation_email(lead_params)
 
     data = JSON.parse("{
       \"personalizations\": [
         {
           \"to\": [
             {
-              \"email\": \"#{lead.email}\"
+              \"email\": \"#{lead_params[:email]}\"
             }
           ],
           \"dynamic_template_data\": {
             \"subject\": \"Contact Request Confirmation\",
-            \"name\": \"#{lead.full_name}\",
-            \"ProjectName\": \"#{lead.project_name}\"
+            \"name\": \"#{lead_params[:full_name]}\",
+            \"ProjectName\": \"#{lead_params[:project_name]}\"
           }
         }
       ],
@@ -108,34 +109,7 @@ class LeadsController < ApplicationController
     rescue Exception => e
         puts e.message
     end
-   end
-
-  # def send_email(email, name, project_name)
-  #   # using SendGrid's Ruby Library
-  #   # https://github.com/sendgrid/sendgrid-ruby
-    
-
-  #   from = SendGrid::Email.new(email: 'rocketelevators.xyz@gmail.com')
-  #   to = SendGrid::Email.new(email: email)
-  #   subject = 'Contact confirmation'
-  #   content = SendGrid::Content.new(type: 'text/html', value: "<html><body>Greetings #{name},<br><br>
-
-  #     We thank you for contacting Rocket Elevators to discuss the opportunity to contribute to your project #{project_name}.<br/><br>
-  #     A representative from our team will be in touch with you very soon. We look forward to demonstrate the value of our solutions and help you choose the appropriate product given your requirements.
-  #     <br><br>
-  #     We’ll Talk soon<br>
-
-  #     The Rocket Team
-  #     </body></html>")
-    
-  #   mail = SendGrid::Mail.new(from, subject, to, content)
-
-  #   sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-  #   response = sg.client.mail._('send').post(request_body: mail.to_json)
-  #   puts response.status_code
-  #   puts response.body
-  #   puts response.headers
-  # end
+  end
 
 end
 
