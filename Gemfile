@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+#Twilio API
+gem 'twilio-ruby'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use mysql as the database for Active Record
@@ -22,9 +25,17 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'devise'
 
+gem 'figaro'
+
+gem 'sendgrid-ruby'
+
 gem 'blazer'
 
 gem 'pg'
+
+gem 'rest-client'
+
+gem 'zendesk_api'
 
 
 #gem 'devise_invitable', '~> 1.7.0'
@@ -55,6 +66,7 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'jquery-ui-rails'
 gem 'bootstrap-social-rails'
+gem 'listen', '>= 3.0.5', '< 3.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -67,7 +79,6 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
