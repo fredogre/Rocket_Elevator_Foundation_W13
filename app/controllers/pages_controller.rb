@@ -7,9 +7,9 @@ class PagesController < ApplicationController
         require 'net/http'
         require 'uri'
 
-        uri = URI.parse("https://stream.watsonplatform.net/authorization/api/v1/token?url=https://stream.watsonplatform.net/text-to-speech/api")
+        uri = URI.parse(ENV['IBM_WATSON_URL'])
         request = Net::HTTP::Get.new(uri)
-        request.basic_auth("e5f3fd85-5e85-4bb0-9855-c16ba2a906fc", "knWhktlohaIq")
+        request.basic_auth(ENV['IBM_USERNAME'], ENV['IBM_PASSWORD'])
 
         req_options = {
             use_ssl: uri.scheme == "https",
