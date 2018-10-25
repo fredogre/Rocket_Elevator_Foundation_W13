@@ -1,6 +1,7 @@
+require 'zendesk_api'
 class QuotesController < ApplicationController
     def new_quote
-        puts "rje suis dans new quote"
+        puts "je suis dans new quote"
 
         puts params["nb_floors"]
 
@@ -53,6 +54,7 @@ class QuotesController < ApplicationController
         quote.contact = contact
         quote.save!
         redirect_to root_path
+        create_zendesk_ticket(contact_params)
     end
 
     def create
@@ -66,5 +68,28 @@ class QuotesController < ApplicationController
     def quote_params
         params.require(:quote).permit!
     end
+    def create_zendesk_ticket(contact_params)
+        ZendeskAPI::Ticket.new($client, :id => 1, :type => "task", :priority => "urgent")
+
+        zendesk_body = 
+        "#{contact_params[:first_name]} #{contact_params[:last_name]} from #{contact_params[:company]} can be reached by email at #{contact_params[:email]}. 
+        #{contact_params[:company]} has a new project named #{contact_params[:project]}. GO GET THEM! $$$$$"  
+    
+        ZendeskAPI::Ticket.create!($client,
+        :subject => "#{contact_params[:project]}",
+        :comment => { :value => zendesk_body },
+        :submitter_id => 12314, 
+        :type => "task",
+        :priority => "urgent",
+
+        :custom_fields => [
+            {id: 360012456391, value: "#{contact_params[:first_name]} #{contact_params[:last_name]}"},
+            {id: 360012412792, value: "#{contact_params[:email]}"},
+            {id: 360012456431, value: "#{contact_params[:company]}"},
+            {id: 360012412992, value: "#{contact_params[:project]}"},
+          ]) 
+        
+    end
+
 
 end

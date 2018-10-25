@@ -35,6 +35,8 @@ gem 'pg'
 
 gem 'rest-client'
 
+gem 'zendesk_api'
+
 
 #gem 'devise_invitable', '~> 1.7.0'
 
