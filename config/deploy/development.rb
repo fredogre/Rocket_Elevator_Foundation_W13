@@ -9,7 +9,7 @@ server "34.203.94.126", user: "ubuntu", roles: %w{app db web}
 
 set :rails_env, "development"
 set :bundle_without, "production"
-set :deploy_to, "/home/ubuntu/apps/guillaume"
+set :deploy_to, "/home/ubuntu/apps/fredo"
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
 set :linked_files, %w{config/secrets.yml config/database.yml}
 

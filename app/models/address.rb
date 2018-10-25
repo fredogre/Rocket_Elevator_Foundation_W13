@@ -1,6 +1,10 @@
 class Address < ApplicationRecord
 
+<<<<<<< HEAD
     def type_enum
+=======
+    def address_type_enum
+>>>>>>> master
         ['Shipping', 'Billing', 'Physical']
     end
 

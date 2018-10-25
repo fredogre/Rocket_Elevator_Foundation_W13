@@ -4,7 +4,11 @@ class Battery < ApplicationRecord
   #has_many :Columns
   
 
+<<<<<<< HEAD
   def type_enum
+=======
+  def project_type_enum
+>>>>>>> master
     ['Residential','Commercial','Corporate','Hybrid']
   end
 
