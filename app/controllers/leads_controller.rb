@@ -14,6 +14,7 @@ class LeadsController < ApplicationController
 
     create_lead(lead_params)
     create_zendesk_ticket(lead_params)
+    send_confirmation_email(lead_params)
 
     redirect_to root_path
   end
