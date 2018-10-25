@@ -14,6 +14,7 @@ class LeadsController < ApplicationController
 
     create_lead(lead_params)
     create_zendesk_ticket(lead_params)
+    send_confirmation_email(lead_params)
 
     redirect_to root_path
   end
@@ -79,6 +80,36 @@ class LeadsController < ApplicationController
 
   end
  
+    
+  def send_confirmation_email(lead_params)
+
+    data = JSON.parse("{
+      \"personalizations\": [
+        {
+          \"to\": [
+            {
+              \"email\": \"#{lead_params[:email]}\"
+            }
+          ],
+          \"dynamic_template_data\": {
+            \"subject\": \"Contact Request Confirmation\",
+            \"name\": \"#{lead_params[:full_name]}\",
+            \"ProjectName\": \"#{lead_params[:project_name]}\"
+          }
+        }
+      ],
+      \"from\": {
+        \"email\": \"rocketelevators.xyz@gmail.com\"
+      },
+      \"template_id\": \"d-65ddb893e67f477f8b252477065820dc\"
+    }")
+    sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+    begin
+        response = sg.client.mail._("send").post(request_body: data)
+    rescue Exception => e
+        puts e.message
+    end
+  end
 
    
 end
