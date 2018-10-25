@@ -1,3 +1,4 @@
+require 'twilio-ruby'
 require 'rest-client'
 require 'json'
 
@@ -46,6 +47,30 @@ class Elevator < ApplicationRecord
       end
       
 
-end
-  
+  def send_message(phone_number, alert_message)
+    @client = Twilio::REST::Client.new(ENV['twilio_accout_sid'], ENV['twilio_auth_token'])
+    @twilio_number = '+15818802402'
+    
+    message = @client.api.account.messages.create(
+      :from => @twilio_number,
+      :to => phone_number,
+      :body => alert_message
+      # US phone numbers can make use of an image as well.
+      # :media_url => image_url 
+    )
+    puts message.to
+  end
+    
+  def status_validation
+     
+    #puts "new value #{self.status}"
+    new_status = self.status
+    
+    
+    if new_status == "Intervention" 
+      send_message("#{self.column.battery.building.technician_phone}", "The Elevator #{self.id} in the building number #{self.column.battery.building_id} at #{self.column.battery.building.address.street} is now in need for intervention, please take action.")    
+    end
 
+  end
+
+end
