@@ -27,7 +27,7 @@ development:
   password: Codeboxx1!
   host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
   port: 3306
-  database: fredo_app
+  database: mathieu_app
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
