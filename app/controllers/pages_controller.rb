@@ -27,7 +27,7 @@ class PagesController < ApplicationController
         quotes = Quote.count
         leads = Lead.count
         batteries = Battery.count
-        city = Address.count(:city)
+        city = Address.distinct.count(:city)
 
         # response.code
         p response.body 
