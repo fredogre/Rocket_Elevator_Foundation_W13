@@ -23,6 +23,8 @@ gem 'jquery-rails'
 
 gem 'rails_admin', '~> 1.3'
 
+gem 'twilio-ruby', '~> 5.15.1'
+
 gem 'devise'
 
 gem 'figaro'
@@ -33,16 +35,12 @@ gem 'blazer'
 
 gem 'pg'
 
-<<<<<<< HEAD
-gem 'twilio-ruby', '~> 5.15', '>= 5.15.1'
+ 
 
-gem "figaro"
-=======
 gem 'rest-client'
 
 gem 'zendesk_api'
 
->>>>>>> master
 
 #gem 'devise_invitable', '~> 1.7.0'
 
