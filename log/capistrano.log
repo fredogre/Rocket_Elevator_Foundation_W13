@@ -976,3 +976,262 @@ To reinstall use:
  DEBUG [ec2739cb] Command: cd /home/ubuntu/apps/mathieu/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/mathieu/shared/tmp/pids/puma.state -F /home/ubuntu/apps/mathieu/shared/puma.rb restart )
  DEBUG [8acc02b2] 	Command restart sent success
   INFO [8acc02b2] Finished in 1.456 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-10-26 18:36:16 -0400 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c33f17fd] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/rvm1scripts/ as ubuntu@34.203.94.126
+ DEBUG [c33f17fd] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/rvm1scripts/
+  INFO [86037607] Finished in 7.280 seconds with exit status 0 (successful).
+ DEBUG Uploading C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [29ef59f8] Running /usr/bin/env chmod +x /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh as ubuntu@34.203.94.126
+ DEBUG [29ef59f8] Command: /usr/bin/env chmod +x /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh
+  INFO [5ceeaf48] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [68d37267] Running /usr/bin/env mkdir -p /tmp as ubuntu@34.203.94.126
+ DEBUG [68d37267] Command: /usr/bin/env mkdir -p /tmp
+  INFO [362d2de2] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fredo-development-matlo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fredo-development-matlo.sh 100.0%
+  INFO [9d354e2d] Running /usr/bin/env chmod 700 /tmp/git-ssh-fredo-development-matlo.sh as ubuntu@34.203.94.126
+ DEBUG [9d354e2d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-fredo-development-matlo.sh
+  INFO [3ebe44d1] Finished in 0.161 seconds with exit status 0 (successful).
+ DEBUG [7b6532d3] Running [ -f /home/ubuntu/apps/mathieu/repo/HEAD ] as ubuntu@34.203.94.126
+ DEBUG [7b6532d3] Command: [ -f /home/ubuntu/apps/mathieu/repo/HEAD ]
+ DEBUG [f7fc80a5] Finished in 0.190 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/mathieu/repo
+ DEBUG [c21aca84] Running if test ! -d /home/ubuntu/apps/mathieu/repo; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [c21aca84] Command: if test ! -d /home/ubuntu/apps/mathieu/repo; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/repo'" 1>&2; false; fi
+ DEBUG [2881b979] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [96dadaa3] Running /usr/bin/env git remote set-url origin https://github.com/matlortie/Rocket_Elevator_API.git as ubuntu@34.203.94.126
+ DEBUG [96dadaa3] Command: cd /home/ubuntu/apps/mathieu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-matlo.sh" ; /usr/bin/env git remote set-url origin https://github.com/matlortie/Rocket_Elevator_API.git )
+  INFO [c961b8c8] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [2734d5f1] Running /usr/bin/env git remote update --prune as ubuntu@34.203.94.126
+ DEBUG [2734d5f1] Command: cd /home/ubuntu/apps/mathieu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-matlo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ea6f802d] 	Fetching origin
+ DEBUG [ea6f802d] 	From https://github.com/matlortie/Rocket_Elevator_API
+   1242c937..ab535088  master            -> master
+ DEBUG [ea6f802d] 	   1242c937..ab535088  matlo             -> matlo
+ DEBUG [ea6f802d] 	 * [new ref]           refs/pull/19/head -> refs/pull/19/head
+ DEBUG [ea6f802d] 	 * [new ref]           refs/pull/20/head -> refs/pull/20/head
+  INFO [ea6f802d] Finished in 0.469 seconds with exit status 0 (successful).
+ DEBUG [58efc59a] Running if test ! -d /home/ubuntu/apps/mathieu/repo; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [58efc59a] Command: if test ! -d /home/ubuntu/apps/mathieu/repo; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/repo'" 1>&2; false; fi
+ DEBUG [cd5ba485] Finished in 0.165 seconds with exit status 0 (successful).
+  INFO [bf269f0d] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624 as ubuntu@34.203.94.126
+ DEBUG [bf269f0d] Command: cd /home/ubuntu/apps/mathieu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-matlo.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624 )
+  INFO [e5cd6823] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [62922591] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/mathieu/releases/20181026223624 as ubuntu@34.203.94.126
+ DEBUG [62922591] Command: cd /home/ubuntu/apps/mathieu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-matlo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/mathieu/releases/20181026223624 )
+  INFO [973a7aa4] Finished in 1.545 seconds with exit status 0 (successful).
+ DEBUG [8eaf1dea] Running if test ! -d /home/ubuntu/apps/mathieu/repo; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [8eaf1dea] Command: if test ! -d /home/ubuntu/apps/mathieu/repo; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/repo'" 1>&2; false; fi
+ DEBUG [9912d5ad] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [eba74523] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@34.203.94.126
+ DEBUG [eba74523] Command: cd /home/ubuntu/apps/mathieu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-matlo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e9a69752] 	ab5350889924cf9a5824873e97247fecb5d752bf
+ DEBUG [e9a69752] Finished in 0.193 seconds with exit status 0 (successful).
+ DEBUG [62ab8e5d] Running if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [62ab8e5d] Command: if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi
+ DEBUG [a90c5463] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [97510f43] Running /usr/bin/env echo "ab5350889924cf9a5824873e97247fecb5d752bf" > REVISION as ubuntu@34.203.94.126
+ DEBUG [97510f43] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && /usr/bin/env echo "ab5350889924cf9a5824873e97247fecb5d752bf" > REVISION
+  INFO [19549c35] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [067ecb98] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624/config as ubuntu@34.203.94.126
+ DEBUG [067ecb98] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624/config
+  INFO [e885ec32] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG [ce0f9fb7] Running [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/config/application.yml ] as ubuntu@34.203.94.126
+ DEBUG [ce0f9fb7] Command: [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/config/application.yml ]
+ DEBUG [1c9068ef] Finished in 0.163 seconds with exit status 1 (failed).
+ DEBUG [d54850aa] Running [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/config/application.yml ] as ubuntu@34.203.94.126
+ DEBUG [d54850aa] Command: [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/config/application.yml ]
+ DEBUG [9e89759b] Finished in 0.150 seconds with exit status 1 (failed).
+  INFO [a44f765e] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/config/application.yml /home/ubuntu/apps/mathieu/releases/20181026223624/config/application.yml as ubuntu@34.203.94.126
+ DEBUG [a44f765e] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/config/application.yml /home/ubuntu/apps/mathieu/releases/20181026223624/config/application.yml
+  INFO [4c58ee69] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [d0fc9c99] Running [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [d0fc9c99] Command: [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/config/secrets.yml ]
+ DEBUG [7ab06660] Finished in 0.154 seconds with exit status 1 (failed).
+ DEBUG [71a7de39] Running [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [71a7de39] Command: [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/config/secrets.yml ]
+ DEBUG [b95cca37] Finished in 0.154 seconds with exit status 1 (failed).
+  INFO [0f44567e] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/config/secrets.yml /home/ubuntu/apps/mathieu/releases/20181026223624/config/secrets.yml as ubuntu@34.203.94.126
+ DEBUG [0f44567e] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/config/secrets.yml /home/ubuntu/apps/mathieu/releases/20181026223624/config/secrets.yml
+  INFO [dfd35a32] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG [d07a810c] Running [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [d07a810c] Command: [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml ]
+ DEBUG [223b147c] Finished in 0.155 seconds with exit status 1 (failed).
+ DEBUG [0bcd8170] Running [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [0bcd8170] Command: [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml ]
+ DEBUG [8ac220ae] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO [8eab4ce6] Running /usr/bin/env rm /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml as ubuntu@34.203.94.126
+ DEBUG [8eab4ce6] Command: /usr/bin/env rm /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml
+  INFO [efb986aa] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [5e0dd2b3] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/config/database.yml /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml as ubuntu@34.203.94.126
+ DEBUG [5e0dd2b3] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/config/database.yml /home/ubuntu/apps/mathieu/releases/20181026223624/config/database.yml
+  INFO [0cb2eb05] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [b99148f0] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624/tmp /home/ubuntu/apps/mathieu/releases/20181026223624 /home/ubuntu/apps/mathieu/releases/20181026223624/public as ubuntu@34.203.94.126
+ DEBUG [b99148f0] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624/tmp /home/ubuntu/apps/mathieu/releases/20181026223624 /home/ubuntu/apps/mathieu/releases/20181026223624/public
+  INFO [d56b8920] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [28079c78] Running [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/pids ] as ubuntu@34.203.94.126
+ DEBUG [28079c78] Command: [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/pids ]
+ DEBUG [750e747e] Finished in 0.160 seconds with exit status 1 (failed).
+ DEBUG [56fb7e2d] Running [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/pids ] as ubuntu@34.203.94.126
+ DEBUG [56fb7e2d] Command: [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/pids ]
+ DEBUG [cdefaecf] Finished in 0.160 seconds with exit status 1 (failed).
+  INFO [954028d8] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/tmp/pids /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/pids as ubuntu@34.203.94.126
+ DEBUG [954028d8] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/tmp/pids /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/pids
+  INFO [143a4d51] Finished in 0.170 seconds with exit status 0 (successful).
+ DEBUG [d06ff6e3] Running [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/sockets ] as ubuntu@34.203.94.126
+ DEBUG [d06ff6e3] Command: [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/sockets ]
+ DEBUG [0140af15] Finished in 0.153 seconds with exit status 1 (failed).
+ DEBUG [960ffe0f] Running [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/sockets ] as ubuntu@34.203.94.126
+ DEBUG [960ffe0f] Command: [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/sockets ]
+ DEBUG [954bbd2a] Finished in 0.163 seconds with exit status 1 (failed).
+  INFO [ea96fe56] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/tmp/sockets /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/sockets as ubuntu@34.203.94.126
+ DEBUG [ea96fe56] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/tmp/sockets /home/ubuntu/apps/mathieu/releases/20181026223624/tmp/sockets
+  INFO [6cb49fd3] Finished in 0.145 seconds with exit status 0 (successful).
+ DEBUG [8bcf4a00] Running [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/log ] as ubuntu@34.203.94.126
+ DEBUG [8bcf4a00] Command: [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/log ]
+ DEBUG [a334c4df] Finished in 0.156 seconds with exit status 1 (failed).
+ DEBUG [e4c1c455] Running [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/log ] as ubuntu@34.203.94.126
+ DEBUG [e4c1c455] Command: [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/log ]
+ DEBUG [fc298ccc] Finished in 0.175 seconds with exit status 0 (successful).
+  INFO [5b0b972e] Running /usr/bin/env rm -rf /home/ubuntu/apps/mathieu/releases/20181026223624/log as ubuntu@34.203.94.126
+ DEBUG [5b0b972e] Command: /usr/bin/env rm -rf /home/ubuntu/apps/mathieu/releases/20181026223624/log
+  INFO [1c377209] Finished in 0.216 seconds with exit status 0 (successful).
+  INFO [1136c1c4] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/log /home/ubuntu/apps/mathieu/releases/20181026223624/log as ubuntu@34.203.94.126
+ DEBUG [1136c1c4] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/log /home/ubuntu/apps/mathieu/releases/20181026223624/log
+  INFO [dcd43a46] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [7c72de05] Running [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets ] as ubuntu@34.203.94.126
+ DEBUG [7c72de05] Command: [ -L /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets ]
+ DEBUG [8c91f351] Finished in 0.152 seconds with exit status 1 (failed).
+ DEBUG [694d6708] Running [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets ] as ubuntu@34.203.94.126
+ DEBUG [694d6708] Command: [ -d /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets ]
+ DEBUG [fef58a74] Finished in 0.157 seconds with exit status 1 (failed).
+  INFO [1474b84f] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/public/assets /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets as ubuntu@34.203.94.126
+ DEBUG [1474b84f] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/shared/public/assets /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets
+  INFO [9b1dadc8] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [4c9a9e23] Running if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [4c9a9e23] Command: if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi
+ DEBUG [775f104e] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [681043d7] Running /usr/bin/env /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh rvm --install install . as ubuntu@34.203.94.126
+ DEBUG [681043d7] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && /usr/bin/env /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [5241efaa] 	Already installed ruby-2.5.1.
+To reinstall use:
+
+    rvm reinstall ruby-2.5.1
+
+  INFO [5241efaa] Finished in 0.539 seconds with exit status 0 (successful).
+  INFO [40b28a8b] Running /usr/bin/env git ls-remote https://github.com/matlortie/Rocket_Elevator_API.git HEAD as ubuntu@34.203.94.126
+ DEBUG [40b28a8b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-matlo.sh" ; /usr/bin/env git ls-remote https://github.com/matlortie/Rocket_Elevator_API.git HEAD )
+ DEBUG [d3640805] 	ab5350889924cf9a5824873e97247fecb5d752bf	HEAD
+  INFO [d3640805] Finished in 0.232 seconds with exit status 0 (successful).
+  INFO [716a9191] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/shared /home/ubuntu/apps/mathieu/releases as ubuntu@34.203.94.126
+ DEBUG [716a9191] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/shared /home/ubuntu/apps/mathieu/releases
+  INFO [6740668b] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [7ac52ca4] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/shared/tmp/pids /home/ubuntu/apps/mathieu/shared/tmp/sockets /home/ubuntu/apps/mathieu/shared/log /home/ubuntu/apps/mathieu/shared/public/assets as ubuntu@34.203.94.126
+ DEBUG [7ac52ca4] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/shared/tmp/pids /home/ubuntu/apps/mathieu/shared/tmp/sockets /home/ubuntu/apps/mathieu/shared/log /home/ubuntu/apps/mathieu/shared/public/assets
+  INFO [8b96a4c8] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [e7ac1035] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/shared/config as ubuntu@34.203.94.126
+ DEBUG [e7ac1035] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/shared/config
+  INFO [40ddde2b] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [8f8c545a] Running [ -f /home/ubuntu/apps/mathieu/shared/config/application.yml ] as ubuntu@34.203.94.126
+ DEBUG [8f8c545a] Command: [ -f /home/ubuntu/apps/mathieu/shared/config/application.yml ]
+ DEBUG [a1d1cdc8] Finished in 0.179 seconds with exit status 0 (successful).
+ DEBUG [5b82ea64] Running [ -f /home/ubuntu/apps/mathieu/shared/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [5b82ea64] Command: [ -f /home/ubuntu/apps/mathieu/shared/config/secrets.yml ]
+ DEBUG [3dcca7fd] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [e8ecd9fc] Running [ -f /home/ubuntu/apps/mathieu/shared/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [e8ecd9fc] Command: [ -f /home/ubuntu/apps/mathieu/shared/config/database.yml ]
+ DEBUG [e6ae0e01] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [9e5ea6f0] Running [ -f /home/ubuntu/apps/mathieu/shared/puma.rb ] as ubuntu@34.203.94.126
+ DEBUG [9e5ea6f0] Command: [ -f /home/ubuntu/apps/mathieu/shared/puma.rb ]
+ DEBUG [2703d055] Finished in 0.161 seconds with exit status 0 (successful).
+ DEBUG [4e5f87ed] Running [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/REVISION ] as ubuntu@34.203.94.126
+ DEBUG [4e5f87ed] Command: [ -f /home/ubuntu/apps/mathieu/releases/20181026223624/REVISION ]
+ DEBUG [0864309f] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [c63b2c02] Running /usr/bin/env cat /home/ubuntu/apps/mathieu/releases/20181026223624/REVISION 2>/dev/null as ubuntu@34.203.94.126
+ DEBUG [c63b2c02] Command: /usr/bin/env cat /home/ubuntu/apps/mathieu/releases/20181026223624/REVISION 2>/dev/null
+ DEBUG [1d00c6be] 	ab5350889924cf9a5824873e97247fecb5d752bf
+ DEBUG [1d00c6be] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [a0336c36] Running if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [a0336c36] Command: if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi
+ DEBUG [585b68a0] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [17f8f284] Running /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle check --path /home/ubuntu/apps/mathieu/shared/bundle as ubuntu@34.203.94.126
+ DEBUG [17f8f284] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle check --path /home/ubuntu/apps/mathieu/shared/bundle
+ DEBUG [246bbc27] 	Warning: the running version of Bundler (1.16.2) is older than the version that created the lockfile (1.16.6). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+ DEBUG [246bbc27] 	The Gemfile's dependencies are satisfied
+ DEBUG [246bbc27] Finished in 1.209 seconds with exit status 0 (successful).
+ DEBUG [abdbc379] Running if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [abdbc379] Command: if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi
+ DEBUG [f25eac73] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [1e86ab15] Running /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as ubuntu@34.203.94.126
+ DEBUG [1e86ab15] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [7d62b222] 	I, [2018-10-26T22:37:10.375412 #21672]  INFO -- : Writing /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/application-954af6ef818a193c9d11f1cfd5725a9553c63ef9025b61b0111b13eeb2d1eea2.css
+ DEBUG [7d62b222] 	I, [2018-10-26T22:37:10.375938 #21672]  INFO -- : Writing /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/application-954af6ef818a193c9d11f1cfd5725a9553c63ef9025b61b0111b13eeb2d1eea2.css.gz
+  INFO [7d62b222] Finished in 35.392 seconds with exit status 0 (successful).
+ DEBUG [777f56c8] Running if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [777f56c8] Command: if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi
+ DEBUG [37df5184] Finished in 0.165 seconds with exit status 0 (successful).
+  INFO [48a2bd1e] Running /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624/assets_manifest_backup as ubuntu@34.203.94.126
+ DEBUG [48a2bd1e] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && /usr/bin/env mkdir -p /home/ubuntu/apps/mathieu/releases/20181026223624/assets_manifest_backup
+  INFO [8cadcff0] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [f85c7b50] Running /usr/bin/env ls /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest* as ubuntu@34.203.94.126
+ DEBUG [f85c7b50] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && /usr/bin/env ls /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest*
+ DEBUG [ea15c439] 	/home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest-1eec68d63ce03375748bbcb8da13df42.json
+ DEBUG [ea15c439] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [ea4e7cc3] Running /usr/bin/env ls /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest* as ubuntu@34.203.94.126
+ DEBUG [ea4e7cc3] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && /usr/bin/env ls /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest*
+ DEBUG [6e8ffad8] 	/home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest-1eec68d63ce03375748bbcb8da13df42.json
+ DEBUG [6e8ffad8] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [b1dec137] Running /usr/bin/env cp /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest-1eec68d63ce03375748bbcb8da13df42.json /home/ubuntu/apps/mathieu/releases/20181026223624/assets_manifest_backup as ubuntu@34.203.94.126
+ DEBUG [b1dec137] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && /usr/bin/env cp /home/ubuntu/apps/mathieu/releases/20181026223624/public/assets/.sprockets-manifest-1eec68d63ce03375748bbcb8da13df42.json /home/ubuntu/apps/mathieu/releases/20181026223624/assets_manifest_backup
+  INFO [c2d93369] Finished in 0.175 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [5c1f0e8b] Running if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [5c1f0e8b] Command: if test ! -d /home/ubuntu/apps/mathieu/releases/20181026223624; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases/20181026223624'" 1>&2; false; fi
+ DEBUG [f8464e1d] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [232dd09e] Running /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@34.203.94.126
+ DEBUG [232dd09e] Command: cd /home/ubuntu/apps/mathieu/releases/20181026223624 && ( export RAILS_ENV="development" ; /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+  INFO [c490168d] Finished in 3.035 seconds with exit status 0 (successful).
+  INFO [d05f1c71] Running /usr/bin/env ln -s /home/ubuntu/apps/mathieu/releases/20181026223624 /home/ubuntu/apps/mathieu/releases/current as ubuntu@34.203.94.126
+ DEBUG [d05f1c71] Command: /usr/bin/env ln -s /home/ubuntu/apps/mathieu/releases/20181026223624 /home/ubuntu/apps/mathieu/releases/current
+  INFO [19e363eb] Finished in 0.172 seconds with exit status 0 (successful).
+  INFO [fd898303] Running /usr/bin/env mv /home/ubuntu/apps/mathieu/releases/current /home/ubuntu/apps/mathieu as ubuntu@34.203.94.126
+ DEBUG [fd898303] Command: /usr/bin/env mv /home/ubuntu/apps/mathieu/releases/current /home/ubuntu/apps/mathieu
+  INFO [90f884ac] Finished in 0.141 seconds with exit status 0 (successful).
+ DEBUG [26d7ffd9] Running /usr/bin/env ls -x /home/ubuntu/apps/mathieu/releases as ubuntu@34.203.94.126
+ DEBUG [26d7ffd9] Command: /usr/bin/env ls -x /home/ubuntu/apps/mathieu/releases
+ DEBUG [00b46c48] 	20181026173111	20181026173359	20181026173613	20181026174032	20181026174536
+20181026223624
+ DEBUG [00b46c48] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 34.203.94.126
+ DEBUG [da75ff60] Running [ -d /home/ubuntu/apps/mathieu/current ] as ubuntu@34.203.94.126
+ DEBUG [da75ff60] Command: [ -d /home/ubuntu/apps/mathieu/current ]
+ DEBUG [2344a550] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG [500867db] Running /usr/bin/env readlink /home/ubuntu/apps/mathieu/current as ubuntu@34.203.94.126
+ DEBUG [500867db] Command: /usr/bin/env readlink /home/ubuntu/apps/mathieu/current
+ DEBUG [62c300bd] 	/home/ubuntu/apps/mathieu/releases/20181026223624
+ DEBUG [62c300bd] Finished in 0.178 seconds with exit status 0 (successful).
+  INFO [3ec8feab] Running /usr/bin/env rm -rf /home/ubuntu/apps/mathieu/releases/20181026173111 as ubuntu@34.203.94.126
+ DEBUG [3ec8feab] Command: /usr/bin/env rm -rf /home/ubuntu/apps/mathieu/releases/20181026173111
+  INFO [3e491118] Finished in 2.325 seconds with exit status 0 (successful).
+ DEBUG [658f7b4f] Running if test ! -d /home/ubuntu/apps/mathieu/releases; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [658f7b4f] Command: if test ! -d /home/ubuntu/apps/mathieu/releases; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/releases'" 1>&2; false; fi
+ DEBUG [3beb9752] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [ef41e0f6] Running /usr/bin/env echo "Branch master (at ab5350889924cf9a5824873e97247fecb5d752bf) deployed as release 20181026223624 by matlo" >> /home/ubuntu/apps/mathieu/revisions.log as ubuntu@34.203.94.126
+ DEBUG [ef41e0f6] Command: cd /home/ubuntu/apps/mathieu/releases && /usr/bin/env echo "Branch master (at ab5350889924cf9a5824873e97247fecb5d752bf) deployed as release 20181026223624 by matlo" >> /home/ubuntu/apps/mathieu/revisions.log
+  INFO [d33cf4ee] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [401bc0b1] Running if test ! -d /home/ubuntu/apps/mathieu/current; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/current'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [401bc0b1] Command: if test ! -d /home/ubuntu/apps/mathieu/current; then echo "Directory does not exist '/home/ubuntu/apps/mathieu/current'" 1>&2; false; fi
+ DEBUG [0492bdb3] Finished in 0.143 seconds with exit status 0 (successful).
+ DEBUG [15daf22f] Running [ -f /home/ubuntu/apps/mathieu/shared/tmp/pids/puma.pid ] as ubuntu@34.203.94.126
+ DEBUG [15daf22f] Command: [ -f /home/ubuntu/apps/mathieu/shared/tmp/pids/puma.pid ]
+ DEBUG [65d3be93] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [88713d35] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/mathieu/shared/tmp/pids/puma.pid ) as ubuntu@34.203.94.126
+ DEBUG [88713d35] Command: cd /home/ubuntu/apps/mathieu/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/mathieu/shared/tmp/pids/puma.pid ) )
+ DEBUG [da6f45e0] Finished in 0.162 seconds with exit status 0 (successful).
+  INFO [1f452f3b] Running /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/mathieu/shared/tmp/pids/puma.state -F /home/ubuntu/apps/mathieu/shared/puma.rb restart as ubuntu@34.203.94.126
+ DEBUG [1f452f3b] Command: cd /home/ubuntu/apps/mathieu/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/mathieu/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/mathieu/shared/tmp/pids/puma.state -F /home/ubuntu/apps/mathieu/shared/puma.rb restart )
+ DEBUG [8429f8fa] 	Command restart sent success
+  INFO [8429f8fa] Finished in 1.151 seconds with exit status 0 (successful).
