@@ -57,6 +57,6 @@ test:
 #
 production:
   <<: *default
-  database: Rocket_Elevators_Information_System_production
-  username: Rocket_Elevators_Information_System
+  database: Rocket_Elevator_API_production
+  username: Rocket_Elevator_API
   password: <%= ENV['ROCKET_ELEVATORS_INFORMATION_SYSTEM_DATABASE_PASSWORD'] %>
