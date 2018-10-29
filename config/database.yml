@@ -10,24 +10,24 @@
 # https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-adapter: mysql2
-encoding: utf8
-pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-username: root
-password: Matantema3
-host: 0.0.0.0
-por: 3306
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: Matantema3
+  host: 0.0.0.0
+  port: 3306
 
 development:
-<<: *default
-database: Rocket_Elevators_Information_System_development
+  <<: *default
+  database: rocket_elevators_information_system_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-<<: *default
-database: Rocket_Elevators_Information_System_test
+#test:
+#<<: *default
+#database: Rocket_Elevators_Information_System_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -48,8 +48,8 @@ database: Rocket_Elevators_Information_System_test
 # production:
 # url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: Rocket_Elevators_Information_System_production
-  username: Rocket_Elevators_Information_System
-  password: <%= ENV['ROCKET_ELEVATORS_INFORMATION_SYSTEM_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: Rocket_Elevators_Information_System_production
+#   username: Rocket_Elevators_Information_System
+#   password: <%= ENV['ROCKET_ELEVATORS_INFORMATION_SYSTEM_DATABASE_PASSWORD'] %>
