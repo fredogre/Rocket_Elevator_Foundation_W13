@@ -1,13 +1,9 @@
 require 'zendesk_api'
 class QuotesController < ApplicationController
     def new_quote
-        puts "je suis dans new quote"
-
-        puts params["nb_floors"]
 
         quote = Quote.new
         
-        #quote.nb_of_floors = params["nb_floors"]
         contact_params = params[:contact]
         contact = Contact.find_or_create_by!({first_name: contact_params[:first_name],last_name: contact_params[:last_name],company: contact_params[:company],email: contact_params[:email],project_name: contact_params[:project],location: contact_params[:location]}) 
 
@@ -47,49 +43,10 @@ class QuotesController < ApplicationController
         quote.installcost = params["installcost"]
         quote.totalcost = params["totalcost"]
 
-        pp params["unitcost"]
-        pp params["installcost"]
-        pp params["totalcost"]
-
         quote.contact = contact
         quote.save!
         redirect_to root_path
-        create_zendesk_ticket(contact_params)
+        create_zendesk_quote_ticket(contact_params)
     end
-
-    def create
-        @quote = Quote.new(quote_params)
-       
-        @quote.save
-        redirect_to root_path
-    end
-
-    private
-    def quote_params
-        params.require(:quote).permit!
-    end
-    def create_zendesk_ticket(contact_params)
-        ZendeskAPI::Ticket.new($client, :id => 1, :type => "task", :priority => "urgent")
-
-        zendesk_body = 
-        "#{contact_params[:first_name]} #{contact_params[:last_name]} from #{contact_params[:company]} can be reached by email at #{contact_params[:email]}. 
-        #{contact_params[:company]} has a new project named #{contact_params[:project]}. GO GET THEM! $$$$$"  
-    
-        ZendeskAPI::Ticket.create!($client,
-        :subject => "#{contact_params[:project]}",
-        :comment => { :value => zendesk_body },
-        :submitter_id => 12314, 
-        :type => "task",
-        :priority => "urgent",
-
-        :custom_fields => [
-            {id: 360012456391, value: "#{contact_params[:first_name]} #{contact_params[:last_name]}"},
-            {id: 360012412792, value: "#{contact_params[:email]}"},
-            {id: 360012456431, value: "#{contact_params[:company]}"},
-            {id: 360012412992, value: "#{contact_params[:project]}"},
-          ]) 
-        
-    end
-
 
 end

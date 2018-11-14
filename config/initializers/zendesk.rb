@@ -1,5 +1,5 @@
 require 'zendesk_api'
-
+require './lib/API/zendesk.rb'
 $client = ZendeskAPI::Client.new do |config|
   # Mandatory:
 
