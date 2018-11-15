@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe LeadsController do
     include RSpec::Rails::ControllerExampleGroup
 
-    describe "create_lead" do
+    describe "new_lead" do
 
         specify "Should create a new lead" do
 
@@ -23,9 +23,16 @@ RSpec.describe LeadsController do
 
             expect(controller).to receive(:sendGrid_send_confirmation_email) {new_lead}
 
-            # expect(new_lead).to receive(:save)
+            # verify that the post has been done. When ok, return code 200 
+
+            expect(response.code).to eq "200"
             
             post(:new_lead, params: lead_params)  
+
+            # When the post is done, redirect_to root_path return code 302 
+
+            expect(response.code).to eq "302"
+
 
         end
 

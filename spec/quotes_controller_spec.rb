@@ -32,10 +32,14 @@ RSpec.describe QuotesController do
             
             expect(controller).to receive(:create_zendesk_quote_ticket) {1}
 
+            # verify that the post has been done. When ok, return code 200 
+
             expect(response.code).to eq "200"
             
             post( :new_quote,params: params)
 
+            # When the post is done, redirect_to root_path return code 302 
+         
             expect(response.code).to eq "302"
             
             # verify that it's really a residential quote that's created with the right fields
