@@ -36,7 +36,6 @@ class LeadsController < ApplicationController
 
     lead.save!
   end
-
     
   def sendGrid_send_confirmation_email(lead_params)
 
@@ -60,7 +59,9 @@ class LeadsController < ApplicationController
       },
       \"template_id\": \"d-65ddb893e67f477f8b252477065820dc\"
     }")
+    
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+
     begin
         response = sg.client.mail._("send").post(request_body: data)
     rescue Exception => e
@@ -70,4 +71,3 @@ class LeadsController < ApplicationController
 
    
 end
-
