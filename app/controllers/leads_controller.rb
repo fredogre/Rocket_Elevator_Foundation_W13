@@ -5,10 +5,8 @@ require 'json'
 
 class LeadsController < ApplicationController
   def new_lead
-    puts "this is a new lead"
     
     binary_content = IO.binread(params[:lead][:attached_file].path) if params[:lead][:attached_file] 
-    lead = Lead.new
 
     lead_params = params[:lead].permit!
 
