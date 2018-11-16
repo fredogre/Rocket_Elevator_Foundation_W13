@@ -82,48 +82,4 @@ RSpec.describe LeadsController do
 
     end
 
-    # describe "sendGrid_send_confirmation_email" do
-
-    #     specify "Should send email with leads params" do
-
-    #         lead_params =  {
-    #             :full_name=>"Mat Lortie",
-    #             :email=> "test",
-    #             :project_name=> "Project",
-    #         }
-
-    #         data = JSON.parse("{
-    #             \"personalizations\": [
-    #               {
-    #                 \"to\": [
-    #                   {
-    #                     \"email\": \"#{lead_params[:email]}\"
-    #                   }
-    #                 ],
-    #                 \"dynamic_template_data\": {
-    #                   \"subject\": \"Contact Request Confirmation\",
-    #                   \"name\": \"#{lead_params[:full_name]}\",
-    #                   \"ProjectName\": \"#{lead_params[:project_name]}\"
-    #                 }
-    #               }
-    #             ],
-    #             \"from\": {
-    #               \"email\": \"rocketelevators.xyz@gmail.com\"
-    #             },
-    #             \"template_id\": \"d-65ddb893e67f477f8b252477065820dc\"
-    #           }")
-
-    #         sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-    #         response = sg.client.mail._("send").post(request_body: data)
-
-
-    #         #   expect(sg.client.mail).to receive("send").with(request_body: data)
-
-    #         expect(sg).to receive(response)
-
-    #         subject.sendGrid_send_confirmation_email(lead_params)
-    #     end
-
-    # end
-
 end
