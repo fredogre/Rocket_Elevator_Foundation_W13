@@ -14,3 +14,6 @@ I have moved the zendesk functions that are called in the quote and lead control
 
 
 The dependencies are updated to correct the security issues we had. 
+
+Here's the link for the security report:
+https://docs.google.com/document/d/1ohvNcI-TIVgTzCwMbz9C10xLX9fEjqt9e2J50Rz4QtM/edit?usp=sharing
