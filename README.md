@@ -11,3 +11,6 @@ quote_controller_spec.rb
 leads_controller-spec.rb
 
 I have moved the zendesk functions that are called in the quote and lead controllers. They are located in ./lib/API/zendesk.rb
+
+
+The dependencies are updated to correct the security issues we had. 
