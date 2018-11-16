@@ -1,5 +1,5 @@
 require 'zendesk_api'
-
+require './lib/API/zendesk.rb'
 $client = ZendeskAPI::Client.new do |config|
   # Mandatory:
 
@@ -23,8 +23,8 @@ $client = ZendeskAPI::Client.new do |config|
   config.retry = true
 
   # Logger prints to STDERR by default, to e.g. print to stdout:
-  require 'logger'
-  config.logger = Logger.new(STDOUT)
+  # require 'logger'
+  # config.logger = Logger.new(STDOUT)
 
   # Changes Faraday adapter
   # config.adapter = :patron

@@ -6,7 +6,7 @@ class Elevator < ApplicationRecord
   belongs_to :column, foreign_key: "column_id"
 
   validate :status_validation
-  
+  validates :status, presence: true
 
   def model_enum
     ['Standard', 'Premium', 'Excelium']
