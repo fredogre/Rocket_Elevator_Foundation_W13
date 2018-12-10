@@ -35,7 +35,7 @@ gem 'pg'
 
 gem 'rest-client'
 
-gem 'zendesk_api'
+#gem 'zendesk_api'
 
 gem 'dropbox_api'
 

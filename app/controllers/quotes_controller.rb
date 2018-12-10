@@ -1,4 +1,4 @@
-require 'zendesk_api'
+#require 'zendesk_api'
 class QuotesController < ApplicationController
     def new_quote
 
@@ -46,7 +46,7 @@ class QuotesController < ApplicationController
         quote.contact = contact
         quote.save!
         redirect_to root_path
-        create_zendesk_quote_ticket(contact_params)
+#        create_zendesk_quote_ticket(contact_params)
     end
 
 end
