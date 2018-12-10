@@ -4,7 +4,7 @@ lock "~> 3.11.0"
 before 'deploy', 'rvm1:install:ruby'
 set :rvm_map_bins, [ 'rake', 'gem', 'bundle', 'ruby', 'puma', 'pumactl' ]
 set :application, "fredo"
-set :repo_url, "https://github.com/matlortie/Rocket_Elevator_API.git"
+set :repo_url, "https://github.com/fredogre/Rocket_Elevator_Foundation_W13.git"
 # set :git_http_username, "username"
 # set :git_http_password, "password"
 
