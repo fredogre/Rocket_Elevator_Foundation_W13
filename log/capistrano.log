@@ -7618,3 +7618,248 @@ To reinstall use:
 * Environment: development
 * Daemonizing...
   INFO [1708c5bb] Finished in 1.094 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-10 15:54:04 -0500 cap development deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2eb838dc] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/rvm1scripts/ as ubuntu@34.203.94.126
+ DEBUG [2eb838dc] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/rvm1scripts/
+  INFO [208226c8] Finished in 21.637 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/frederiquegrenier/.rvm/gems/ruby-2.5.1/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/frederiquegrenier/.rvm/gems/ruby-2.5.1/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [32233ae4] Running /usr/bin/env chmod +x /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh as ubuntu@34.203.94.126
+ DEBUG [32233ae4] Command: /usr/bin/env chmod +x /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh
+  INFO [052d1988] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [d83ef7d2] Running /usr/bin/env mkdir -p /tmp as ubuntu@34.203.94.126
+ DEBUG [d83ef7d2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1864e6c5] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fredo-development-frederiquegrenier.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fredo-development-frederiquegrenier.sh 100.0%
+  INFO [f7bce3fc] Running /usr/bin/env chmod 700 /tmp/git-ssh-fredo-development-frederiquegrenier.sh as ubuntu@34.203.94.126
+ DEBUG [f7bce3fc] Command: /usr/bin/env chmod 700 /tmp/git-ssh-fredo-development-frederiquegrenier.sh
+  INFO [eb378ee9] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [1fa1d19d] Running [ -f /home/ubuntu/apps/fredo/repo/HEAD ] as ubuntu@34.203.94.126
+ DEBUG [1fa1d19d] Command: [ -f /home/ubuntu/apps/fredo/repo/HEAD ]
+ DEBUG [68d23e48] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/fredo/repo
+ DEBUG [0b747784] Running if test ! -d /home/ubuntu/apps/fredo/repo; then echo "Directory does not exist '/home/ubuntu/apps/fredo/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [0b747784] Command: if test ! -d /home/ubuntu/apps/fredo/repo; then echo "Directory does not exist '/home/ubuntu/apps/fredo/repo'" 1>&2; false; fi
+ DEBUG [76663e43] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [5820bc20] Running /usr/bin/env git remote set-url origin https://github.com/fredogre/Rocket_Elevator_Foundation_W13.git as ubuntu@34.203.94.126
+ DEBUG [5820bc20] Command: cd /home/ubuntu/apps/fredo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-frederiquegrenier.sh" ; /usr/bin/env git remote set-url origin https://github.com/fredogre/Rocket_Elevator_Foundation_W13.git )
+  INFO [dfef700c] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO [37aef87e] Running /usr/bin/env git remote update --prune as ubuntu@34.203.94.126
+ DEBUG [37aef87e] Command: cd /home/ubuntu/apps/fredo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-frederiquegrenier.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [421a9bb0] 	Fetching origin
+ DEBUG [421a9bb0] 	From https://github.com/fredogre/Rocket_Elevator_Foundation_W13
+   ae8dfe08..4e2a90d6  master     -> master
+  INFO [421a9bb0] Finished in 0.510 seconds with exit status 0 (successful).
+ DEBUG [3f249cde] Running if test ! -d /home/ubuntu/apps/fredo/repo; then echo "Directory does not exist '/home/ubuntu/apps/fredo/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [3f249cde] Command: if test ! -d /home/ubuntu/apps/fredo/repo; then echo "Directory does not exist '/home/ubuntu/apps/fredo/repo'" 1>&2; false; fi
+ DEBUG [5fa54f10] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [3081df92] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426 as ubuntu@34.203.94.126
+ DEBUG [3081df92] Command: cd /home/ubuntu/apps/fredo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-frederiquegrenier.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426 )
+  INFO [eeb00da6] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [0a5a2111] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/fredo/releases/20181210205426 as ubuntu@34.203.94.126
+ DEBUG [0a5a2111] Command: cd /home/ubuntu/apps/fredo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-frederiquegrenier.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/fredo/releases/20181210205426 )
+  INFO [20048ffa] Finished in 1.398 seconds with exit status 0 (successful).
+ DEBUG [b8d25050] Running if test ! -d /home/ubuntu/apps/fredo/repo; then echo "Directory does not exist '/home/ubuntu/apps/fredo/repo'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [b8d25050] Command: if test ! -d /home/ubuntu/apps/fredo/repo; then echo "Directory does not exist '/home/ubuntu/apps/fredo/repo'" 1>&2; false; fi
+ DEBUG [d718d629] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [7e630f78] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@34.203.94.126
+ DEBUG [7e630f78] Command: cd /home/ubuntu/apps/fredo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-frederiquegrenier.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [7cb8e661] 	4e2a90d64d957f4c95bb38334871631323e3006f
+ DEBUG [7cb8e661] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [dc47e2ad] Running if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [dc47e2ad] Command: if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi
+ DEBUG [1635edbc] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [bd11571e] Running /usr/bin/env echo "4e2a90d64d957f4c95bb38334871631323e3006f" > REVISION as ubuntu@34.203.94.126
+ DEBUG [bd11571e] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && /usr/bin/env echo "4e2a90d64d957f4c95bb38334871631323e3006f" > REVISION
+  INFO [2bcdf8b5] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [609c25d1] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426/config as ubuntu@34.203.94.126
+ DEBUG [609c25d1] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426/config
+  INFO [ab8db449] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [97251f5b] Running [ -L /home/ubuntu/apps/fredo/releases/20181210205426/config/application.yml ] as ubuntu@34.203.94.126
+ DEBUG [97251f5b] Command: [ -L /home/ubuntu/apps/fredo/releases/20181210205426/config/application.yml ]
+ DEBUG [bd23a81a] Finished in 0.116 seconds with exit status 1 (failed).
+ DEBUG [385c71e3] Running [ -f /home/ubuntu/apps/fredo/releases/20181210205426/config/application.yml ] as ubuntu@34.203.94.126
+ DEBUG [385c71e3] Command: [ -f /home/ubuntu/apps/fredo/releases/20181210205426/config/application.yml ]
+ DEBUG [2b56593c] Finished in 0.116 seconds with exit status 1 (failed).
+  INFO [2329b9f6] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/config/application.yml /home/ubuntu/apps/fredo/releases/20181210205426/config/application.yml as ubuntu@34.203.94.126
+ DEBUG [2329b9f6] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/config/application.yml /home/ubuntu/apps/fredo/releases/20181210205426/config/application.yml
+  INFO [066a0871] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [48949e1c] Running [ -L /home/ubuntu/apps/fredo/releases/20181210205426/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [48949e1c] Command: [ -L /home/ubuntu/apps/fredo/releases/20181210205426/config/secrets.yml ]
+ DEBUG [660908cd] Finished in 0.116 seconds with exit status 1 (failed).
+ DEBUG [48e1d97b] Running [ -f /home/ubuntu/apps/fredo/releases/20181210205426/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [48e1d97b] Command: [ -f /home/ubuntu/apps/fredo/releases/20181210205426/config/secrets.yml ]
+ DEBUG [cef42e89] Finished in 0.116 seconds with exit status 1 (failed).
+  INFO [7a9317bc] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/config/secrets.yml /home/ubuntu/apps/fredo/releases/20181210205426/config/secrets.yml as ubuntu@34.203.94.126
+ DEBUG [7a9317bc] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/config/secrets.yml /home/ubuntu/apps/fredo/releases/20181210205426/config/secrets.yml
+  INFO [53cb664e] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [43b17b72] Running [ -L /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [43b17b72] Command: [ -L /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml ]
+ DEBUG [8e51cd2d] Finished in 0.113 seconds with exit status 1 (failed).
+ DEBUG [0470a7fd] Running [ -f /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [0470a7fd] Command: [ -f /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml ]
+ DEBUG [f7429575] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [fa4c2645] Running /usr/bin/env rm /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml as ubuntu@34.203.94.126
+ DEBUG [fa4c2645] Command: /usr/bin/env rm /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml
+  INFO [e33fa1e9] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [115f04d5] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/config/database.yml /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml as ubuntu@34.203.94.126
+ DEBUG [115f04d5] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/config/database.yml /home/ubuntu/apps/fredo/releases/20181210205426/config/database.yml
+  INFO [10b0826a] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [218af6c0] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426/tmp /home/ubuntu/apps/fredo/releases/20181210205426 /home/ubuntu/apps/fredo/releases/20181210205426/public as ubuntu@34.203.94.126
+ DEBUG [218af6c0] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426/tmp /home/ubuntu/apps/fredo/releases/20181210205426 /home/ubuntu/apps/fredo/releases/20181210205426/public
+  INFO [f0dcc655] Finished in 0.113 seconds with exit status 0 (successful).
+ DEBUG [2f674299] Running [ -L /home/ubuntu/apps/fredo/releases/20181210205426/tmp/pids ] as ubuntu@34.203.94.126
+ DEBUG [2f674299] Command: [ -L /home/ubuntu/apps/fredo/releases/20181210205426/tmp/pids ]
+ DEBUG [134d0859] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [fe881717] Running [ -d /home/ubuntu/apps/fredo/releases/20181210205426/tmp/pids ] as ubuntu@34.203.94.126
+ DEBUG [fe881717] Command: [ -d /home/ubuntu/apps/fredo/releases/20181210205426/tmp/pids ]
+ DEBUG [6544ae6b] Finished in 0.119 seconds with exit status 1 (failed).
+  INFO [22b1fe86] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/tmp/pids /home/ubuntu/apps/fredo/releases/20181210205426/tmp/pids as ubuntu@34.203.94.126
+ DEBUG [22b1fe86] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/tmp/pids /home/ubuntu/apps/fredo/releases/20181210205426/tmp/pids
+  INFO [c31ccf2b] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [b0f600e8] Running [ -L /home/ubuntu/apps/fredo/releases/20181210205426/tmp/sockets ] as ubuntu@34.203.94.126
+ DEBUG [b0f600e8] Command: [ -L /home/ubuntu/apps/fredo/releases/20181210205426/tmp/sockets ]
+ DEBUG [65c8b945] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [d46e9246] Running [ -d /home/ubuntu/apps/fredo/releases/20181210205426/tmp/sockets ] as ubuntu@34.203.94.126
+ DEBUG [d46e9246] Command: [ -d /home/ubuntu/apps/fredo/releases/20181210205426/tmp/sockets ]
+ DEBUG [2af99ae8] Finished in 0.122 seconds with exit status 1 (failed).
+  INFO [ab43be81] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/tmp/sockets /home/ubuntu/apps/fredo/releases/20181210205426/tmp/sockets as ubuntu@34.203.94.126
+ DEBUG [ab43be81] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/tmp/sockets /home/ubuntu/apps/fredo/releases/20181210205426/tmp/sockets
+  INFO [0269d785] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [d10cc68c] Running [ -L /home/ubuntu/apps/fredo/releases/20181210205426/log ] as ubuntu@34.203.94.126
+ DEBUG [d10cc68c] Command: [ -L /home/ubuntu/apps/fredo/releases/20181210205426/log ]
+ DEBUG [6ff568b6] Finished in 0.115 seconds with exit status 1 (failed).
+ DEBUG [9071b652] Running [ -d /home/ubuntu/apps/fredo/releases/20181210205426/log ] as ubuntu@34.203.94.126
+ DEBUG [9071b652] Command: [ -d /home/ubuntu/apps/fredo/releases/20181210205426/log ]
+ DEBUG [04395dd5] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [6f1c7304] Running /usr/bin/env rm -rf /home/ubuntu/apps/fredo/releases/20181210205426/log as ubuntu@34.203.94.126
+ DEBUG [6f1c7304] Command: /usr/bin/env rm -rf /home/ubuntu/apps/fredo/releases/20181210205426/log
+  INFO [7b118fad] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [280555a3] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/log /home/ubuntu/apps/fredo/releases/20181210205426/log as ubuntu@34.203.94.126
+ DEBUG [280555a3] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/log /home/ubuntu/apps/fredo/releases/20181210205426/log
+  INFO [baf6f85d] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [4d410ec6] Running [ -L /home/ubuntu/apps/fredo/releases/20181210205426/public/assets ] as ubuntu@34.203.94.126
+ DEBUG [4d410ec6] Command: [ -L /home/ubuntu/apps/fredo/releases/20181210205426/public/assets ]
+ DEBUG [d9be7b78] Finished in 0.116 seconds with exit status 1 (failed).
+ DEBUG [36102a6c] Running [ -d /home/ubuntu/apps/fredo/releases/20181210205426/public/assets ] as ubuntu@34.203.94.126
+ DEBUG [36102a6c] Command: [ -d /home/ubuntu/apps/fredo/releases/20181210205426/public/assets ]
+ DEBUG [f908cba0] Finished in 0.119 seconds with exit status 1 (failed).
+  INFO [aaa46d37] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/public/assets /home/ubuntu/apps/fredo/releases/20181210205426/public/assets as ubuntu@34.203.94.126
+ DEBUG [aaa46d37] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/shared/public/assets /home/ubuntu/apps/fredo/releases/20181210205426/public/assets
+  INFO [7db7e407] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [ac7f0093] Running if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [ac7f0093] Command: if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi
+ DEBUG [cf9f1f76] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [7ad4c9ba] Running /usr/bin/env /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh rvm --install install . as ubuntu@34.203.94.126
+ DEBUG [7ad4c9ba] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && /usr/bin/env /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [9f010c31] 	Already installed ruby-2.5.1.
+To reinstall use:
+
+    rvm reinstall ruby-2.5.1
+
+  INFO [9f010c31] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [cc274ac7] Running /usr/bin/env git ls-remote https://github.com/fredogre/Rocket_Elevator_Foundation_W13.git HEAD as ubuntu@34.203.94.126
+ DEBUG [cc274ac7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fredo-development-frederiquegrenier.sh" ; /usr/bin/env git ls-remote https://github.com/fredogre/Rocket_Elevator_Foundation_W13.git HEAD )
+ DEBUG [ce72b920] 	4e2a90d64d957f4c95bb38334871631323e3006f	HEAD
+  INFO [ce72b920] Finished in 0.209 seconds with exit status 0 (successful).
+  INFO [4b207261] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/shared /home/ubuntu/apps/fredo/releases as ubuntu@34.203.94.126
+ DEBUG [4b207261] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/shared /home/ubuntu/apps/fredo/releases
+  INFO [e796b4ef] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [89ec5074] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/shared/tmp/pids /home/ubuntu/apps/fredo/shared/tmp/sockets /home/ubuntu/apps/fredo/shared/log /home/ubuntu/apps/fredo/shared/public/assets as ubuntu@34.203.94.126
+ DEBUG [89ec5074] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/shared/tmp/pids /home/ubuntu/apps/fredo/shared/tmp/sockets /home/ubuntu/apps/fredo/shared/log /home/ubuntu/apps/fredo/shared/public/assets
+  INFO [ba59640d] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [490b445e] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/shared/config as ubuntu@34.203.94.126
+ DEBUG [490b445e] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/shared/config
+  INFO [2ea5b80c] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [845a6817] Running [ -f /home/ubuntu/apps/fredo/shared/config/application.yml ] as ubuntu@34.203.94.126
+ DEBUG [845a6817] Command: [ -f /home/ubuntu/apps/fredo/shared/config/application.yml ]
+ DEBUG [471e2564] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [3d1eadd8] Running [ -f /home/ubuntu/apps/fredo/shared/config/secrets.yml ] as ubuntu@34.203.94.126
+ DEBUG [3d1eadd8] Command: [ -f /home/ubuntu/apps/fredo/shared/config/secrets.yml ]
+ DEBUG [d4da44fd] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [ad4a9ee2] Running [ -f /home/ubuntu/apps/fredo/shared/config/database.yml ] as ubuntu@34.203.94.126
+ DEBUG [ad4a9ee2] Command: [ -f /home/ubuntu/apps/fredo/shared/config/database.yml ]
+ DEBUG [998cd2ca] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [7fe79db8] Running [ -f /home/ubuntu/apps/fredo/shared/puma.rb ] as ubuntu@34.203.94.126
+ DEBUG [7fe79db8] Command: [ -f /home/ubuntu/apps/fredo/shared/puma.rb ]
+ DEBUG [baf03447] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [fbdc6125] Running [ -f /home/ubuntu/apps/fredo/releases/20181210205426/REVISION ] as ubuntu@34.203.94.126
+ DEBUG [fbdc6125] Command: [ -f /home/ubuntu/apps/fredo/releases/20181210205426/REVISION ]
+ DEBUG [171ce730] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [9649014c] Running /usr/bin/env cat /home/ubuntu/apps/fredo/releases/20181210205426/REVISION 2>/dev/null as ubuntu@34.203.94.126
+ DEBUG [9649014c] Command: /usr/bin/env cat /home/ubuntu/apps/fredo/releases/20181210205426/REVISION 2>/dev/null
+ DEBUG [ade56de7] 	4e2a90d64d957f4c95bb38334871631323e3006f
+ DEBUG [ade56de7] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [17e2ffbd] Running if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [17e2ffbd] Command: if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi
+ DEBUG [80335307] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [ed4b2dbb] Running /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle check --path /home/ubuntu/apps/fredo/shared/bundle as ubuntu@34.203.94.126
+ DEBUG [ed4b2dbb] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle check --path /home/ubuntu/apps/fredo/shared/bundle
+ DEBUG [c5fe723d] 	Warning: the running version of Bundler (1.16.2) is older than the version that created the lockfile (1.16.6). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+ DEBUG [c5fe723d] 	The Gemfile's dependencies are satisfied
+ DEBUG [c5fe723d] Finished in 1.039 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [9dfe0629] Running if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [9dfe0629] Command: if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi
+ DEBUG [67cfb98e] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [8d1f91ef] Running /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as ubuntu@34.203.94.126
+ DEBUG [8d1f91ef] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [40ad044a] 	I, [2018-12-10T20:55:08.584796 #23199]  INFO -- : Writing /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/application-d03bb0d1edc7d393fa0cabbf2252637c6480e12013cc2688c704358e4d045119.css
+ DEBUG [40ad044a] 	I, [2018-12-10T20:55:08.585316 #23199]  INFO -- : Writing /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/application-d03bb0d1edc7d393fa0cabbf2252637c6480e12013cc2688c704358e4d045119.css.gz
+  INFO [40ad044a] Finished in 33.157 seconds with exit status 0 (successful).
+ DEBUG [2d47288a] Running if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [2d47288a] Command: if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi
+ DEBUG [b495752a] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [409260d4] Running /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426/assets_manifest_backup as ubuntu@34.203.94.126
+ DEBUG [409260d4] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && /usr/bin/env mkdir -p /home/ubuntu/apps/fredo/releases/20181210205426/assets_manifest_backup
+  INFO [b0533df2] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [ac84e19a] Running /usr/bin/env ls /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest* as ubuntu@34.203.94.126
+ DEBUG [ac84e19a] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && /usr/bin/env ls /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest*
+ DEBUG [a58a9ef5] 	/home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest-1c194416fdbe9aa861eb52ec38e9065c.json
+ DEBUG [a58a9ef5] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [9dcf5f06] Running /usr/bin/env ls /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest* as ubuntu@34.203.94.126
+ DEBUG [9dcf5f06] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && /usr/bin/env ls /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest*
+ DEBUG [aa7d0f1e] 	/home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest-1c194416fdbe9aa861eb52ec38e9065c.json
+ DEBUG [aa7d0f1e] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [8767c229] Running /usr/bin/env cp /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest-1c194416fdbe9aa861eb52ec38e9065c.json /home/ubuntu/apps/fredo/releases/20181210205426/assets_manifest_backup as ubuntu@34.203.94.126
+ DEBUG [8767c229] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && /usr/bin/env cp /home/ubuntu/apps/fredo/releases/20181210205426/public/assets/.sprockets-manifest-1c194416fdbe9aa861eb52ec38e9065c.json /home/ubuntu/apps/fredo/releases/20181210205426/assets_manifest_backup
+  INFO [6a38f009] Finished in 0.140 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [137baac1] Running if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [137baac1] Command: if test ! -d /home/ubuntu/apps/fredo/releases/20181210205426; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases/20181210205426'" 1>&2; false; fi
+ DEBUG [c2e4f312] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [53516382] Running /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@34.203.94.126
+ DEBUG [53516382] Command: cd /home/ubuntu/apps/fredo/releases/20181210205426 && ( export RAILS_ENV="development" ; /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+  INFO [d5f5f475] Finished in 2.710 seconds with exit status 0 (successful).
+  INFO [e4e57645] Running /usr/bin/env ln -s /home/ubuntu/apps/fredo/releases/20181210205426 /home/ubuntu/apps/fredo/releases/current as ubuntu@34.203.94.126
+ DEBUG [e4e57645] Command: /usr/bin/env ln -s /home/ubuntu/apps/fredo/releases/20181210205426 /home/ubuntu/apps/fredo/releases/current
+  INFO [946d7019] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [0957e911] Running /usr/bin/env mv /home/ubuntu/apps/fredo/releases/current /home/ubuntu/apps/fredo as ubuntu@34.203.94.126
+ DEBUG [0957e911] Command: /usr/bin/env mv /home/ubuntu/apps/fredo/releases/current /home/ubuntu/apps/fredo
+  INFO [9a9b50a8] Finished in 0.125 seconds with exit status 0 (successful).
+ DEBUG [6580d9d4] Running /usr/bin/env ls -x /home/ubuntu/apps/fredo/releases as ubuntu@34.203.94.126
+ DEBUG [6580d9d4] Command: /usr/bin/env ls -x /home/ubuntu/apps/fredo/releases
+ DEBUG [e1cde4ec] 	20181210190038	20181210191727	20181210195325	20181210205426
+ DEBUG [e1cde4ec] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [1414d95c] Running if test ! -d /home/ubuntu/apps/fredo/releases; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [1414d95c] Command: if test ! -d /home/ubuntu/apps/fredo/releases; then echo "Directory does not exist '/home/ubuntu/apps/fredo/releases'" 1>&2; false; fi
+ DEBUG [c1c99895] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [2bf0a526] Running /usr/bin/env echo "Branch master (at 4e2a90d64d957f4c95bb38334871631323e3006f) deployed as release 20181210205426 by frederiquegrenier" >> /home/ubuntu/apps/fredo/revisions.log as ubuntu@34.203.94.126
+ DEBUG [2bf0a526] Command: cd /home/ubuntu/apps/fredo/releases && /usr/bin/env echo "Branch master (at 4e2a90d64d957f4c95bb38334871631323e3006f) deployed as release 20181210205426 by frederiquegrenier" >> /home/ubuntu/apps/fredo/revisions.log
+  INFO [c7320b46] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [9cc0bc31] Running if test ! -d /home/ubuntu/apps/fredo/current; then echo "Directory does not exist '/home/ubuntu/apps/fredo/current'" 1>&2; false; fi as ubuntu@34.203.94.126
+ DEBUG [9cc0bc31] Command: if test ! -d /home/ubuntu/apps/fredo/current; then echo "Directory does not exist '/home/ubuntu/apps/fredo/current'" 1>&2; false; fi
+ DEBUG [9ffe730e] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [ff1a179d] Running [ -f /home/ubuntu/apps/fredo/shared/tmp/pids/puma.pid ] as ubuntu@34.203.94.126
+ DEBUG [ff1a179d] Command: [ -f /home/ubuntu/apps/fredo/shared/tmp/pids/puma.pid ]
+ DEBUG [5c0623c2] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [e314a058] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/fredo/shared/tmp/pids/puma.pid ) as ubuntu@34.203.94.126
+ DEBUG [e314a058] Command: cd /home/ubuntu/apps/fredo/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/fredo/shared/tmp/pids/puma.pid ) )
+ DEBUG [9bf91898] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [182575ec] Running /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/fredo/shared/tmp/pids/puma.state -F /home/ubuntu/apps/fredo/shared/puma.rb restart as ubuntu@34.203.94.126
+ DEBUG [182575ec] Command: cd /home/ubuntu/apps/fredo/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/fredo/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/fredo/shared/tmp/pids/puma.state -F /home/ubuntu/apps/fredo/shared/puma.rb restart )
+ DEBUG [7b4d577d] 	Command restart sent success
+  INFO [7b4d577d] Finished in 1.065 seconds with exit status 0 (successful).
