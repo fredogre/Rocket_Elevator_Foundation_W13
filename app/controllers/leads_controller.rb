@@ -67,6 +67,6 @@ class LeadsController < ApplicationController
     #rescue Exception => e
      #   puts e.message
     #end
-  #end
+  end
 
    
