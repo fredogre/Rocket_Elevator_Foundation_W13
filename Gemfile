@@ -23,6 +23,8 @@ gem 'jquery-rails'
 
 gem 'rails_admin', '~> 1.3'
 
+gem 'newrelic_rpm'
+
 gem 'devise'
 
 gem 'figaro'
