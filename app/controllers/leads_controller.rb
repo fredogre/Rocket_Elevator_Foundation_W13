@@ -12,7 +12,7 @@ class LeadsController < ApplicationController
 
     create_lead(lead_params)
  #   create_zendesk_lead_ticket(lead_params)
-    sendGrid_send_confirmation_email(lead_params)
+    #sendGrid_send_confirmation_email(lead_params)
 
     redirect_to root_path
   end
@@ -70,4 +70,3 @@ class LeadsController < ApplicationController
   #end
 
    
-end
