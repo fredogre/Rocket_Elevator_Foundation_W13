@@ -1,3 +1,4 @@
+require 'syslogger'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -27,7 +28,10 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
- 
+  #Loggly 
+  config.logger = Syslogger.new("rails-application",Syslog::LOG_PID, Syslog::LOG_LOCAL7)
+  config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Json.new
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local

@@ -27,6 +27,10 @@ gem 'newrelic_rpm'
 
 gem 'devise'
 
+gem 'syslogger', '~> 1.6.0'
+
+gem 'lograge', '~> 0.3.1'
+
 gem 'figaro'
 
 gem 'sendgrid-ruby'
